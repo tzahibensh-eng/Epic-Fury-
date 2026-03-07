@@ -22,7 +22,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{overflow-x:hidden;}
-body{font-family:'Heebo',sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+body{font-family:'Heebo','Segoe UI',sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 20%,rgba(255,59,92,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(255,140,66,0.04) 0%,transparent 50%);pointer-events:none;z-index:-1;}
 .container{max-width:1800px;margin:0 auto;padding:20px;}
 header{display:flex;justify-content:space-between;align-items:center;padding:16px 0 20px;border-bottom:1px solid var(--border-color);margin-bottom:16px;flex-wrap:wrap;gap:12px;}
@@ -34,24 +34,24 @@ header{display:flex;justify-content:space-between;align-items:center;padding:16p
 .badge{padding:5px 10px;border-radius:6px;font-weight:600;font-size:11px;}
 .badge.date{background:var(--accent-purple);color:white;}
 .toggle-container{display:flex;align-items:center;gap:0;background:var(--bg-secondary);border-radius:12px;border:1px solid var(--border-color);overflow:hidden;}
-.toggle-btn{padding:12px 32px;font-size:18px;font-weight:800;cursor:pointer;transition:all 0.25s;border:none;background:transparent;color:var(--text-muted);font-family:'Heebo',sans-serif;letter-spacing:0.5px;}
+.toggle-btn{padding:12px 32px;font-size:18px;font-weight:800;cursor:pointer;transition:all 0.25s;border:none;background:transparent;color:var(--text-muted);font-family:'Heebo','Segoe UI',sans-serif;letter-spacing:0.5px;}
 .toggle-btn.active-launches{background:var(--accent-red);color:#fff;}
 .toggle-btn.active-alerts{background:var(--accent-blue);color:#fff;}
-.refresh-btn{background:var(--accent-blue);color:white;border:none;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:600;font-family:'Heebo',sans-serif;}
+.refresh-btn{background:var(--accent-blue);color:white;border:none;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:600;font-family:'Heebo','Segoe UI',sans-serif;}
 .refresh-btn:hover{opacity:0.9;}
 
 /* Dashboard Intro */
 .dashboard-intro{background:var(--bg-secondary);border:1px solid var(--border-color);border-right:3px solid var(--accent-blue);border-radius:3px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%);padding:14px 18px;margin-bottom:14px;font-size:16px;line-height:1.9;color:var(--text-secondary);direction:rtl;}
-.iran-filter-btn{display:inline-block;margin-top:8px;padding:10px 28px;font-size:16px;font-weight:800;font-family:'Heebo',sans-serif;background:var(--iran-color);color:#fff;border:2px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer;letter-spacing:0.5px;transition:all 0.2s;box-shadow:0 2px 10px rgba(168,85,247,0.35);text-decoration:none;}
+.iran-filter-btn{display:inline-block;margin-top:8px;padding:10px 28px;font-size:16px;font-weight:800;font-family:'Heebo','Segoe UI',sans-serif;background:var(--iran-color);color:#fff;border:2px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer;letter-spacing:0.5px;transition:all 0.2s;box-shadow:0 2px 10px rgba(168,85,247,0.35);text-decoration:none;}
 .iran-filter-btn:hover{opacity:0.9;transform:scale(1.04);border-color:rgba(255,255,255,0.6);text-decoration:underline;}
 .iran-filter-btn.active-iran{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--iran-color);}
 .dashboard-intro strong{color:var(--text-primary);}
 
 /* Filter Bar */
 .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;align-items:center;}
-.filter-select{background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-color);border-radius:3px;padding:6px 10px;font-size:12px;font-family:'Heebo',sans-serif;min-width:120px;cursor:pointer;}
+.filter-select{background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-color);border-radius:3px;padding:6px 10px;font-size:12px;font-family:'Heebo','Segoe UI',sans-serif;min-width:120px;cursor:pointer;}
 .filter-select option{background:var(--bg-secondary);color:var(--text-primary);}
-.city-search{background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-color);border-radius:3px;padding:6px 10px;font-size:16px;font-family:'Heebo',sans-serif;width:200px;}
+.city-search{background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-color);border-radius:3px;padding:6px 10px;font-size:16px;font-family:'Heebo','Segoe UI',sans-serif;width:200px;}
 .city-search::placeholder{color:var(--text-muted);}
 .city-search-wrapper{position:relative;}
 .city-dropdown{position:absolute;top:100%;right:0;left:0;background:var(--bg-card);border:1px solid var(--border-color);border-radius:0 0 8px 8px;max-height:200px;overflow-y:auto;z-index:500;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.4);}
@@ -64,7 +64,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:16p
 .filter-badge{display:flex;align-items:center;gap:4px;background:var(--accent-blue);color:white;padding:3px 8px;border-radius:12px;font-size:11px;font-weight:600;cursor:pointer;}
 .filter-badge:hover{opacity:0.8;}
 .filter-badge .x{font-size:13px;margin-right:2px;}
-.clear-all-btn{background:var(--accent-red);color:white;border:none;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Heebo',sans-serif;display:none;}
+.clear-all-btn{background:var(--accent-red);color:white;border:none;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;display:none;}
 .clear-all-btn:hover{opacity:0.8;}
 
 /* Stats Grid */
@@ -129,7 +129,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:16p
 .pop-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:var(--accent-yellow);cursor:pointer;border:3px solid var(--bg-card);box-shadow:0 0 12px rgba(255,217,61,0.5);}
 .slider-hint{font-size:12px;color:var(--accent-yellow);font-weight:700;animation:pulseHint 2s ease-in-out infinite;white-space:nowrap;}
 @keyframes pulseHint{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.5;transform:scale(1.05);}}
-.pop-trend-toggle{background:var(--bg-secondary);color:var(--text-secondary);border:1px solid var(--border-color);border-radius:6px;padding:5px 12px;font-size:11px;font-family:'Heebo',sans-serif;cursor:pointer;transition:all 0.2s;}
+.pop-trend-toggle{background:var(--bg-secondary);color:var(--text-secondary);border:1px solid var(--border-color);border-radius:6px;padding:5px 12px;font-size:11px;font-family:'Heebo','Segoe UI',sans-serif;cursor:pointer;transition:all 0.2s;}
 .pop-trend-toggle.active{background:var(--accent-yellow);color:#000;font-weight:700;}
 
 /* Right sidebar */
@@ -363,7 +363,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 
 .nav-bar{position:sticky;top:0;z-index:999;background:linear-gradient(180deg,var(--bg-primary) 0%,rgba(14,14,28,0.95) 100%);border-bottom:3px solid var(--accent-yellow);padding:10px 12px;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;box-shadow:0 4px 12px rgba(0,0,0,0.4);justify-content:center;flex-wrap:wrap;}
 .nav-bar::-webkit-scrollbar{display:none;}
-.nav-btn{background:var(--accent-yellow);color:#000;border:2px solid var(--accent-yellow);border-radius:3px;padding:10px 18px;font-size:14px;font-weight:800;font-family:'Heebo',sans-serif;cursor:pointer;white-space:nowrap;transition:all 0.25s;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);letter-spacing:0.5px;}
+.nav-btn{background:var(--accent-yellow);color:#000;border:2px solid var(--accent-yellow);border-radius:3px;padding:10px 18px;font-size:14px;font-weight:800;font-family:'Heebo','Segoe UI',sans-serif;cursor:pointer;white-space:nowrap;transition:all 0.25s;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);letter-spacing:0.5px;}
 .nav-btn:hover,.nav-btn:active{background:#fff;color:#000;border-color:#fff;transform:translateY(-1px);}
 </style>
 </head>
@@ -378,21 +378,22 @@ footer a{color:var(--accent-blue);text-decoration:none;}
     <div class="logo-text"><h1>שאגת הארי דשבורד</h1><span>התרעות ואירועים מ-28 בפברואר 2026</span><span style="font-size:11px;color:var(--text-muted);display:block;margin-top:2px;">פותח על ידי <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">צחי בן שימול</a> בסיוע <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">ברק ליטוינוב</a> | נתוני ההתראות באמצעות הגיט הפתוח של <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">יובל הרפז</a></span></div>
   </div>
   <div class="header-controls">
-    <div class="badge date">מ-28.02.2026</div>
+    <div class="badge date" id="dateBadge">מ-28.02.2026</div>
     <div class="toggle-container" style="margin-right:8px;">
       <button class="toggle-btn active-launches" id="btnHe" onclick="setLang('he')" style="padding:8px 16px;font-size:13px;">HE</button>
       <button class="toggle-btn" id="btnEn" onclick="setLang('en')" style="padding:8px 16px;font-size:13px;">EN</button>
+      <button class="toggle-btn" id="btnRu" onclick="setLang('ru')" style="padding:8px 16px;font-size:13px;">RU</button>
     </div>
     <button class="refresh-btn" onclick="refreshFromGitHub()">רענן מ-GitHub</button>
     <span id="lastUpdateTime" style="font-size:11px;color:var(--text-muted);min-width:100px;" data-i18n-template="lastUpdate"></span>
   </div>
 </header>
 <nav class="nav-bar" id="dashNavBar">
-  <button class="nav-btn" onclick="document.getElementById('section-charts').scrollIntoView({behavior:'smooth'})">&#128202; מבט על</button>
-  <button class="nav-btn" onclick="document.getElementById('section-iran-ma').scrollIntoView({behavior:'smooth'})">&#127919; מגמות ירי מאיראן</button>
-  <button class="nav-btn" onclick="document.getElementById('section-map').scrollIntoView({behavior:'smooth'})">&#128506; מפה</button>
-  <button class="nav-btn" onclick="document.getElementById('section-population').scrollIntoView({behavior:'smooth'})">&#128737; כמה נכנסנו למקלט?</button>
-  <button class="nav-btn" onclick="document.getElementById('section-regions').scrollIntoView({behavior:'smooth'})">&#128293; מי ספג הרבה, מי קצת</button>
+  <button class="nav-btn" id="navOverview" onclick="document.getElementById('section-charts').scrollIntoView({behavior:'smooth'})">&#128202; מבט על</button>
+  <button class="nav-btn" id="navIranTrends" onclick="document.getElementById('section-iran-ma').scrollIntoView({behavior:'smooth'})">&#127919; מגמות ירי מאיראן</button>
+  <button class="nav-btn" id="navMap" onclick="document.getElementById('section-map').scrollIntoView({behavior:'smooth'})">&#128506; מפה</button>
+  <button class="nav-btn" id="navShelter" onclick="document.getElementById('section-population').scrollIntoView({behavior:'smooth'})">&#128737; כמה נכנסנו למקלט?</button>
+  <button class="nav-btn" id="navRegions" onclick="document.getElementById('section-regions').scrollIntoView({behavior:'smooth'})">&#128293; מי ספג הרבה, מי קצת</button>
 </nav>
 
 
@@ -442,8 +443,8 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 
 <!-- Stats Row: 2 cards only -->
 <div class="stats-row-top" style="grid-template-columns:1fr 1fr;gap:12px;">
-  <div class="stat-card total"><div class="stat-label">סה"כ אירועים שזוהו</div><div class="stat-value" id="totalMain">--</div><div style="font-size:11px;color:var(--text-secondary);margin-top:6px;line-height:1.5;" id="mainBreakdown"></div></div>
-  <div class="stat-card today"><div class="stat-label">אירועי אתמול</div><div class="stat-value" id="yesterdayCount">--</div><div class="stat-change" id="yesterdayDate">--</div><div style="font-size:10px;color:var(--text-muted);margin-top:4px;" id="yesterdayBreakdown"></div></div>
+  <div class="stat-card total"><div class="stat-label" id="labelTotalEvents">סה"כ אירועים שזוהו</div><div class="stat-value" id="totalMain">--</div><div style="font-size:11px;color:var(--text-secondary);margin-top:6px;line-height:1.5;" id="mainBreakdown"></div></div>
+  <div class="stat-card today"><div class="stat-label" id="labelYesterday">אירועי אתמול</div><div class="stat-value" id="yesterdayCount">--</div><div class="stat-change" id="yesterdayDate">--</div><div style="font-size:10px;color:var(--text-muted);margin-top:4px;" id="yesterdayBreakdown"></div></div>
 </div>
 
 
@@ -451,15 +452,15 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 <div class="left-column">
   <!-- Charts Row 1 -->
   <div id="section-charts" class="charts-grid">
-    <div class="card"><div class="card-header" style="color:var(--iran-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyIranTitle">אירועים מאיראן - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="iranBtnEvents" onclick="setDailyIranView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo',sans-serif;">אירועים</button><button class="daily-view-btn" id="iranBtnAlerts" onclick="setDailyIranView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="dailyIranChart"></div></div></div>
-    <div class="card"><div class="card-header" style="color:var(--lebanon-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyLebTitle">אירועים מלבנון - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="lebBtnEvents" onclick="setDailyLebView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo',sans-serif;">אירועים</button><button class="daily-view-btn" id="lebBtnAlerts" onclick="setDailyLebView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="dailyLebChart"></div></div></div>
-    <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="originChartTitle">מאיפה שיגרו?</span><div style="display:flex;gap:4px;"><button class="origin-view-btn active" id="originBtnEvents" onclick="setOriginView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo',sans-serif;">אירועים</button><button class="origin-view-btn" id="originBtnAlerts" onclick="setOriginView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="originChart"></div></div></div>
-    <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="hourlyChartTitle">באיזו שעה? לפי שעה</span><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="hourlyBtnIran" onclick="setHourlyOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo',sans-serif;">איראן</button><button class="hourly-view-btn" id="hourlyBtnLebanon" onclick="setHourlyOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo',sans-serif;">לבנון</button></div></div><div class="card-body"><div class="chart-container" id="hourlyChart"></div></div></div>
+    <div class="card"><div class="card-header" style="color:var(--iran-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyIranTitle">אירועים מאיראן - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="iranBtnEvents" onclick="setDailyIranView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="daily-view-btn" id="iranBtnAlerts" onclick="setDailyIranView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="dailyIranChart"></div></div></div>
+    <div class="card"><div class="card-header" style="color:var(--lebanon-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyLebTitle">אירועים מלבנון - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="lebBtnEvents" onclick="setDailyLebView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="daily-view-btn" id="lebBtnAlerts" onclick="setDailyLebView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="dailyLebChart"></div></div></div>
+    <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="originChartTitle">מאיפה שיגרו?</span><div style="display:flex;gap:4px;"><button class="origin-view-btn active" id="originBtnEvents" onclick="setOriginView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="origin-view-btn" id="originBtnAlerts" onclick="setOriginView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="originChart"></div></div></div>
+    <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="hourlyChartTitle">באיזו שעה? לפי שעה</span><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="hourlyBtnIran" onclick="setHourlyOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button><button class="hourly-view-btn" id="hourlyBtnLebanon" onclick="setHourlyOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button></div></div><div class="card-body"><div class="chart-container" id="hourlyChart"></div></div></div>
   </div>
 
   <!-- Iran moving average + cumulative -->
   <div id="section-iran-ma" class="card">
-    <div class="card-header" style="color:var(--iran-color);">אירועים מאיראן: ממוצע נע 12 שעות + מצטבר</div>
+    <div class="card-header" id="iranMAHeader" style="color:var(--iran-color);">אירועים מאיראן: ממוצע נע 12 שעות + מצטבר</div>
     <div class="card-body"><div style="height:300px;" id="iranChart"></div></div>
   </div>
 
@@ -468,9 +469,9 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 
   <!-- Map -->
   <div id="section-map" class="card" style="position:relative;">
-    <div class="card-header">איפה נפלו? מפת ישובים <span id="mapStats" style="font-size:10px;color:var(--accent-green);font-weight:600;">טוען...</span></div>
+    <div class="card-header" id="mapHeader">איפה נפלו? מפת ישובים <span id="mapStats" style="font-size:10px;color:var(--accent-green);font-weight:600;">טוען...</span></div>
     <div id="map"></div>
-    <button onclick="focusIsrael()" style="position:absolute;top:130px;left:10px;z-index:1000;background:#fff;border:2px solid rgba(0,0,0,0.3);border-radius:4px;width:30px;height:30px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.3);" title="מרכז על ישראל"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#333" stroke-width="1.5"/><circle cx="8" cy="8" r="1.5" fill="#333"/><line x1="8" y1="0" x2="8" y2="4" stroke="#333" stroke-width="1.5"/><line x1="8" y1="12" x2="8" y2="16" stroke="#333" stroke-width="1.5"/><line x1="0" y1="8" x2="4" y2="8" stroke="#333" stroke-width="1.5"/><line x1="12" y1="8" x2="16" y2="8" stroke="#333" stroke-width="1.5"/></svg></button>
+    <button onclick="focusIsrael()" style="position:absolute;top:130px;left:10px;z-index:1000;background:#fff;border:2px solid rgba(0,0,0,0.3);border-radius:4px;width:30px;height:30px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.3);" title="מרכז על ישראל" id="focusIsraelBtn"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#333" stroke-width="1.5"/><circle cx="8" cy="8" r="1.5" fill="#333"/><line x1="8" y1="0" x2="8" y2="4" stroke="#333" stroke-width="1.5"/><line x1="8" y1="12" x2="8" y2="16" stroke="#333" stroke-width="1.5"/><line x1="0" y1="8" x2="4" y2="8" stroke="#333" stroke-width="1.5"/><line x1="12" y1="8" x2="16" y2="8" stroke="#333" stroke-width="1.5"/></svg></button>
     </div>
 
 
@@ -480,7 +481,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 <!-- Right Sidebar -->
 <div class="right-sidebar">
   <div class="card" style="border:1px solid var(--accent-blue);overflow:visible;">
-    <div class="card-header" data-i18n="cityTimelineTitle" style="color:var(--accent-blue);font-size:15px;">ציר זמן לפי ישוב</div>
+    <div class="card-header" id="cityTimelineHeader" data-i18n="cityTimelineTitle" style="color:var(--accent-blue);font-size:15px;">ציר זמן לפי ישוב</div>
     <div class="card-body" style="padding:10px 14px;overflow:visible;">
       <div class="city-search-wrapper">
         <input class="city-search" id="timelineSearchInput" type="text" placeholder="הקלידו שם ישוב..." oninput="onTimelineSearch(this.value)" onfocus="onTimelineSearch(this.value)" style="width:100%;margin-bottom:6px;font-size:13px;padding:8px 12px;">
@@ -492,11 +493,11 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   </div>
   <div id="section-regions" class="regions-pair">
   <div class="card">
-    <div class="card-header" style="color:var(--accent-red);">הישובים שספגו הכי הרבה</div>
+    <div class="card-header" id="topRegionsHeader" style="color:var(--accent-red);">הישובים שספגו הכי הרבה</div>
     <div class="region-bars-container" id="topRegions"></div>
   </div>
   <div class="card">
-    <div class="card-header" style="color:var(--accent-green);">הישובים שספגו הכי פחות</div>
+    <div class="card-header" id="bottomRegionsHeader" style="color:var(--accent-green);">הישובים שספגו הכי פחות</div>
     <div class="region-bars-container" id="bottomRegions"></div>
   </div>
   </div>
@@ -525,7 +526,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
     </div>
     <div class="chart-container-wide" id="popChart" style="height:320px;"></div>
     <div id="popClickHint" style="text-align:center;padding:6px 0 2px;font-size:12px;color:var(--accent-blue);opacity:0.85;">
-      <span style="display:inline-flex;align-items:center;gap:4px;background:rgba(96,165,250,0.1);padding:4px 12px;border-radius:12px;border:1px dashed rgba(96,165,250,0.3);">&#128073; לחצו על עמודה כדי לראות את הערים וכמות הפעמים</span>
+      <span style="display:inline-flex;align-items:center;gap:4px;background:rgba(96,165,250,0.1);padding:4px 12px;border-radius:12px;border:1px dashed rgba(96,165,250,0.3);" id="popClickHintText">&#128073; לחצו על עמודה כדי לראות את הערים וכמות הפעמים</span>
     </div>
     <div id="popCitiesPanel" style="display:none;margin-top:10px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:8px;padding:10px 12px;max-height:200px;overflow-y:auto;direction:rtl;"></div>
   </div>
@@ -536,9 +537,9 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 
 <!-- Summary Table -->
 <div class="card" style="margin-top:20px;">
-  <div class="card-header" data-i18n="summaryTableTitle" style="font-size:15px;">טבלת נתונים מסכמת</div>
+  <div class="card-header" id="summaryTableHeader" data-i18n="summaryTableTitle" style="font-size:15px;">טבלת נתונים מסכמת</div>
   <div class="card-body" style="padding:14px;overflow-x:auto;">
-    <table id="summaryTable" class="display" style="width:100%;font-size:12px;direction:rtl;">
+    <table id="summaryTable" class="display" style="width:100%;font-size:12px;">
       <thead><tr>
         <th data-i18n="colTimestamp">זמן</th>
         <th data-i18n="colCity">ישוב</th>
@@ -552,7 +553,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 </div>
 
 
-<footer>נתונים מ-<a href="https://github.com/yuval-harpaz/alarms" target="_blank">yuval-harpaz/alarms</a> | ECharts + Leaflet</footer>
+<footer id="footerText">נתונים מ-<a href="https://github.com/yuval-harpaz/alarms" target="_blank">yuval-harpaz/alarms</a> | ECharts + Leaflet</footer>
 </div>
 
 <script>
@@ -636,6 +637,7 @@ var T = {
     popPctSuffix: '% מהאוכלוסייה במאגר)',
     popOnce: 'נכנסו פעם אחת', popTwice: 'נכנסו פעמיים', popNTimes: 'נכנסו {n} פעמים',
     mapTitle: 'איפה נפלו? מפת ישובים',
+    dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
     dailyLaunchTitle: 'מתי היו אירועים? לפי יום', dailyAlertTitle: 'מתי התריעו? לפי יום',
     originTitle: 'מאיפה שיגרו?', threatTitle: 'מה שיגרו? סוג האיום',
     hourlyLaunchTitle: 'באיזו שעה? לפי שעה', hourlyAlertTitle: 'באיזו שעה התריעו?',
@@ -668,7 +670,18 @@ var T = {
     hoursAgo: 'שעות',
     daysAgo: 'ימים',
     originNote: 'ישנם מקרים שעוד לא עודכן מקור הירי. כטב״מ ללא מקור ידוע מוחשב כלבנון (כטב״מים מפעילים אזעקות ברוב הארץ גם משיגור מלבנון). טילים/רקטות מסווגים לפי היקף האירוע: מעל 75 יישובים — איראן, מתחת — לבנון.',
-    sliderHint: '&#8592; גררו אותי &#8594;'
+    sliderHint: '&#8592; גררו אותי &#8594;',
+    navOverview: 'מבט על', navIranTrends: 'מגמות ירי מאיראן', navMap: 'מפה', navShelter: 'כמה נכנסנו למקלט?', navRegions: 'מי ספג הרבה, מי קצת',
+    labelTotalEvents: 'סה"כ אירועים שזוהו', labelYesterday: 'אירועי אתמול',
+    dateBadge: 'מ-28.02.2026',
+    mapHeader: 'איפה נפלו? מפת ישובים',
+    focusIsraelTitle: 'מרכז על ישראל',
+    fromIran: 'מאיראן', fromLebanon: 'מלבנון',
+    dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
+    popClickHintText: 'לחצו על עמודה כדי לראות את הערים וכמות הפעמים',
+    popCityPickerLabel: 'בחרו ישוב:',
+    seriesDrones: 'כטב"מים', seriesRockets: 'רקטות/טילים',
+    footerPrefix: 'נתונים מ-',
   },
   en: {
     dashboardTitle: 'Lion\'s Roar Dashboard',
@@ -689,6 +702,7 @@ var T = {
     popPctSuffix: '% of tracked population)',
     popOnce: 'Entered once', popTwice: 'Entered twice', popNTimes: 'Entered {n} times',
     mapTitle: 'Where did they fall? City map',
+    dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
     dailyLaunchTitle: 'When were events? By day', dailyAlertTitle: 'When were alerts? By day',
     originTitle: 'Where were they launched from?', threatTitle: 'What was launched? Threat type',
     hourlyLaunchTitle: 'What hour? By hour', hourlyAlertTitle: 'What hour were alerts?',
@@ -722,10 +736,88 @@ var T = {
     hoursAgo: 'hours',
     daysAgo: 'days',
     originNote: 'In some cases the launch origin has not yet been updated. UAVs with unknown origin are classified as Lebanon (UAVs trigger nationwide alerts even from Lebanon). Rockets/missiles are classified by event size: 75+ cities \u2192 Iran, fewer \u2192 Lebanon.',
-    sliderHint: '&#8592; drag me &#8594;'
+    sliderHint: '&#8592; drag me &#8594;',
+    navOverview: 'Overview', navIranTrends: 'Iran launch trends', navMap: 'Map', navShelter: 'How many went to shelter?', navRegions: 'Who got hit most, who least',
+    labelTotalEvents: 'Total events detected', labelYesterday: 'Yesterday\'s events',
+    dateBadge: 'From 28.02.2026',
+    mapHeader: 'Where did they fall? City map',
+    focusIsraelTitle: 'Focus on Israel',
+    fromIran: 'from Iran', fromLebanon: 'from Lebanon',
+    dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
+    popClickHintText: 'Click a bar to see cities and alert counts',
+    popCityPickerLabel: 'Select city:',
+    seriesDrones: 'UAVs', seriesRockets: 'Rockets/Missiles',
+    footerPrefix: 'Data from ',
+  },
+  ru: {
+    dashboardTitle: 'Панель «Рёв Льва»',
+    dashboardSubtitle: 'Тревоги и события с 28 февраля 2026',
+    credits: 'Разработано <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Цахи Бен Шимол</a> при содействии <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Барак Литвинов</a> | Данные тревог из открытого репозитория <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Юваль Харпаз</a>',
+    introText: '<strong>Что показывает панель?</strong> Данные тревог и событий в реальном времени с 28 февраля 2026 года из открытого источника. <br><strong>Событие</strong> = активация системы оповещения. Одно событие может вызвать сирены в нескольких городах одновременно. Каждое событие имеет уникальный ID. <br><strong>Тревога</strong> = каждый город, получивший сирену в рамках события. Одно событие может породить десятки тревог (один город = одна тревога). <br><strong>Динамические фильтры:</strong> нажмите на любой элемент графика, карты или боковой панели, чтобы отфильтровать всю панель. Повторное нажатие снимает фильтр. Также можно использовать выпадающие меню выше.',
+    iranBtn: '&#127470;&#127479; Нажмите для фильтрации только по Ирану',
+    allOrigins: 'Все источники', gaza: 'Газа', lebanon: 'Ливан', iran: 'Иран', fa: 'FA', unknown: 'Неизвестно',
+    allThreats: 'Все типы угроз', rockets: 'Ракеты и снаряды', aircraft: 'Враждебный БПЛА', infiltration: 'Проникновение террористов',
+    allDays: 'Все дни', allHours: 'Все часы', searchCity: 'Поиск города...',
+    clearAll: 'Очистить всё',
+    eventsDetected: 'Обнаружено событий', alertsInCities: 'Тревоги в городах', eventsToday: 'Событий сегодня',
+    citiesAttacked: 'Атакованные города', uniqueCities: 'Уникальные города', uniqueId: 'Уникальный ID события', eachCity: 'Каждый город = одна тревога',
+    sourceGaza: 'Источник: Газа', sourceLebanon: 'Источник: Ливан', sourceIran: 'Источник: Иран',
+    popTitle: 'Тревоги по численности населения',
+    popExplanation: 'Сколько человек (примерно) укрылись в убежищах? График показывает оценочное число населения, получившего тревоги за весь период. Чем выше столбец, тем больше людей испытали данное количество тревог. Нажмите на столбец, чтобы увидеть города. <span class="pop-note">&#9888; Данные о населении — лишь оценка.</span>',
+    popKpiSub: 'население получило тревоги за ',
+    popPctSuffix: '% отслеживаемого населения)',
+    popOnce: 'Укрывались 1 раз', popTwice: 'Укрывались 2 раза', popNTimes: 'Укрывались {n} раз',
+    mapTitle: 'Куда упали? Карта городов',
+    dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
+    dailyLaunchTitle: 'Когда были события? По дням', dailyAlertTitle: 'Когда были тревоги? По дням',
+    originTitle: 'Откуда стреляли?', threatTitle: 'Чем стреляли? Тип угрозы',
+    hourlyLaunchTitle: 'В какое время? По часам', hourlyAlertTitle: 'В какое время были тревоги?',
+    iranChartTitle: 'События из Ирана: скользящее среднее 12ч + нарастающий итог',
+    topRegions: 'Наиболее пострадавшие города', bottomRegions: 'Наименее пострадавшие города',
+    recentTitle: 'Последние события',
+    cityTimelineTitle: 'Хронология города', cityTimelineDefault: 'Выберите город...',
+    launches: 'События', alerts: 'Тревоги',
+    launchesPerHour: 'Событий в час', ma12: 'Скользящее среднее 12ч', cumulative: 'Нарастающий итог',
+    perHour: 'В час',
+    refreshBtn: 'Обновить с GitHub', refreshing: 'Обновление...', refreshed: 'Обновлено', refreshError: 'Ошибка',
+    lastUpdate: 'Обновлено: ',
+    loading: 'Загрузка данных...', loadingMap: 'Загрузка...',
+    footerText: 'Данные из ',
+    intensity: 'Интенсивность',
+    popTrendTitle: 'Взвешенное среднее тревог по населению',
+    popDayPickerLabel: 'Выберите день:',
+    popAllDates: 'Весь период',
+    popTrendBtn: 'Дневной тренд', popTrendBtnHide: 'Скрыть тренд',
+    popTrendFormula: 'Формула: (1×население с 1 тревогой + 2×население с 2 тревогами + ...) / всё отслеживаемое население',
+    popTrendTotalPop: 'Всё отслеживаемое население',
+    summaryTableTitle: 'Сводная таблица данных',
+    colTimestamp: 'Время', colCity: 'Город', colThreat: 'Тип угрозы', colOrigin: 'Источник', colLaunchId: 'ID события',
+    threat0: 'Ракеты и снаряды', threat5: 'Враждебный БПЛА', threat2: 'Проникновение террористов',
+    residents: 'жителей', cities: 'городов',
+    popCitiesBadge: 'города (убежища)',
+    toggleHint: 'Нажмите для переключения между событиями и тревогами &#8595;',
+    sinceLastEvent: '&#9200; Время с последнего события',
+    minutesAgo: 'минут',
+    hoursAgo: 'часов',
+    daysAgo: 'дней',
+    originNote: 'В некоторых случаях источник запуска ещё не определён. БПЛА с неизвестным источником классифицируются как Ливан (БПЛА вызывают тревоги по всей стране даже из Ливана). Ракеты/снаряды классифицируются по масштабу: 75+ городов — Иран, менее — Ливан.',
+    sliderHint: '&#8592; перетащите &#8594;',
+    navOverview: 'Обзор', navIranTrends: 'Тренды обстрелов Ирана', navMap: 'Карта', navShelter: 'Сколько укрылись?', navRegions: 'Кто пострадал больше/меньше',
+    labelTotalEvents: 'Всего обнаружено событий', labelYesterday: 'Вчерашние события',
+    dateBadge: 'С 28.02.2026',
+    mapHeader: 'Куда упали? Карта городов',
+    focusIsraelTitle: 'Фокус на Израиль',
+    fromIran: 'из Ирана', fromLebanon: 'из Ливана',
+    dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
+    popClickHintText: 'Нажмите на столбец, чтобы увидеть города и количество тревог',
+    popCityPickerLabel: 'Выберите город:',
+    seriesDrones: 'БПЛА', seriesRockets: 'Ракеты/снаряды',
+    footerPrefix: 'Данные из '
   }
 };
 
+var CITY_EN={"אבו גוש":"Abu Ghosh","אבו סנאן":"Abo Snan","אבו קרינאת":"Abo Krinat","אבו תלול":"Abo Tlol","אבטליון":"Abatlivn","אביאל":"Abial","אביבים":"Abibim","אביגדור":"Abigdor","אביגיל":"Abigil","אביחיל":"Abichil","אביעזר":"Abiazr","אבירים":"Abirim","אביתר":"Abitr","אבן יהודה":"Even Yehuda","אבן מנחם":"Abn Manachm","אבן ספיר":"Abn Spir","אבן שמואל":"Abn Shmoal","אבני איתן":"Abni Aitn","אבני חפץ":"Abni Chaptz","אבנת":"Abant","אבשלום":"Abashlom","אדורה":"Adorh","אדורים":"Adorim","אדמית":"Admit","אדרת":"Adart","אודים":"Odim","אודם":"Odm","אוהד":"Ohd","אום אל פחם":"Om Al Pachm","אום אל קוטוף":"Om Al Kotof","אום בטין":"Om Btin","אופקים":"Ofakim","אור הגנוז":"Or Hagnoz","אור הנר":"Or Hanr","אור יהודה":"Or Yehuda","אור עקיבא":"Or Akiva","אורה":"Orh","אורות":"Orot","אורטל":"Oratl","אורים":"Orim","אורנים":"Ornim","אורנית":"Ornit","אושה":"Oshh","אזור":"Azor","אזור תעשייה אלון התבור":"Azor Tashyh Alon Hatbor","אזור תעשייה אפק ולב הארץ":"Azor Tashyh Apak Vlab Hartz","אזור תעשייה אריאל":"Azor Tashyh Arial","אזור תעשייה באר טוביה":"Azor Tashyh Bar Tobih","אזור תעשייה בני יהודה":"Azor Tashyh Bni Yhodh","אזור תעשייה בר-לב":"Azor Tashyh Bar-lb","אזור תעשייה בראון":"Azor Tashyh Bron","אזור תעשייה ברוש":"Azor Tashyh Brosh","אזור תעשייה ברקן":"Azor Tashyh Barakn","אזור תעשייה גדרה":"Azor Tashyh Gadarh","אזור תעשייה דימונה":"Azor Tashyh Dimonh","אזור תעשייה הדרומי אשקלון":"Azor Tashyh Hadromi Ashaklon","אזור תעשייה הר טוב - צרעה":"Azor Tashyh Har Tob - Tzrah","אזור תעשייה חבל מודיעין שוהם":"Azor Tashyh Chabal Modiayn Shohm","אזור תעשייה יקנעם עילית":"Azor Tashyh Yknam Aylit","אזור תעשייה כנות":"Azor Tashyh Knot","אזור תעשייה כפר יונה":"Azor Tashyh Kapar Yvnh","אזור תעשייה כרמיאל":"Azor Tashyh Karmial","אזור תעשייה מבוא כרמל":"Azor Tashyh Mboa Karaml","אזור תעשייה מבואות הגלבוע":"Azor Tashyh Mboot Hagalboa","אזור תעשייה מישור אדומים":"Azor Tashyh Mishor Adomim","אזור תעשייה מיתרים":"Azor Tashyh Mitrim","אזור תעשייה נ.ע.מ":"Azor Tashyh N.a.m","אזור תעשייה ניר עציון":"Azor Tashyh Nir Atzivn","אזור תעשייה נשר - רמלה":"Azor Tashyh Nashr - Ramla","אזור תעשייה עד הלום":"Azor Tashyh Ad Hlom","אזור תעשייה עידן הנגב":"Azor Tashyh Aydn Hanagb","אזור תעשייה עמק חפר":"Azor Tashyh Amak Chapr","אזור תעשייה צ.ח.ר":"Azor Tashyh Tz.ch.r","אזור תעשייה ציפורית":"Azor Tashyh Tziporit","אזור תעשייה צפוני אשקלון":"Azor Tashyh Tzponi Ashaklon","אזור תעשייה קדמת גליל":"Azor Tashyh Kadamat Glil","אזור תעשייה קיסריה":"Azor Tashyh Kisrih","אזור תעשייה קריית ביאליק":"Azor Tashyh Kryt Bialik","אזור תעשייה קריית גת":"Azor Tashyh Kryt Gt","אזור תעשייה רבדים":"Azor Tashyh Rabdim","אזור תעשייה רותם":"Azor Tashyh Rotm","אזור תעשייה רמת דלתון":"Azor Tashyh Ramat Dalton","אזור תעשייה שחורת":"Azor Tashyh Shchort","אזור תעשייה שחק":"Azor Tashyh Shachk","אזור תעשייה שער בנימין":"Azor Tashyh Shar Bnimin","אזור תעשייה שער נעמן":"Azor Tashyh Shar Namn","אזור תעשייה תימורים":"Azor Tashyh Timorim","אזור תעשייה תרדיון":"Azor Tashyh Tardivn","אחווה":"Achvh","אחוזם":"Achozm","אחוזת ברק":"Achozat Bark","אחיה":"Achih","אחיהוד":"Achihod","אחיטוב":"Achitob","אחיסמך":"Achisamkh","אחיעזר":"Achiazr","איבטין":"Eibtin","איבי הנחל":"Eibi Hanachl","איבים":"Eibim","איזור תעשייה מילואות צפון":"Eizor Tashyh Miloot Tzpon","אייל":"Eiyl","איילת השחר":"Eiylat Hashachr","איירפורט סיטי":"Eiyrporat Siti","אילון":"Eilon","אילות":"Eilot","אילניה":"Eilnih","אילת":"Eilat","אירוס":"Eiros","איתמר":"Eitamr","איתן":"Eitn","אכסאל":"Aksal","אל סייד":"Al Syd","אל עזי":"Al Azi","אל עריאן":"Al Arian","אל פורעה":"Al Porah","אל רום":"Al Rom","אלומה":"Alomh","אלומות":"Alomot","אלון":"Alon","אלון הגליל":"Alon Haglil","אלון מורה":"Alon Morh","אלון שבות":"Alon Shbot","אלוני אבא":"Aloni Aba","אלוני הבשן":"Aloni Habashn","אלוני יצחק":"Aloni Ytzachk","אלונים":"Alonim","אלי עד":"Ali Ad","אליאב":"Aliab","אליכין":"Alikin","אליפלט":"Alipalt","אליקים":"Alikim","אלישיב":"Alishib","אלישמע":"Alishma","אלמגור":"Alamgor","אלמוג":"Almog","אלעד":"Elad","אלעזר":"Alazr","אלפי מנשה":"Alpi Manashh","אלקוש":"Alkosh","אלקנה":"Alakanh","אמונים":"Amonim","אמירים":"Amirim","אמנון":"Amnon","אמץ":"Amtz","אניעם":"Aniam","אעבלין":"Aablin","אעירה השחר":"Aayrah Hashachr","אפיק":"Apik","אפיקים":"Apikim","אפק":"Apk","אפקה":"Apakh","אפרת":"Apart","ארבל":"Arabl","ארגמן":"Aragamn","ארז":"Arz","אריאל":"Arial","ארסוף":"Arsof","אש קודש":"Ash Kodsh","אשבול":"Ashbol","אשבל":"Ashabl","אשדוד - א,ב,ד,ה":"Ashdod - A,b,d,h","אשדוד - איזור תעשייה צפוני":"Ashdod - Eizor Tashyh Tzponi","אשדוד - ג,ו,ז":"Ashdod - G,v,z","אשדוד - ח,ט,י,יג,יד,טז":"Ashdod - Ch,t,y,yg,yd,tz","אשדוד -יא,יב,טו,יז,מרינה,סיט":"Ashdod -ya,yb,to,yz,mrinah,sit","אשדות יעקב":"Ashdot Yakb","אשחר":"Ashachr","אשכולות":"Ashkolot","אשל הנשיא":"Ashal Hanshia","אשלים":"Ashlim","אשקלון - דרום":"Ashkelon - Drom","אשקלון - צפון":"Ashkelon - Tzpon","אשרת":"Ashart","אשתאול":"Ashtol","אשתמוע":"Ashatmoa","אתר דודאים":"Atar Dodaim","אתר ההנצחה גולני":"Atar Hahanatzachah Golni","באקה אל גרבייה":"Bakah Al Garbyh","באר אורה":"Be'er Orh","באר גנים":"Be'er Gnim","באר טוביה":"Be'er Tobih","באר יעקב":"Be'er Yakb","באר מילכה":"Be'er Milakh","באר שבע - דרום":"Be'er Shba - Drom","באר שבע - מזרח":"Be'er Shba - Mazarch","באר שבע - מערב":"Be'er Shba - Marb","באר שבע - צפון":"Be'er Shba - Tzpon","בארות יצחק":"Barot Ytzachk","בארותיים":"Barotym","בארי":"Bari","בוסתן הגליל":"Bosatn Haglil","בועיינה-נוג'ידאת":"Boaynah-nog'ydat","בוקעתא":"Bokata","בורגתה":"Boragath","בחן":"Bachn","בטחה":"Batachh","בי\"ס כרמים בנימינה":"Bis Karmim Bniminh","ביצרון":"Bitzron","ביר אלמכסור":"Bir Alamaksor","ביר הדאג'":"Bir Hdag'","ביריה":"Birih","בית אורן":"Beit Orn","בית אל":"Beit Al","בית אלעזרי":"Beit Alazri","בית אלפא וחפציבה":"Beit Alpa Vchaptzibh","בית אריה":"Beit Arih","בית ברל":"Beit Barl","בית ג'אן":"Beit G'an","בית גוברין":"Beit Gobrin","בית גמליאל":"Beit Gamlial","בית דגן":"Beit Dagn","בית הברכה":"Beit Habarakh","בית הגדי":"Beit Hagdi","בית הלוי":"Beit Hloy","בית הלל":"Beit Hall","בית העלמין החדש נהריה":"Beit Halmin Hachadash Nahrih","בית העלמין החדש עכו":"Beit Halmin Hachadash Ako","בית העמק":"Beit Hamk","בית הערבה":"Beit Harabh","בית השיטה":"Beit Hshith","בית זית":"Beit Zit","בית זרע":"Beit Zra","בית חג\"י":"Beit Chagy","בית חגלה":"Beit Chagalh","בית חורון":"Beit Choron","בית חלקיה":"Beit Chalkih","בית חנן":"Beit Chann","בית חנניה":"Beit Channih","בית חרות":"Beit Chrot","בית חשמונאי":"Beit Chashmonai","בית יהושע":"Beit Yhosha","בית יוסף":"Beit Yvsf","בית ינאי":"Beit Ynai","בית יצחק - שער חפר":"Beit Ytzachk - Sha'ar Chapr","בית ירח":"Beit Yrch","בית יתיר":"Beit Ytir","בית לחם הגלילית":"Beit Lachm Haglilit","בית מאיר":"Beit Mair","בית נחמיה":"Beit Nachmih","בית ניר":"Beit Nir","בית נקופה":"Beit Nkoph","בית סוהר צלמון":"Beit Sohar Tzalmon","בית סוהר קישון":"Beit Sohar Kishon","בית ספר שדה מירון":"Beit Sapar Shadah Miron","בית עובד":"Beit Aobd","בית עוזיאל":"Beit Aozial","בית עזרא":"Beit Azra","בית עלמין מורשה":"Beit Almin Morashh","בית עלמין תל רגב":"Beit Almin Tal Ragb","בית עריף":"Beit Arif","בית צבי":"Beit Tzbi","בית קמה":"Beit Kamh","בית קשת":"Beit Kasht","בית רימון":"Beit Rimon","בית שאן":"Beit She'an","בית שמש":"Beit Shemesh","בית שערים":"Beit Sharim","בית שקמה":"Beit Shakamh","ביתן אהרן":"Bitn Aharn","ביתר עילית":"Beitar Illit","בלפוריה":"Balporih","בן זכאי":"Bn Zkai","בן עמי":"Bn Ami","בן שמן":"Bn Shamn","בני אדם":"Bnei Adm","בני ברק":"Bnei Brak","בני דקלים":"Bnei Daklim","בני דרום":"Bnei Drom","בני דרור":"Bnei Dror","בני יהודה וגבעת יואב":"Bnei Yhodah Vgbat Yvab","בני נצרים":"Bnei Natzrim","בני עטרות":"Bnei Atrot","בני עי''ש":"Bnei Ay''sh","בני ציון":"Bnei Tzivn","בני ראם":"Bnei Ram","בניה":"Bnih","בנימינה":"Bniminh","בסמת טבעון":"Basamat Tbaon","בענה":"Banh","בצרה":"Batzarh","בצת":"Batzt","בקוע":"Bkoa","בקעות":"Bkaot","בר גיורא":"Bar Givra","בר יוחאי":"Bar Yvchai","בר כוכבא":"Bar Kokba","ברוכין":"Brokin","ברור חיל":"Bror Chil","ברוש":"Brosh","ברטעה":"Bartah","ברכיה":"Barkih","ברעם":"Bram","ברקאי":"Barkai","ברקן":"Barakn","ברקת":"Barakt","בת הדר":"Bat Hadr","בת חן":"Bat Chn","בת חפר":"Bat Chapr","בת ים":"Bat Yam","בת עין":"Bat Ayn","בת שלמה":"Bat Shalamh","בתי מלון ים המלח":"Bti Mlon Ym Hamalch","בתרונות":"Batronot","ג'דידה מכר":"G'didah Makr","ג'וליס":"G'vlis","ג'לג'וליה":"G'lg'vlih","ג'סר א-זרקא":"G'sar A-zarka","ג'ש - גוש חלב":"G'sh - Gosh Chalb","ג'ת":"G't","גאולי תימן":"Goli Timn","גאולים":"Golim","גאליה":"Galih","גבולות":"Gbolot","גבים":"Gbim","גבע בנימין":"Geva Bnimin","גבע כרמל":"Geva Karaml","גבעולים":"Gbaolim","גבעון החדשה":"Gbaon Hachadashh","גבעות":"Gbaot","גבעות בר":"Givot Br","גבעות עדן":"Givot Adn","גבעת אבני":"Givat Abni","גבעת אלה":"Givat Alh","גבעת אסף":"Givat Asf","גבעת ברנר":"Givat Baranr","גבעת הראל":"Givat Hral","גבעת הרואה":"Givat Hroah","גבעת השלושה":"Givat Hashloshh","גבעת וולפסון":"Givat Vlapson","גבעת וושינגטון":"Givat Vshinagton","גבעת זאב":"Givat Zab","גבעת חביבה":"Givat Chbibh","גבעת חיים איחוד":"Givat Chym Aichod","גבעת חיים מאוחד":"Givat Chym Mochd","גבעת חן":"Givat Chn","גבעת יערים":"Givat Yarim","גבעת ישעיהו":"Givat Yshayho","גבעת כ''ח":"Givat K''ch","גבעת ניל''י":"Givat Nil''y","גבעת עדה":"Givat Adh","גבעת עוז":"Givat Aoz","גבעת פורת יוסף":"Givat Porat Yvsf","גבעת שמואל":"Givat Shmuel","גבעת שפירא":"Givat Shpira","גבעתי":"Gbati","גבעתיים":"Givatayim","גברעם":"Gabram","גבת":"Gabt","גדות":"Gdot","גדעונה":"Gdaonh","גדרה":"Gedera","גונן":"Gonn","גופנה":"Gopanh","גורן":"Gorn","גורנות הגליל":"Gornot Haglil","גזית":"Gzit","גזר":"Gazr","גיאה":"Giah","גיבתון":"Gibton","גיזו":"Gizo","גילת":"Gilt","גינוסר":"Ginosr","גינתון":"Ginton","גיתה":"Gith","גיתית":"Gitit","גלאון":"Glon","גלגל":"Galagl","גלעד":"Glad","גמזו":"Gamzo","גן הדרום":"Gan Hadrom","גן השומרון":"Gan Hshomron","גן חיים":"Gan Chym","גן יאשיה":"Gan Yashih","גן יבנה":"Gan Yavne","גן נר":"Gan Nr","גן שורק":"Gan Shork","גן שלמה":"Gan Shalamh","גן שמואל":"Gan Shmoal","גנות":"Gnot","גנות הדר":"Gnot Hadr","גני הדר":"Gni Hadr","גני חוגה":"Gni Chogh","גני טל":"Gni Tl","גני יוחנן":"Gni Yvchann","גני עם":"Gni Am","גני תקווה":"Ganei Tikva","גניגר":"Gnigr","געש":"Gash","געתון":"Gaton","גפן":"Gapn","גשור":"Gshor","גשר":"Gashr","גשר הזיו":"Gashar Hziv","גת":"Gt","גת רימון":"Gat Rimon","דבוריה":"Dborih","דביר":"Dbir","דברת":"Dabart","דגניה א":"Dagnih A","דגניה ב":"Dagnih B","דוב''ב":"Dob''b","דולב":"Dolb","דור":"Dor","דורות":"Dorot","דורות עילית":"Dorot Illit","דחי":"Dchi","דימונה":"Dimona","דיר אל-אסד":"Deir al-Asad","דיר חנא":"Dir Chna","דישון":"Dishon","דליה":"Dlih","דלית אל כרמל":"Dlit Al Karaml","דלתון":"Dalton","דמיידה":"Dmydh","דפנה":"Dapanh","דקל":"Dakl","האון":"Hon","הבונים":"Hbonim","הגבעה הצהובה":"Hagbah Hatzhobh","הגושרים":"Hgoshrim","הדר עם":"Hadar Am","הוד השרון":"Hod HaSharon","הודיה":"Hodih","הודיות":"Hodivt","הושעיה":"Hoshayh","הזורעים":"Hzoraym","החווה של אורי כהן":"Hchvh Shal Ori Kahn","החווה של זוהר":"Hchvh Shal Zohr","החווה של יאיא":"Hchvh Shal Yaia","החווה של מנחם":"Hchvh Shal Manachm","החווה של עשהאל":"Hchvh Shal Ashhal","החותרים":"Hchotrim","היוגב":"Hivgb","היישוב היהודי חברון":"Hyshob Hihodi Chabron","הילה":"Hilh","המעפיל":"Hmapil","המרכז האקדמי רופין":"Hamarakaz Hakadmi Ropin","הסוללים":"Hsollim","העוגן":"Haogn","הר אדר":"Har Adr","הר ברכה":"Har Barakh","הר גילה":"Har Gilh","הר חלוץ":"Har Chlotz","הר עמשא":"Har Amsha","הראל":"Hral","הרדוף":"Hardof","הרצליה - מערב":"Herzliya - Marb","הרצליה - מרכז וגליל ים":"Herzliya - Marakaz Vglil Ym","הררית יחד":"Harrit Ychd","ואדי אל חמאם":"Oadi Al Chmam","ואדי אל נעם דרום":"Oadi Al Nam Drom","ורד יריחו":"Orad Yricho","ורדון":"Ordon","זבדיאל":"Zabdial","זוהר":"Zohr","זיקים":"Zikim","זיתן":"Zitn","זכרון יעקב":"Zikhron Yaakov","זכריה":"Zakrih","זמר":"Zamr","זמרת":"Zamart","זנוח":"Znoch","זרועה":"Zroah","זרזיר":"Zarzir","זרחיה":"Zarchih","זרעית":"Zrayt","חבצלת השרון וצוקי ים":"Chabatzalat Hashron Vtzoki Ym","חג'אג'רה":"Chg'ag'rh","חגור":"Chgor","חגלה":"Chagalh","חד נס":"Chad Ns","חדיד":"Chdid","חדרה - מזרח":"Hadera - Mazarch","חדרה - מערב":"Hadera - Marb","חדרה - מרכז":"Hadera - Marakz","חדרה - נווה חיים":"Hadera - Neve Chym","חוות אביה":"Chvt Abih","חוות אביחי":"Chvt Abichi","חוות אל נווה":"Chvt Al Nvh","חוות אלחי":"Chvt Alchi","חוות ארץ האיילים":"Chvt Artz Haiylim","חוות אשכולות":"Chvt Ashkolot","חוות בניהו":"Chvt Bniho","חוות גלעד":"Chvt Glad","חוות גנות":"Chvt Gnot","חוות דרומא":"Chvt Droma","חוות הרועה העברי":"Chvt Hroah Habri","חוות הרשאש":"Chvt Harshash","חוות חנינא":"Chvt Chnina","חוות טואמין":"Chvt Toamin","חוות טליה":"Chvt Tlih","חוות יאיר":"Chvt Yair","חוות יד השומר":"Chvt Yd Hshomr","חוות יויו":"Chvt Yvyv","חוות ינון":"Chvt Ynon","חוות מגדלים":"Chvt Magadlim","חוות מגנזי":"Chvt Maganzi","חוות מדבר חבר":"Chvt Madabar Chabr","חוות מור ואברהם":"Chvt Mor Vabarahm","חוות מלאכי אברהם":"Chvt Mlaki Abarahm","חוות מלכיאל":"Chvt Malkial","חוות מנחם":"Chvt Manachm","חוות מעלה אהוביה":"Chvt Malah Ahobih","חוות מקנה יהודה":"Chvt Makanah Yhodh","חוות מרום שמואל":"Chvt Mrom Shmoal","חוות נווה צוף":"Chvt Nvh Tzof","חוות נוף אב\"י":"Chvt Nof Aby","חוות נחל שילה":"Chvt Nachal Shilh","חוות נחלת אבות":"Chvt Nachalat Abot","חוות נחלת צבי":"Chvt Nachalat Tzbi","חוות עדן":"Chvt Adn","חוות עולם חסד":"Chvt Aolm Chasd","חוות עמיאל":"Chvt Amial","חוות פריאל":"Chvt Prial","חוות צאן קדר":"Chvt Tzan Kadr","חוות צרידה":"Chvt Tzridh","חוות קשואלה":"Chvt Kshoalh","חוות ראש תאנה":"Chvt Rash Tanh","חוות שדה":"Chvt Shadh","חוות שוביאל":"Chvt Shobial","חוות שחרית":"Chvt Shachrit","חוות תלם צפון":"Chvt Talm Tzpon","חולדה":"Choladh","חולון":"Holon","חולית":"Cholit","חולתה":"Cholath","חומש":"Chomsh","חוסן":"Chosn","חוסנייה":"Chosnyh","חוף אכזיב":"Chof Akzib","חוף בצת":"Chof Batzt","חוף זיקים":"Chof Zikim","חוף קליה":"Chof Klih","חופית":"Chopit","חוקוק":"Chokok","חורה":"Chorh","חורפיש":"Chorpish","חורשים":"Chorshim","חזון":"Chzon","חיבת ציון":"Chibat Tzivn","חיננית":"Chinnit","חיפה - בת גלים ק.אליעזר":"Haifa - Bat Glim K.aliazr","חיפה - כרמל, הדר ועיר תחתית":"Haifa - Karamal, Hadar Vayr Tachtit","חיפה - מערב":"Haifa - Marb","חיפה - מפרץ":"Haifa - Mapartz","חיפה - נווה שאנן ורמות כרמל":"Haifa - Neve Shann Vrmot Karaml","חיפה - קריית חיים ושמואל":"Haifa - Kiryat Chym Vshmoal","חירן":"Chirn","חלץ":"Chaltz","חמד":"Chamd","חמדיה":"Chamdih","חמדת":"Chamadt","חמדת ימים":"Chamadat Ymim","חמרה":"Chamarh","חמת גדר":"Chamat Gadr","חניאל":"Chnial","חניון רעים אנדרטת הנובה":"Chnivn Raym Anadaratat Hnobh","חניתה":"Chnith","חנתון":"Chanton","חספין":"Chaspin","חפץ חיים":"Chaptz Chym","חצב":"Chatzb","חצור":"Chtzor","חצור הגלילית":"Hazor HaGlilit","חצרים":"Chatzrim","חרב לאת":"Charab Lat","חרוצים":"Chrotzim","חרות":"Chrot","חריש":"Chrish","חרמש":"Charamsh","חרמש דרום":"Charamash Drom","חרשה":"Charashh","חרשים":"Charshim","חשמונאים":"Chashmonaim","טבריה":"Tiberias","טובא זנגריה":"Toba Zanagrih","טורעאן":"Toraan","טייבה":"Tybh","טייבה בגלבוע":"Tybah Bagalboa","טירה":"Tirh","טירת יהודה":"Tirat Yhodh","טירת כרמל":"Tirat Carmel","טירת צבי":"Tirat Tzbi","טל - אל":"Tl - Al","טל מנשה":"Tal Manashh","טל שחר":"Tal Shachr","טללים":"Tallim","טלמון":"Talmon","טמרה":"Tamarh","טמרה בגלבוע":"Tamarah Bagalboa","טנא עומרים":"Tna Aomrim","טפחות":"Tapchot","יבוא דודי":"Yboa Dodi","יבול":"Ybol","יבנאל":"Ybnal","יבנה":"Yavne","יגור":"Ygor","יגל":"Ygl","יד בנימין":"Yd Bnimin","יד השמונה":"Yd Hashmonh","יד חנה":"Yd Chanh","יד מרדכי":"Yd Maradki","יד נתן":"Yd Natn","יד רמב''ם":"Yd Ramb''m","יהוד מונוסון":"Yhod Monoson","יהל":"Yhl","יובלים":"Yvblim","יודפת":"Yvdapt","יונתן":"Yvnatn","יושיביה":"Yvshibih","יזרעאל":"Yzraal","יחיעם":"Ychiam","ייט''ב":"Yt''b","יכיני":"Ykini","ימין אורד":"Ymin Ord","ינוב":"Ynob","ינוח ג'ת":"Ynoch G't","ינון":"Ynon","יסוד המעלה":"Ysod Hmalh","יסודות":"Ysodot","יסעור":"Ysaor","יעבץ":"Yabtz","יעד":"Yad","יעף":"Yaf","יערה":"Yarh","יפיע":"Ypia","יפית":"Ypit","יפעת":"Ypat","יפתח":"Ypatch","יצהר":"Ytzahr","יציץ":"Ytzitz","יקום":"Ykom","יקיר":"Ykir","יקנעם המושבה והזורע":"Yknam Hmoshabah Vhzora","יקנעם עילית":"Yknam Aylit","יראון":"Yron","ירדנה":"Yradanh","ירוחם":"Yeruham","ירושלים - אזור תעשייה עטרות":"Jerusalem - Azor Tashyh Atrot","ירושלים - דרום":"Jerusalem - Drom","ירושלים - כפר עקב":"Jerusalem - Kfar Akb","ירושלים - מזרח":"Jerusalem - Mazarch","ירושלים - מערב":"Jerusalem - Marb","ירושלים - מרכז":"Jerusalem - Marakz","ירושלים - צפון":"Jerusalem - Tzpon","ירחיב":"Yrchib","ירכא":"Yrka","ירקונה":"Yrkonh","ישובי אומן":"Yshobi Omn","ישובי יעל":"Yshobi Yal","ישע":"Ysha","ישעי":"Yshay","ישרש":"Ysharsh","יתד":"Ytd","כאבול":"Kabol","כאוכב אבו אלהיג'א":"Kokab Abo Alhig'a","כברי":"Kabri","כדורי":"Kdori","כוכב השחר":"Kokhav Hashachr","כוכב יאיר - צור יגאל":"Kokhav Yair - Tzor Ygal","כוכב יעקב":"Kokhav Yakb","כוכב מיכאל":"Kokhav Mikal","כורזים ורד הגליל":"Korzim Vrad Haglil","כחל":"Kachl","כינרת מושבה":"Kinarat Moshabh","כינרת קבוצה":"Kinarat Kbotzh","כיסופים":"Kisopim","כישור":"Kishor","כליל":"Klil","כלנית":"Kalnit","כמון - כמאנה מזרחית":"Kmon - Kmanah Mazarchit","כנות":"Knot","כנף":"Kanf","כסייפה":"Ksyph","כסלון":"Kaslon","כסרא סמיע":"Kasra Smia","כעביה טבאש":"Kabih Tbash","כפר אביב":"Kfar Abib","כפר אדומים":"Kfar Adomim","כפר אוריה":"Kfar Orih","כפר אחים":"Kfar Achim","כפר אלדד":"Kfar Aladd","כפר ביאליק":"Kfar Bialik","כפר ביל''ו":"Kfar Bil''v","כפר בלום":"Kfar Blom","כפר בן נון":"Kfar Bn Non","כפר ברא":"Kfar Bra","כפר ברוך":"Kfar Brokh","כפר גדעון":"Kfar Gdaon","כפר גלים":"Kfar Glim","כפר גליקסון":"Kfar Glikson","כפר גלעדי":"Kfar Gladi","כפר גמילה מלכישוע":"Kfar Gmilah Malkishoa","כפר דניאל":"Kfar Dnial","כפר האורנים":"Kfar Hornim","כפר החורש":"Kfar Hchorsh","כפר המכבי":"Kfar Hamakbi","כפר הנגיד":"Kfar Hangid","כפר הנוער קריית יערים":"Kfar Hnoar Kryt Yarim","כפר הנוקדים":"Kfar Hnokdim","כפר הנשיא":"Kfar Hanshia","כפר הס":"Kfar Hs","כפר הרא''ה":"Kfar Hra''h","כפר הרי''ף וצומת ראם":"Kfar Hri''f Vtzomat Ram","כפר ויתקין":"Kfar Oytkin","כפר ורבורג":"Kfar Orborg","כפר ורדים":"Kfar Ordim","כפר זוהרים":"Kfar Zohrim","כפר זיתים":"Kfar Zitim","כפר ח'וואלד":"Kfar Ch'vald","כפר חב''ד":"Kfar Chb''d","כפר חיטים":"Kfar Chitim","כפר חיים":"Kfar Chym","כפר חנניה":"Kfar Channih","כפר חסידים":"Kfar Chsidim","כפר חרוב":"Kfar Chrob","כפר טרומן":"Kfar Tromn","כפר יאסיף":"Kfar Yasif","כפר ידידיה":"Kfar Ydidih","כפר יהושע":"Kfar Yhosha","כפר יובל":"Kfar Yvbl","כפר יונה":"Kfar Yona","כפר יחזקאל":"Kfar Ychazkal","כפר כמא":"Kfar Kma","כפר כנא":"Kfar Kna","כפר מונש":"Kfar Monsh","כפר מימון ותושיה":"Kfar Mimon Vtoshih","כפר מל''ל":"Kfar Ml''l","כפר מנדא":"Kfar Manda","כפר מנחם":"Kfar Manachm","כפר מסריק":"Kfar Masrik","כפר מצר":"Kfar Matzr","כפר מרדכי":"Kfar Maradki","כפר נהר הירדן":"Kfar Nahar Hiradn","כפר נוער בן שמן":"Kfar Noar Bn Shamn","כפר נטר":"Kfar Natr","כפר סאלד":"Kfar Sald","כפר סבא":"Kfar Saba","כפר סילבר":"Kfar Silabr","כפר סירקין":"Kfar Sirkin","כפר עבודה":"Kfar Abodh","כפר עזה":"Kfar Aza","כפר עציון":"Kfar Atzivn","כפר פינס":"Kfar Pins","כפר קאסם":"Kfar Kasm","כפר קיש":"Kfar Kish","כפר קרע":"Kfar Kra","כפר רופין":"Kfar Ropin","כפר רות":"Kfar Rot","כפר שמאי":"Kfar Shmai","כפר שמואל":"Kfar Shmoal","כפר שמריהו":"Kfar Shamriho","כפר תבור":"Kfar Tbor","כפר תפוח":"Kfar Tpoch","כפר תקווה":"Kfar Tkvh","כרכום":"Karkom","כרם ביבנה":"Karm Bibanh","כרם בן זמרה":"Karm Bn Zamarh","כרם מהר''ל":"Karm Mahr''l","כרם רעים":"Karm Raym","כרם שלום":"Karm Shlom","כרמי גת":"Karmi Gt","כרמי יוסף":"Karmi Yvsf","כרמי צור":"Karmi Tzor","כרמי קטיף ואמציה":"Karmi Ktif Vamtzih","כרמיאל":"Karmiel","כרמיה":"Karmih","כרמים":"Karmim","כרמית":"Karmit","כרמל":"Karaml","לב החולה":"Lab Hcholh","לבון":"Lbon","לביא":"Lbia","לבנים":"Labnim","להב":"Lahb","להבות הבשן":"Lahbot Habashn","להבות חביבה":"Lahbot Chbibh","להבים":"Lahbim","לוד":"Lod","לוזית":"Lozit","לוחמי הגטאות":"Lochmi Hagtot","לוטם וחמדון":"Lotm Vchamdon","לוטן":"Lotn","לטרון":"Latron","לימן":"Limn","לכיש":"Lkish","לפיד":"Lpid","לפידות":"Lpidot","לקיה":"Lkih","מאור":"Mor","מאיר שפיה":"Mair Shpih","מבוא ביתר":"Mboa Bitr","מבוא דותן":"Mboa Dotn","מבוא חורון":"Mboa Choron","מבוא חמה":"Mboa Chamh","מבוא מודיעים":"Mboa Modiaym","מבואות יריחו":"Mboot Yricho","מבועים":"Mboaym","מבטחים":"Mabatchim","מבקיעים":"Mabkiaym","מבשרת ציון":"Mabasharat Tzivn","מג'דל כרום":"Mg'dal Krom","מג'דל שמס":"Mg'dal Shams","מגדים":"Magdim","מגדל":"Migdal","מגדל העמק":"Migdal HaEmek","מגדל עוז":"Magadal Aoz","מגדל תפן":"Magadal Tapn","מגדלים":"Magadlim","מגל":"Magl","מגן":"Magn","מגן שאול":"Magn Shol","מגרון":"Magron","מגשימים":"Magshimim","מדרך עוז":"Madarkh Aoz","מודיעין - ישפרו סנטר":"Modiin - Yshapro Sanatr","מודיעין - ליגד סנטר":"Modiin - Ligad Sanatr","מודיעין מכבים רעות":"Modiayn Makbim Raot","מודיעין עילית":"Modiayn Aylit","מולדת":"Moladt","מועאוויה":"Moaovyh","מוצא עילית":"Motza Aylit","מוקיבלה":"Mokibalh","מורן":"Morn","מורשת":"Morasht","מזור":"Mzor","מזכרת בתיה":"Mazkeret Batya","מזרע":"Mazra","מזרעה":"Mazrah","מחולה":"Mcholh","מחניים":"Machnym","מחסיה":"Machsih","מטווח ניר עם":"Mtvch Nir Am","מטולה":"Metula","מטע":"Mta","מי עמי":"Mi Ami","מייסר":"Mysr","מיני ישראל - נחשון":"Mini Yshral - Nachshon","מיצד":"Mitzd","מיצר":"Mitzr","מירב":"Mirb","מירון":"Miron","מישר":"Mishr","מיתר":"Mitr","מכון וינגייט":"Mkon Vyngyt","מכורה":"Mkorh","מכינת אלישע":"Mkinat Alisha","מכללת ספיר":"Makalalat Spir","מכמורת":"Makmort","מכמנים - כמאנה מערבית":"Makamnim - Kmanah Marbit","מלאכי השלום":"Mlaki Hashlom","מלונות ים המלח מרכז":"Mlonot Ym Hamalach Marakz","מלילות":"Mlilot","מלכיה":"Malkih","מנוחה":"Mnochh","מנוף":"Mnof","מנות":"Mnot","מנחמיה":"Manachmih","מנחת מחניים":"Manachat Machnym","מנרה":"Manarh","מנשית זבדה":"Manshit Zabadh","מסד":"Masd","מסדה":"Masadh","מסוף אורנית":"Msof Ornit","מסילות":"Msilot","מסילת ציון":"Msilat Tzivn","מסלול":"Maslol","מסעדה":"Msadh","מע'אר":"Ma'ar","מעברות":"Mabrot","מעגלים":"Maglim","מעגן":"Magn","מעגן מיכאל":"Magn Mikal","מעוז חיים":"Maoz Chym","מעון":"Maon","מעון צופיה":"Ma'on Tzopih","מעונה":"Maonh","מעיין ברוך":"Mayn Brokh","מעיין צבי":"Mayn Tzbi","מעיליא":"Maylia","מעלה אדומים":"Ma'ale Adumim","מעלה אפרים":"Ma'ale Aprim","מעלה גלבוע":"Ma'ale Galboa","מעלה גמלא":"Ma'ale Gamla","מעלה החמישה":"Ma'ale Hachmishh","מעלה חבר":"Ma'ale Chabr","מעלה לבונה":"Ma'ale Lbonh","מעלה מכמש":"Ma'ale Makamsh","מעלה עירון":"Ma'ale Ayron","מעלה עמוס":"Ma'ale Amos","מעלה צביה":"Ma'ale Tzbih","מעלה רחבעם":"Ma'ale Rachbam","מעלות תרשיחא":"Malot Tarshicha","מענית":"Manit","מעש":"Mash","מפלסים":"Mapalsim","מצדה":"Matzadh","מצובה":"Mtzobh","מצוקי דרגות":"Mtzoki Dargot","מצליח":"Matzlich","מצפה":"Matzaph","מצפה אבי''ב":"Mitzpe Abi''b","מצפה אילן":"Mitzpe Eiln","מצפה דני":"Mitzpe Dni","מצפה זי\"ו":"Mitzpe Ziv","מצפה חגית":"Mitzpe Chgit","מצפה יאיר":"Mitzpe Yair","מצפה יריחו":"Mitzpe Yricho","מצפה מדרג":"Mitzpe Madarg","מצפה נטופה":"Mitzpe Ntoph","מצפה רמון":"Mitzpe Ramon","מצפה שלם":"Mitzpe Shalm","מצפור פצאל":"Matzpor Ptzal","מצר":"Matzr","מקווה ישראל":"Mkvh Yshral","מרגליות":"Maraglivt","מרום גולן":"Mrom Goln","מרחביה מושב":"Marachbih Moshb","מרחביה קיבוץ":"Marachbih Kibotz","מרחצאות עין גדי":"Marachtzot Ayn Gdi","מרכז אזורי דרום השרון":"Marakaz Azori Drom Hashron","מרכז אזורי מבואות חרמון":"Marakaz Azori Mboot Charmon","מרכז אזורי מגילות":"Marakaz Azori Mgilot","מרכז אזורי מרום גליל":"Marakaz Azori Mrom Glil","מרכז אזורי משגב":"Marakaz Azori Mashagb","מרכז אזורי רמת כורזים":"Marakaz Azori Ramat Korzim","מרכז חבר":"Marakaz Chabr","מרכז מיר''ב":"Marakaz Mir''b","מרכז שפירא":"Marakaz Shpira","מרעית":"Mrayt","משאבי שדה":"Mshabi Shadh","משגב דב":"Mashagab Db","משגב עם":"Mashagab Am","משהד":"Mashahd","משואה":"Mshoah","משואות יצחק":"Mshoot Ytzachk","משכיות":"Mashkivt","משמר איילון":"Mashamar Aiylon","משמר דוד":"Mashamar Dod","משמר הירדן":"Mashamar Hiradn","משמר הנגב":"Mashamar Hanagb","משמר העמק":"Mashamar Hamk","משמר השבעה":"Mashamar Hashbah","משמר השרון":"Mashamar Hashron","משמרות":"Mashamrot","משמרת":"Mashamart","משען":"Mshan","מתחם בני דרום":"Matachm Bni Drom","מתחם גלילות":"Matachm Glilot","מתחם סקי גלבוע":"Matachm Ski Galboa","מתחם פי גלילות":"Matachm Pi Glilot","מתחם שביל התפוזים":"Matachm Shbil Hatpozim","מתן":"Matn","מתת":"Matt","מתתיהו":"Mattiho","נאות גולן":"Not Goln","נאות מרדכי":"Not Maradki","נאות סמדר":"Not Samadr","נאות קדומים":"Not Kdomim","נאעורה":"Naaorh","נבטים":"Nabtim","נבי שועייב":"Nbi Shoayb","נגבה":"Nagabh","נגוהות":"Ngohot","נהורה":"Nhorh","נהלל":"Nahall","נהריה":"Nahariya","נוב":"Nob","נוגה":"Nogh","נוה איתן":"Noh Aitn","נווה":"Nvh","נווה אור":"Neve Or","נווה אטי''ב":"Neve Ati''b","נווה אילן":"Neve Eiln","נווה ארז":"Neve Arz","נווה דניאל":"Neve Dnial","נווה זוהר":"Neve Zohr","נווה זיו":"Neve Ziv","נווה חריף":"Neve Chrif","נווה ים":"Neve Ym","נווה ימין":"Neve Ymin","נווה ירק":"Neve Yrk","נווה מבטח":"Neve Mabatch","נווה מיכאל - רוגלית":"Neve Mikal - Roglit","נווה צוף":"Neve Tzof","נווה שלום":"Neve Shlom","נועם":"Noam","נוף איילון":"Nof Eiylon","נוף הגליל":"Nof Haglil","נופי נחמיה":"Nopi Nachmih","נופי פרת":"Nopi Part","נופים":"Nopim","נופית":"Nopit","נופך":"Nopkh","נוקדים":"Nokdim","נורדיה":"Nordih","נורית":"Norit","נחושה":"Nchoshh","נחל עוז":"Nahal Aoz","נחלה":"Nachalh","נחליאל":"Nachlial","נחלים":"Nahalim","נחם":"Nachm","נחף":"Nachf","נחשולים":"Nachsholim","נחשון":"Nachshon","נחשונים":"Nachshonim","נטועה":"Ntoah","נטור":"Ntor","נטע":"Nta","נטעים":"Ntaym","נטף":"Natf","נילי":"Nili","נין":"Nin","ניצן":"Nitzn","ניצני עוז":"Nitzni Aoz","ניצנים":"Nitznim","ניר אליהו":"Nir Aliho","ניר בנים":"Nir Bnim","ניר גלים":"Nir Glim","ניר דוד":"Nir Dod","ניר ח''ן":"Nir Ch''n","ניר יצחק":"Nir Ytzachk","ניר ישראל":"Nir Yshral","ניר משה":"Nir Mashh","ניר עוז":"Nir Oz","ניר עם":"Nir Am","ניר עציון":"Nir Atzivn","ניר עקיבא":"Nir Akiba","ניר צבי":"Nir Tzbi","נירים":"Nirim","נירית":"Nirit","נמל קיסריה":"Namal Kisrih","נמרוד":"Namrod","נס הרים":"Nas Hrim","נס עמים":"Nas Amim","נס ציונה":"Nes Tziona","נעורים":"Naorim","נעלה":"Nalh","נעמה":"Namh","נען":"Nan","נערן":"Narn","נצר חזני":"Natzar Chazni","נצר סרני":"Natzar Sarni","נצרת":"Nazareth","נריה":"Nrih","נשר":"Nashr","נתיב הגדוד":"Ntib Hagdod","נתיב הל''ה":"Ntib Hl''h","נתיב העשרה":"Netiv HaAsara","נתיב השיירה":"Ntib Hshyrh","נתיבות":"Netivot","נתניה - מזרח":"Netanya - Mazarch","נתניה - מערב":"Netanya - Marb","סאג'ור":"Sag'vr","סאסא":"Sasa","סביון":"Sbivn","סגולה":"Sgolh","סואעד חמירה":"Soaad Chmirh","סולם":"Solm","סוסיא":"Sosia","סוסיא הקדומה":"Sosia Hakdomh","סופה":"Soph","סכנין":"Saknin","סלמה":"Salamh","סלעית":"Slayt","סנדלה":"Sanadalh","סנסנה":"Sanasanh","סעד":"Sad","סעווה":"Savh","סער":"Sar","ספיר":"Spir","ספסופה - כפר חושן":"Sapsoph - Kfar Choshn","סתריה":"Satrih","ע'ג'ר":"A'g'r","עבדון":"Abdon","עברון":"Abron","עגור":"Agor","עדי":"Adi","עדי עד":"Adi Ad","עדנים":"Adnim","עוז וגאון":"Aoz Vgon","עוזה":"Aozh","עוזייר":"Aozyr","עולש":"Aolsh","עומר":"Aomr","עופר":"Aopr","עופרים":"Aoprim","עוצם":"Aotzm","עזוז":"Azoz","עזר":"Azr","עזריאל":"Azrial","עזריה":"Azrih","עזריקם":"Azrikm","עטרת":"Atart","עיינות":"Aynot","עילבון":"Aylbon","עילוט":"Aylot","עין איילה":"Ein Eiylh","עין אל אסד":"Ein Al Asd","עין אל סהלה":"Ein Al Sahalh","עין בוקק":"Ein Bokk","עין גב":"Ein Gb","עין גדי":"Ein Gdi","עין דור":"Ein Dor","עין הבשור":"Ein Habshor","עין הוד":"Ein Hod","עין החורש":"Ein Hchorsh","עין המפרץ":"Ein Hamapartz","עין הנצי''ב":"Ein Hantzi''b","עין העמק":"Ein Hamk","עין השופט":"Ein Hshopt","עין השלושה":"Ein Hashloshh","עין ורד":"Ein Ord","עין זיוון":"Ein Zivn","עין חוד":"Ein Chod","עין חרוד":"Ein Chrod","עין יהב":"Ein Yhb","עין יעקב":"Ein Yakb","עין כרמל":"Ein Karaml","עין מאהל":"Ein Mahl","עין נקובא":"Ein Nkoba","עין עירון":"Ein Ayron","עין צורים":"Ein Tzorim","עין קנייא":"Ein Knya","עין ראפה":"Ein Raph","עין שמר":"Ein Shamr","עין שריד":"Ein Shrid","עינות קדם":"Aynot Kadm","עינת":"Aynt","עכו":"Acre","עכו - אזור תעשייה":"Acre - Azor Tashyh","עכו - רמות ים":"Acre - Rmot Ym","עלומים":"Alomim","עלי":"Ali","עלי זהב - לשם":"Ali Zahb - Lashm","עלמה":"Alamh","עלמון":"Almon","עמוקה":"Amokh","עמיחי":"Amichi","עמינדב":"Aminadb","עמיעד":"Amiad","עמיעוז":"Amiaoz","עמיקם":"Amikm","עמיר":"Amir","עמנואל":"Amnoal","עמקה":"Amakh","ענב":"Anb","עספיא":"Aspia","עפולה":"Afula","עפרה":"Aparh","עץ אפרים":"Atz Aprim","עצמון - שגב":"Atzmon - Shagb","עראבה":"Arabh","ערב אל נעים":"Arab Al Naym","ערב אל עראמשה":"Arab Al Aramashh","ערד":"Arad","ערוגות":"Arogot","ערערה":"Ar'ara","ערערה בנגב":"Ararah Banagb","עשהאל":"Ashhal","עשרת":"Ashart","עתלית":"Atlit","עתניאל":"Atnial","פארן":"Parn","פארק אריאל שרון":"Parak Arial Shron","פארק תעשיות מגדל עוז":"Parak Tashivt Magadal Aoz","פארק תעשיות פלמחים":"Parak Tashivt Palamchim","פארק תעשייה ראם":"Parak Tashyh Ram","פדואל":"Pdoal","פדויים":"Pdoym","פדיה":"Pdih","פוריה כפר עבודה":"Porih Kapar Abodh","פוריה נווה עובד":"Porih Nvh Aobd","פוריה עילית":"Porih Aylit","פוריידיס":"Porydis","פורת":"Port","פטיש":"Ptish","פלך":"Palkh","פלמחים":"Palamchim","פני קדם":"Pni Kadm","פנימיית עין כרם":"Pnimyt Ayn Karm","פסגות":"Pasgot","פסוטה":"Psoth","פעמי תש''ז":"Pami Tsh''z","פצאל":"Ptzal","פקיעין":"Pkiayn","פקיעין החדשה":"Pkiayn Hachadashh","פרדס חנה כרכור":"Paradas Chanah Karkor","פרדסיה":"Paradsih","פרוד":"Prod","פרי גן":"Pri Gn","פתח תקווה":"Petah Tikva","פתחיה":"Patchih","צאלים":"Tzalim","צבעון":"Tzbaon","צובה":"Tzobh","צוחר":"Tzochr","צומת אלמוג":"Tzomat Almog","צומת הגוש":"Tzomat Hgosh","צופים":"Tzopim","צופית":"Tzopit","צופר":"Tzopr","צוקים":"Tzokim","צור הדסה":"Tzor Hadash","צור יצחק":"Tzor Ytzachk","צור משה":"Tzor Mashh","צור נתן":"Tzor Natn","צוריאל":"Tzorial","צורית גילון":"Tzorit Gilon","ציפורי":"Tzipori","צלפון":"Tzalpon","צמח":"Tzemah","צפריה":"Tzaprih","צפרירים":"Tzapririm","צפת - נוף כנרת":"Safed - Nof Kineret","צפת - עיר":"Safed - Ayr","צפת - עכברה":"Safed - Akabarh","צרופה":"Tzroph","צרעה":"Tzrah","קבוצת גבע":"Kbotzat Gba","קבוצת יבנה":"Kbotzat Ybanh","קדומים":"Kdomim","קדימה צורן":"Kdimah Tzorn","קדיתא":"Kdita","קדם ערבה":"Kadm Arabh","קדמה":"Kadamh","קדמת צבי":"Kadamat Tzbi","קדר":"Kadr","קדר דרום":"Kadar Drom","קדרון":"Kadron","קדרים":"Kadrim","קוממיות":"Kommivt","קורנית":"Kornit","קטורה":"Ktorh","קיבוץ דן":"Kibotz Dn","קיבוץ מגידו":"Kibotz Mgido","קידה":"Kidh","קיסריה":"Kisrih","קלחים":"Kalchim","קליה":"Klih","קלנסווה":"Kalansvh","קלע אלון":"Kla Alon","קסר א-סר":"Kasar A-sr","קציר":"Ktzir","קצרין":"Katzrin","קצרין - אזור תעשייה":"Katzrin - Azor Tashyh","קריית אונו":"Kiryat Ono","קריית אתא":"Kiryat Ata","קריית ביאליק":"Kiryat Bialik","קריית גת":"Kiryat Gat","קריית חינוך מרחבים":"Kiryat Chinokh Marachbim","קריית טבעון - בית זייד":"Kiryat Tbaon - Beit Zyd","קריית ים":"Kiryat Yam","קריית יערים":"Kiryat Yarim","קריית מוצקין":"Kiryat Motzkin","קריית מלאכי":"Kiryat Malachi","קריית נטפים":"Kiryat Natpim","קריית ענבים":"Kiryat Anbim","קריית עקרון":"Kiryat Ekron","קריית שמונה":"Kiryat Shmona","קרית ארבע":"Krit Arba","קרני שומרון":"Karni Shomron","קשת":"Kasht","ראמה":"Ramh","ראס אל-עין":"Ras Al-ayn","ראס עלי":"Ras Ali","ראש הנקרה":"Rash Hanakarh","ראש העין":"Rash Hayn","ראש פינה":"Rosh Pina","ראש צורים":"Rash Tzorim","ראשון לציון - מזרח":"Rishon LeZion - Mazarch","ראשון לציון - מערב":"Rishon LeZion - Marb","רבבה":"Rababh","רבדים":"Rabdim","רביבים":"Rbibim","רביד":"Rbid","רגבה":"Ragabh","רגבים":"Ragbim","רהט":"Rahat","רווחה":"Rvchh","רוויה":"Rvyh","רוחמה":"Rochamh","רומאנה":"Romanh","רומת אל הייב":"Romat Al Hyb","רועי":"Roay","רותם":"Rotm","רחוב":"Rchob","רחובות":"Rehovot","רחלים":"Rachlim","רטורנו - גבעת שמש":"Rtorno - Givat Shamsh","ריחאנייה":"Richanyh","ריחן":"Richn","ריינה":"Rynh","רימונים":"Rimonim","רינתיה":"Rintih","רכסים":"Raksim","רם און":"Rm On","רמות":"Rmot","רמות השבים":"Rmot Hashbim","רמות מאיר":"Rmot Mair","רמות מנשה":"Rmot Manashh","רמות נפתלי":"Rmot Napatli","רמלה":"Ramla","רמת גן - מזרח":"Ramat Gan - Mazarch","רמת גן - מערב":"Ramat Gan - Marb","רמת דוד":"Ramat Dod","רמת הכובש":"Ramat Hkobsh","רמת השופט":"Ramat Hshopt","רמת השרון":"Ramat Hashron","רמת טראמפ":"Ramat Tramp","רמת יוחנן":"Ramat Yvchann","רמת ישי":"Ramat Yshi","רמת מגרון":"Ramat Magron","רמת מגשימים":"Ramat Magshimim","רמת צבי":"Ramat Tzbi","רמת רזיאל":"Ramat Rzial","רנן":"Rann","רעים":"Re'im","רעננה":"Ra'anana","רקפת":"Rakapt","רשפון":"Rashpon","רשפים":"Rashpim","רתמים":"Ratmim","שאנטי במדבר":"Shanti Bamadabr","שאר ישוב":"Shar Yshob","שבות רחל":"Shbot Rachl","שבי דרום":"Shbi Drom","שבי ציון":"Shbi Tzivn","שבי שומרון":"Shbi Shomron","שגב שלום":"Shagab Shlom","שדה אילן":"Sde Eiln","שדה אליהו":"Sde Aliho","שדה אליעזר":"Sde Aliazr","שדה אפרים":"Sde Aprim","שדה בועז":"Sde Boaz","שדה בר":"Sde Br","שדה דוד":"Sde Dod","שדה ורבורג":"Sde Orborg","שדה יואב":"Sde Yvab","שדה יעקב":"Sde Yakb","שדה יצחק":"Sde Ytzachk","שדה משה":"Sde Mashh","שדה נחום":"Sde Nchom","שדה נחמיה":"Sde Nachmih","שדה ניצן":"Sde Nitzn","שדה עוזיהו":"Sde Aoziho","שדה צבי":"Sde Tzbi","שדות ים":"Shdot Ym","שדות מיכה":"Shdot Mikh","שדי אברהם":"Shdi Abarahm","שדי חמד":"Shdi Chamd","שדי תרומות":"Shdi Tromot","שדמה":"Shadamh","שדמות דבורה":"Shadmot Dborh","שדמות מחולה":"Shadmot Mcholh","שדרות":"Sderot","שואבה":"Shoabh","שובה":"Shobh","שובל":"Shobl","שוהם":"Shohm","שומרה":"Shomarh","שומריה":"Shomrih","שוקדה":"Shokadh","שורש":"Shorsh","שורשים":"Shorshim","שושנת העמקים":"Shoshanat Hamkim","שזור":"Shzor","שחר":"Shachr","שיבולים":"Shibolim","שיבלי אום אלג'נם":"Shibli Om Alg'nm","שיטים":"Shitim","שייח' דנון":"Shych' Dnon","שילה":"Shilh","שילת":"Shilt","שכניה":"Shekhanya","שלווה":"Shlvh","שלוחות":"Shlochot","שלומי":"Shlomi","שלומית":"Shlomit","שלומציון":"Shlomtzivn","שלפים":"Shalpim","שמיר":"Shmir","שמעה":"Shmah","שמרת":"Shamart","שמשית":"Shamshit","שני ליבנה":"Shni Libanh","שניר":"Shnir","שעב":"Shab","שעל":"Shal","שעלבים":"Shalbim","שער אפרים":"Sha'ar Aprim","שער הגולן":"Sha'ar Hgoln","שער העמקים":"Sha'ar Hamkim","שער מנשה":"Sha'ar Manashh","שערי תקווה":"Shari Tkvh","שפיים":"Shpym","שפיר":"Shpir","שפר":"Shapr","שפרעם":"Shapram","שקד":"Shakd","שקף":"Shakf","שרונה":"Shronh","שריגים - לי-און":"Shrigim - Li-on","שריד":"Shrid","שרשרת":"Sharashart","שתולה":"Shtolh","שתולים":"Shtolim","תארבין":"Tarbin","תאשור":"Tashor","תדהר":"Tadahr","תובל":"Tobl","תומר":"Tomr","תחנת רכבת כפר ברוך":"Tachanat Rakabat Kapar Brokh","תחנת רכבת כפר יהושוע":"Tachanat Rakabat Kapar Yhoshoa","תחנת רכבת קריית מלאכי - יואב":"Tachanat Rakabat Kryt Mlaki - Yvab","תחנת רכבת ראש העין":"Tachanat Rakabat Rash Hayn","תימורים":"Timorim","תירוש":"Tirosh","תל אביב - דרום העיר ויפו":"Tel Abib - Drom Hayr Vypo","תל אביב - מזרח":"Tel Abib - Mazarch","תל אביב - מרכז העיר":"Tel Abib - Marakaz Hayr","תל אביב - עבר הירקון":"Tel Abib - Abar Hirkon","תל חי":"Tel Chi","תל יוסף":"Tel Yvsf","תל יצחק":"Tel Ytzachk","תל מונד":"Tel Mond","תל עדשים":"Tel Adshim","תל ערד":"Tel Arad","תל ציון":"Tel Tzivn","תל קציר":"Tel Ktzir","תל שבע":"Tel Shba","תל תאומים":"Tel Tomim","תלם":"Talm","תלמי אליהו":"Talmi Aliho","תלמי אלעזר":"Talmi Alazr","תלמי ביל''ו":"Talmi Bil''v","תלמי יוסף":"Talmi Yvsf","תלמי יחיאל":"Talmi Ychial","תלמי יפה":"Talmi Yph","תלמים":"Talmim","תמרת":"Tamart","תנובות":"Tnobot","תעוז":"Taoz","תעשיון צריפין":"Tashivn Tzripin","תפרח":"Taparch","תקומה":"Tkomh","תקוע":"Tkoa","תקוע ד' וה'":"Tkoa D' Vh'","תרום":"Trom"};
+function cityName(heb){if(LANG==='he')return heb;return CITY_EN[heb]||heb;}
 function t(key){ return T[LANG][key] || T['he'][key] || key; }
 
 function normOrigin(o){if(!o||o===''||o==='FA') return 'Unknown';if(o==='Gaza'||o==='Lebanon'||o==='Iran') return o;return 'Unknown';}
@@ -876,9 +968,11 @@ function toggleIranFilter(){
 function setLang(lang){
   LANG=lang;
   document.documentElement.dir=lang==='he'?'rtl':'ltr';
-  document.documentElement.lang=lang;
+  document.documentElement.lang=lang==='ru'?'ru':lang;
   document.getElementById('btnHe').className='toggle-btn'+(lang==='he'?' active-launches':'');
   document.getElementById('btnEn').className='toggle-btn'+(lang==='en'?' active-launches':'');
+  document.getElementById('btnRu').className='toggle-btn'+(lang==='ru'?' active-launches':'');
+  document.getElementById('summaryTable').style.direction=lang==='he'?'rtl':'ltr';
   applyLang();
   refreshAll();
 }
@@ -886,8 +980,9 @@ function setLang(lang){
 function applyLang(){
   var isL=viewMode==='launches';
   document.querySelector('.logo-text h1').textContent=t('dashboardTitle');
-  document.querySelector('.logo-text span').textContent=t('dashboardSubtitle');
-  document.querySelector('.logo-text span:nth-of-type(2)').innerHTML=t('credits');
+  var _logoSpans=document.querySelectorAll('.logo-text span');
+  if(_logoSpans[0])_logoSpans[0].textContent=t('dashboardSubtitle');
+  if(_logoSpans[1])_logoSpans[1].innerHTML=t('credits');
   document.querySelector('.dashboard-intro').innerHTML=t('introText')+'<br><span style="color:var(--accent-yellow);font-size:13px;">&#9888; '+t('originNote')+'</span>';
   document.getElementById('popSectionTitle').textContent=t('popTitle');
   document.getElementById('popExplanationEl').innerHTML=t('popExplanation');
@@ -898,12 +993,14 @@ function applyLang(){
   var fo=document.getElementById('filterOrigin');
   fo.options[0].textContent=t('allOrigins');
   fo.options[1].textContent=t('gaza'); fo.options[2].textContent=t('lebanon');
-  fo.options[3].textContent=t('iran'); fo.options[4].textContent=t('other');
+  fo.options[3].textContent=t('iran');
   var ft=document.getElementById('filterThreat');
   ft.options[0].textContent=t('allThreats');
   ft.options[1].textContent=t('rockets'); ft.options[2].textContent=t('aircraft'); ft.options[3].textContent=t('infiltration');
   document.getElementById('filterDay').options[0].textContent=t('allDays');
   document.getElementById('filterHour').options[0].textContent=t('allHours');
+  document.getElementById('filterDay').style.direction=LANG==='he'?'rtl':'ltr';
+  document.getElementById('filterHour').style.direction=LANG==='he'?'rtl':'ltr';
   document.getElementById('citySearch').placeholder=t('searchCity');
   document.getElementById('clearAllBtn').textContent=t('clearAll');
 
@@ -911,32 +1008,81 @@ function applyLang(){
 
 
 
-  document.querySelector('.pop-impact-card .card-header').textContent=t('popTitle');
-  document.querySelector('.pop-explanation').innerHTML=t('popExplanation');
 
-  if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=isL?'אירועים מאיראן - לפי יום':'Iran events by day';
-  if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=isL?'אירועים מלבנון - לפי יום':'Lebanon events by day';
+  if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=t('dailyIranTitle');
+  if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=t('dailyLebTitle');
   document.getElementById('hourlyChartTitle').textContent=isL?t('hourlyLaunchTitle'):t('hourlyAlertTitle');
   document.getElementById('originChartTitle').textContent=t('originTitle');
 
-  var iranHeader=document.querySelector('.card-header[style*="iran-color"]');
-  if(iranHeader) iranHeader.textContent=t('iranChartTitle');
   var minuteCards=document.querySelectorAll('.left-column > .card');
   minuteCards.forEach(function(c){var h=c.querySelector('.card-header');if(h&&h.textContent.indexOf('דקה')!==-1||h&&h.textContent.indexOf('minute')!==-1) h.textContent=t('minuteTitle');});
 
-  var sideHeaders=document.querySelectorAll('.right-sidebar .card-header');
-  if(sideHeaders[0]) sideHeaders[0].textContent=t('cityTimelineTitle');
-  if(sideHeaders[1]) sideHeaders[1].textContent=t('topRegions');
-  if(sideHeaders[2]) sideHeaders[2].textContent=t('bottomRegions');
-  if(sideHeaders[3]) sideHeaders[3].textContent=t('recentTitle');
 
 
   var tsi=document.getElementById('timelineSearchInput');
-  if(tsi) tsi.placeholder=LANG==='he'?'הקלידו שם ישוב...':'Type city name...';
+  if(tsi) tsi.placeholder=LANG==='he'?'הקלידו שם ישוב...':LANG==='ru'?'Введите название...':'Type city name...';
 
   var _ptb=document.getElementById('popTrendBtn');if(_ptb)_ptb.textContent=showPopTrend?t('popTrendBtnHide'):t('popTrendBtn');
   if(document.getElementById('popTrendTitle')) document.getElementById('popTrendTitle').textContent=t('popTrendTitle');
   var _ptf=document.querySelector('[data-i18n="popTrendFormula"]');if(_ptf)_ptf.textContent=t('popTrendFormula');
+
+  // Nav bar
+  var _no=document.getElementById('navOverview');if(_no)_no.innerHTML='&#128202; '+t('navOverview');
+  var _ni=document.getElementById('navIranTrends');if(_ni)_ni.innerHTML='&#127919; '+t('navIranTrends');
+  var _nm=document.getElementById('navMap');if(_nm)_nm.innerHTML='&#128506; '+t('navMap');
+  var _ns=document.getElementById('navShelter');if(_ns)_ns.innerHTML='&#128737; '+t('navShelter');
+  var _nr=document.getElementById('navRegions');if(_nr)_nr.innerHTML='&#128293; '+t('navRegions');
+
+  // Stat cards
+  var _lt=document.getElementById('labelTotalEvents');if(_lt)_lt.textContent=t('labelTotalEvents');
+  var _ly=document.getElementById('labelYesterday');if(_ly)_ly.textContent=t('labelYesterday');
+  var _db=document.getElementById('dateBadge');if(_db)_db.textContent=t('dateBadge');
+
+  // Map
+  var _mh=document.getElementById('mapHeader');if(_mh){var ms=document.getElementById('mapStats');_mh.innerHTML=t('mapHeader')+' ';if(ms)_mh.appendChild(ms);}
+  var _fb=document.getElementById('focusIsraelBtn');if(_fb)_fb.title=t('focusIsraelTitle');
+
+  // Iran MA
+  var _imh=document.getElementById('iranMAHeader');if(_imh)_imh.textContent=t('iranChartTitle');
+
+  // Sidebar
+  var _cth=document.getElementById('cityTimelineHeader');if(_cth)_cth.textContent=t('cityTimelineTitle');
+
+  // Region headers
+  var _trh=document.getElementById('topRegionsHeader');if(_trh)_trh.textContent=t('topRegions');
+  var _brh=document.getElementById('bottomRegionsHeader');if(_brh)_brh.textContent=t('bottomRegions');
+
+  // Toggle buttons on charts
+  var _ibe=document.getElementById('iranBtnEvents');if(_ibe)_ibe.textContent=t('launches');
+  var _iba=document.getElementById('iranBtnAlerts');if(_iba)_iba.textContent=t('alerts');
+  var _lbe=document.getElementById('lebBtnEvents');if(_lbe)_lbe.textContent=t('launches');
+  var _lba=document.getElementById('lebBtnAlerts');if(_lba)_lba.textContent=t('alerts');
+  var _obe=document.getElementById('originBtnEvents');if(_obe)_obe.textContent=t('launches');
+  var _oba=document.getElementById('originBtnAlerts');if(_oba)_oba.textContent=t('alerts');
+  var _hbi=document.getElementById('hourlyBtnIran');if(_hbi)_hbi.textContent=t('iran');
+  var _hbl=document.getElementById('hourlyBtnLebanon');if(_hbl)_hbl.textContent=t('lebanon');
+
+  // Pop click hint
+  var _pch=document.getElementById('popClickHintText');if(_pch)_pch.innerHTML='&#128073; '+t('popClickHintText');
+
+  // Pop pickers
+  var _pdl=document.getElementById('popDayPickerLabel');if(_pdl)_pdl.textContent=t('popDayPickerLabel');
+  var _pcl=document.getElementById('popCityPickerLabel');if(_pcl)_pcl.textContent=t('popCityPickerLabel');
+
+  // Pop day dropdown - update "All dates" option
+  var _pds=document.getElementById('popDaySelect');if(_pds&&_pds.options[0])_pds.options[0].textContent=t('popAllDates');
+
+  // Pop city search placeholder
+  var _pcsi=document.getElementById('popCitySearchInput');if(_pcsi&&!_pcsi.value)_pcsi.placeholder=LANG==='he'?'כל הישובים':LANG==='ru'?'Все города':'All cities';
+
+  // Summary table header
+  var _sth=document.getElementById('summaryTableHeader');if(_sth)_sth.textContent=t('summaryTableTitle');
+  // Summary table column headers
+  var thEls=document.querySelectorAll('#summaryTable thead th');
+  if(thEls.length>=5){thEls[0].textContent=t('colTimestamp');thEls[1].textContent=t('colCity');thEls[2].textContent=t('colThreat');thEls[3].textContent=t('colOrigin');thEls[4].textContent=t('colLaunchId');}
+
+  // Footer
+  var _ft=document.getElementById('footerText');if(_ft)_ft.innerHTML=t('footerPrefix')+'<a href="https://github.com/yuval-harpaz/alarms" target="_blank">yuval-harpaz/alarms</a> | ECharts + Leaflet';
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -950,7 +1096,7 @@ function onTimelineSearch(val){
   if(!val||val.length<1){dd.classList.remove('show');_tlMatches=[];return;}
   var v=val.trim();
   _tlMatches=allCities.filter(function(c){return c.indexOf(v)!==-1;}).slice(0,15);
-  if(_tlMatches.length===0){dd.innerHTML='<div class="city-dropdown-item" style="color:var(--text-muted);cursor:default;">'+(LANG==='he'?'לא נמצא':'Not found')+'</div>';dd.classList.add('show');return;}
+  if(_tlMatches.length===0){dd.innerHTML='<div class="city-dropdown-item" style="color:var(--text-muted);cursor:default;">'+(LANG==='he'?'לא נמצא':LANG==='ru'?'Не найдено':'Not found')+'</div>';dd.classList.add('show');return;}
   dd.innerHTML=_tlMatches.map(function(c,i){return '<div class="city-dropdown-item" onmousedown="selectTimelineCity(_tlMatches['+i+'])">'+c+'</div>';}).join('');
   dd.classList.add('show');
 }
@@ -982,10 +1128,10 @@ function renderCityTimeline(city){
   var cityAlerts=getFilteredAlerts().filter(function(a){return a[1]===city;});
   cityAlerts.sort(function(a,b){return b[0].localeCompare(a[0]);});
   if(cityAlerts.length===0){
-    el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-muted);font-size:13px;">'+(LANG==='he'?'אין נתונים לישוב זה בפילטרים הנוכחיים':'No data for this city with current filters')+'</div>';
+    el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-muted);font-size:13px;">'+(LANG==='he'?'אין נתונים לישוב זה בפילטרים הנוכחיים':LANG==='ru'?'Нет данных для этого города с текущими фильтрами':'No data for this city with current filters')+'</div>';
     return;
   }
-  el.innerHTML='<div style="padding:6px 10px;font-size:11px;color:var(--text-muted);border-bottom:1px solid var(--border-color);">'+cityAlerts.length+' '+(LANG==='he'?'התרעות':'alerts')+'</div>'
+  el.innerHTML='<div style="padding:6px 10px;font-size:11px;color:var(--text-muted);border-bottom:1px solid var(--border-color);">'+cityAlerts.length+' '+(LANG==='he'?'התרעות':LANG==='ru'?'тревог':'alerts')+'</div>'
     +cityAlerts.map(function(a){
     var dt=new Date(a[0]);
     var time=dt.toLocaleTimeString('he-IL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
@@ -996,7 +1142,7 @@ function renderCityTimeline(city){
     var icon=threatIcons[threatCode]||'⚠️';
     return '<div class="timeline-item">'
       +'<div class="timeline-date"><div class="timeline-date-day">'+dayNum+'</div><div class="timeline-date-time">'+time+'</div></div>'
-      +'<div class="timeline-origin '+oc+'">'+(a[5]&&a[5]!=='FA'?a[5]:(LANG==='he'?'לא ידוע':'Unknown'))+'</div>'
+      +'<div class="timeline-origin '+oc+'">'+(a[5]&&a[5]!=='FA'?a[5]:(LANG==='he'?'לא ידוע':LANG==='ru'?'Неизвестно':'Unknown'))+'</div>'
       +'<div class="timeline-threat"><span class="timeline-threat-icon">'+icon+'</span>'+threatName+'</div>'
       +'</div>';
   }).join('');
@@ -1055,9 +1201,9 @@ function renderPopTrend(){
     }},
     grid:{left:isMobile?35:55,right:isMobile?10:20,top:20,bottom:30},
     xAxis:{type:'category',data:days.map(function(d){return d.substring(5);}),axisLabel:{color:'#606070',fontSize:10,rotate:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
-    yAxis:{type:'value',name:LANG==='he'?'ממוצע אזעקות משוקלל':'Weighted avg alerts',nameTextStyle:{color:'#606070',fontSize:9},axisLabel:{color:'#606070',fontSize:9,formatter:function(v){return v.toFixed(1);}},splitLine:{lineStyle:{color:'#1e1e2e'}}},
+    yAxis:{type:'value',name:t('popTrendTitle'),nameTextStyle:{color:'#606070',fontSize:9},axisLabel:{color:'#606070',fontSize:9,formatter:function(v){return v.toFixed(1);}},splitLine:{lineStyle:{color:'#1e1e2e'}}},
     series:[
-      {name:LANG==='he'?'ממוצע משוקלל':'Weighted avg',type:'line',data:dailyWeightedAvg,smooth:true,lineStyle:{color:'var(--accent-blue)',width:3},areaStyle:{color:'rgba(56,189,248,0.12)'},symbol:'circle',symbolSize:6,itemStyle:{color:'var(--accent-blue)'},label:{show:true,fontSize:isMobile?7:9,color:'#a0a0b0',formatter:function(p){return p.value.toFixed(2);},position:'top'}}
+      {name:t('popTrendTitle'),type:'line',data:dailyWeightedAvg,smooth:true,lineStyle:{color:'var(--accent-blue)',width:3},areaStyle:{color:'rgba(56,189,248,0.12)'},symbol:'circle',symbolSize:6,itemStyle:{color:'var(--accent-blue)'},label:{show:true,fontSize:isMobile?7:9,color:'#a0a0b0',formatter:function(p){return p.value.toFixed(2);},position:'top'}}
     ]
   },true);
 }
@@ -1108,7 +1254,7 @@ function removeFilter(key){
 function onCitySearch(val){
   var dd=document.getElementById('cityDropdown');
   if(!val||val.length<1){dd.classList.remove('show');return;}
-  var matches=allCities.filter(function(c){return c.indexOf(val)!==-1;}).slice(0,15);
+  var matches=allCities.filter(function(c){return c.indexOf(val)!==-1||(CITY_EN[c]&&CITY_EN[c].toLowerCase().indexOf(val.toLowerCase())!==-1);}).slice(0,15);
   if(matches.length===0){dd.classList.remove('show');return;}
   dd.innerHTML=matches.map(function(c){return '<div class="city-dropdown-item" onclick="selectCity(\''+c.replace(/'/g,"\\'")+'\')">'+c+'</div>';}).join('');
   dd.classList.add('show');
@@ -1142,8 +1288,8 @@ function setMode(mode){
   if(bLB) bLB.className='toggle-btn'+(mode==='launches'?' active-launches':'');
   if(bAB) bAB.className='toggle-btn'+(mode==='alerts'?' active-alerts':'');
   var isL=mode==='launches';
-  if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=isL?'אירועים מאיראן - לפי יום':'Iran events by day';
-  if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=isL?'אירועים מלבנון - לפי יום':'Lebanon events by day';
+  if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=t('dailyIranTitle');
+  if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=t('dailyLebTitle');
   document.getElementById('hourlyChartTitle').textContent=isL?t('hourlyLaunchTitle'):t('hourlyAlertTitle');
   refreshAll();
 }
@@ -1193,7 +1339,7 @@ function renderStats(d){
   var yc=document.getElementById('yesterdayCount');if(yc)yc.textContent=fmt(yesterdayTotal);
   var yd=document.getElementById('yesterdayDate');if(yd)yd.textContent=YESTERDAY;
   var yb=document.getElementById('yesterdayBreakdown');
-  if(yb)yb.textContent=yesterdayIranL+' מאיראן | '+yesterdayLebL+' מלבנון';
+  if(yb)yb.textContent=yesterdayIranL+' '+t('fromIran')+' | '+yesterdayLebL+' '+t('fromLebanon');
 }
 
 function focusIsrael(){if(map) map.setView([31.5,35.0],7);}
@@ -1267,14 +1413,14 @@ function renderMapMarkers(){
       markers.push(lbl);
     }
 
-    m.bindTooltip('<div class="popup-content"><div class="popup-city">'+city+'</div><div class="popup-count" style="color:'+color+'">'+count+' '+modeLabel+'</div><div class="popup-intensity">עצימות: '+(ratio*100).toFixed(0)+'%</div></div>',{direction:'top',offset:[0,-radius],className:'map-tooltip'});
+    m.bindTooltip('<div class="popup-content"><div class="popup-city">'+cityName(city)+'</div><div class="popup-count" style="color:'+color+'">'+count+' '+modeLabel+'</div><div class="popup-intensity">עצימות: '+(ratio*100).toFixed(0)+'%</div></div>',{direction:'top',offset:[0,-radius],className:'map-tooltip'});
     m.on('click',function(){setFilter('city',city);document.getElementById('citySearch').value=filters.city||'';});
     markers.push(m);
   });
   var zoomMsg='';
   if(zoom<=10){
     var popLabel=minPop>=1000?(minPop/1000)+'K+':'';
-    zoomMsg=' ('+(LANG==='he'?'מציג '+popLabel+' תושבים, זום לפרטים':'showing '+popLabel+' pop, zoom for details')+')';
+    zoomMsg=' ('+(LANG==='he'?'מציג '+popLabel+' תושבים, זום לפרטים':LANG==='ru'?'показано '+popLabel+' жителей, приблизьте':'showing '+popLabel+' pop, zoom for details')+')';
   }
   document.getElementById('mapStats').textContent=mapped+'/'+total+' ישובים'+zoomMsg;
 }
@@ -1382,8 +1528,8 @@ function renderDailyIran(d){
     xAxis:{type:'category',data:daysNoToday.map(function(x){return x.substring(5);}),axisLabel:{color:'#606070',fontSize:isMobile?8:10,rotate:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
     yAxis:{type:'value',axisLabel:{color:'#606070',fontSize:10},splitLine:{lineStyle:{color:'#1e1e2e'}}},
     series:[
-      {name:'כטב"מים',type:'bar',stack:'total',data:dronesData,itemStyle:{color:'#c084fc',borderRadius:[0,0,0,0]}},
-      {name:'רקטות/טילים',type:'bar',stack:'total',data:rocketsData,itemStyle:{color:'#7c3aed',borderRadius:[3,3,0,0]}}
+      {name:t('seriesDrones'),type:'bar',stack:'total',data:dronesData,itemStyle:{color:'#c084fc',borderRadius:[0,0,0,0]}},
+      {name:t('seriesRockets'),type:'bar',stack:'total',data:rocketsData,itemStyle:{color:'#7c3aed',borderRadius:[3,3,0,0]}}
     ]
   },true);
   dcIran.off('click');
@@ -1419,8 +1565,8 @@ function renderDailyLeb(d){
     xAxis:{type:'category',data:daysNoToday.map(function(x){return x.substring(5);}),axisLabel:{color:'#606070',fontSize:isMobile?8:10,rotate:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
     yAxis:{type:'value',axisLabel:{color:'#606070',fontSize:10},splitLine:{lineStyle:{color:'#1e1e2e'}}},
     series:[
-      {name:'כטב"מים',type:'bar',stack:'total',data:dronesData,itemStyle:{color:'#fdba74',borderRadius:[0,0,0,0]}},
-      {name:'רקטות/טילים',type:'bar',stack:'total',data:rocketsData,itemStyle:{color:'#ea580c',borderRadius:[3,3,0,0]}}
+      {name:t('seriesDrones'),type:'bar',stack:'total',data:dronesData,itemStyle:{color:'#fdba74',borderRadius:[0,0,0,0]}},
+      {name:t('seriesRockets'),type:'bar',stack:'total',data:rocketsData,itemStyle:{color:'#ea580c',borderRadius:[3,3,0,0]}}
     ]
   },true);
   dcLeb.off('click');
@@ -1546,7 +1692,7 @@ function renderRegions(d){
       var pct=(e[1]/maxVal*100).toFixed(0);
       var escaped=e[0].replace(/'/g,"\\'");
       return '<div class="region-bar" onclick="selectCity(\''+escaped+'\');selectTimelineCity(\''+escaped+'\')">'
-        +'<div class="region-name">'+e[0]+'</div>'
+        +'<div class="region-name">'+cityName(e[0])+'</div>'
         +'<div class="region-bar-fill" style="width:'+pct+'px;background:'+color+';"></div>'
         +'<div class="region-count">'+e[1]+'</div></div>';
     }).join('');
@@ -1560,10 +1706,10 @@ function renderRecent(d){
   var el=document.getElementById('recentList');
   var recentAlerts=getFilteredAlerts().slice().sort(function(a,b){return b[0].localeCompare(a[0]);}).slice(0,80);
   if(recentAlerts.length===0){
-    el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-muted);font-size:13px;">'+(LANG==='he'?'אין נתונים':'No data')+'</div>';
+    el.innerHTML='<div style="padding:16px;text-align:center;color:var(--text-muted);font-size:13px;">'+(LANG==='he'?'אין נתונים':LANG==='ru'?'Нет данных':'No data')+'</div>';
     return;
   }
-  el.innerHTML='<div style="padding:6px 10px;font-size:11px;color:var(--text-muted);border-bottom:1px solid var(--border-color);">'+recentAlerts.length+' '+(LANG==='he'?'אחרונים':'recent')+'</div>'
+  el.innerHTML='<div style="padding:6px 10px;font-size:11px;color:var(--text-muted);border-bottom:1px solid var(--border-color);">'+recentAlerts.length+' '+(LANG==='he'?'אחרונים':LANG==='ru'?'последних':'recent')+'</div>'
     +recentAlerts.map(function(a){
     var dt=new Date(a[0]);
     var time=dt.toLocaleTimeString('he-IL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
@@ -1576,9 +1722,9 @@ function renderRecent(d){
     var ca=firstCoords?'data-lat="'+firstCoords[0]+'" data-lng="'+firstCoords[1]+'"':'';
     return '<div class="timeline-item" style="cursor:pointer;" '+ca+' onclick="zoomTo(this)">'
       +'<div class="timeline-date"><div class="timeline-date-day">'+dayNum+'</div><div class="timeline-date-time">'+time+'</div></div>'
-      +'<div class="timeline-origin '+oc+'">'+(a[5]&&a[5]!=='FA'?a[5]:(LANG==='he'?'\u05DC\u05D0 \u05D9\u05D3\u05D5\u05E2':'Unknown'))+'</div>'
+      +'<div class="timeline-origin '+oc+'">'+(a[5]&&a[5]!=='FA'?a[5]:(LANG==='he'?'\u05DC\u05D0 \u05D9\u05D3\u05D5\u05E2':LANG==='ru'?'Неизвестно':'Unknown'))+'</div>'
       +'<div class="timeline-threat"><span class="timeline-threat-icon">'+icon+'</span>'+threatName+'</div>'
-      +'<div style="font-size:10px;color:var(--text-muted);min-width:50px;text-align:left;">'+a[1]+'</div>'
+      +'<div style="font-size:10px;color:var(--text-muted);min-width:50px;text-align:left;">'+cityName(a[1])+'</div>'
       +'</div>';
   }).join('');
 }
@@ -1599,7 +1745,7 @@ function initPopSlider(){
   RAW.forEach(function(a){daySet.add(a[0].substring(0,10));});
   popDays=Array.from(daySet).sort();
   var sel=document.getElementById('popDaySelect');
-  sel.innerHTML='<option value="all">'+(LANG==='he'?'כל התקופה':'All dates')+'</option>';
+  sel.innerHTML='<option value="all">'+(LANG==='he'?'כל התקופה':LANG==='ru'?'Весь период':'All dates')+'</option>';
   popDays.forEach(function(d){
     var opt=document.createElement('option');
     opt.value=d;opt.textContent=d;
@@ -1641,10 +1787,10 @@ function renderPopChart(){
     var trendVals=trendDays.map(function(d){return cityDayCounts[d];});
     if(!popChartInstance) popChartInstance=initChart('popChart');
     popChartInstance.setOption({
-      tooltip:{trigger:'axis',formatter:function(p){return p[0].name+'<br/>'+p[0].value+' '+(isL?(LANG==='he'?'אירועים':'events'):(LANG==='he'?'התרעות':'alerts'));}},
+      tooltip:{trigger:'axis',formatter:function(p){return p[0].name+'<br/>'+p[0].value+' '+(isL?(LANG==='he'?'אירועים':LANG==='ru'?'событий':'events'):(LANG==='he'?'התרעות':LANG==='ru'?'тревог':'alerts'));}},
       grid:{left:isMobile?40:55,right:isMobile?10:20,top:isMobile?25:35,bottom:isMobile?65:75},
-      xAxis:{type:'category',data:trendDays.map(function(x){return x.substring(5);}),name:LANG==='he'?'תאריך':'Date',nameLocation:'center',nameGap:isMobile?40:45,nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?10:13,fontWeight:'bold'},axisLabel:{color:'#a0a0b0',fontSize:isMobile?9:12,fontWeight:'bold',rotate:isMobile?45:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
-      yAxis:{type:'value',name:isL?(LANG==='he'?'אירועים':'Events'):(LANG==='he'?'התרעות':'Alerts'),nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?8:10},axisLabel:{color:'#a0a0b0',fontSize:isMobile?8:11},splitLine:{lineStyle:{color:'#1e1e2e'}}},
+      xAxis:{type:'category',data:trendDays.map(function(x){return x.substring(5);}),name:LANG==='he'?'תאריך':LANG==='ru'?'Дата':'Date',nameLocation:'center',nameGap:isMobile?40:45,nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?10:13,fontWeight:'bold'},axisLabel:{color:'#a0a0b0',fontSize:isMobile?9:12,fontWeight:'bold',rotate:isMobile?45:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
+      yAxis:{type:'value',name:isL?(LANG==='he'?'אירועים':LANG==='ru'?'Событий':'Events'):(LANG==='he'?'התרעות':'Alerts'),nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?8:10},axisLabel:{color:'#a0a0b0',fontSize:isMobile?8:11},splitLine:{lineStyle:{color:'#1e1e2e'}}},
       series:[{type:'line',data:trendVals,smooth:true,lineStyle:{color:'var(--accent-blue)',width:3},itemStyle:{color:'#3b82f6'},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(59,130,246,0.3)'},{offset:1,color:'rgba(59,130,246,0.02)'}]}},
         label:{show:true,position:'top',color:'#e0e0e0',fontSize:isMobile?9:12,fontWeight:'bold'}}]
     },true);
@@ -1718,11 +1864,11 @@ function renderPopChart(){
   popChartInstance.setOption({
     tooltip:{trigger:'axis',formatter:function(p){
       var i=p[0].dataIndex;
-      return (LANG==='he'?'פעמים: ':'Times: ')+cats[i]+'<br/>'+vals[i].toLocaleString()+' '+t('residents')+'<br/>'+cityNums[i]+' '+t('cities')+'<br/><span style="font-size:10px;color:#aaa;">'+(LANG==='he'?'לחצו לפירוט':'Click for details')+'</span>';
+      return (LANG==='he'?'פעמים: ':LANG==='ru'?'Раз: ':'Times: ')+cats[i]+'<br/>'+vals[i].toLocaleString()+' '+t('residents')+'<br/>'+cityNums[i]+' '+t('cities')+'<br/><span style="font-size:10px;color:#aaa;">'+(LANG==='he'?'לחצו לפירוט':LANG==='ru'?'Нажмите для подробностей':'Click for details')+'</span>';
     }},
     grid:{left:isMobile?40:55,right:isMobile?10:20,top:isMobile?25:35,bottom:isMobile?65:75},
-    xAxis:{type:'category',data:cats,name:LANG==='he'?'מספר פעמים':'Times',nameLocation:'center',nameGap:isMobile?40:45,nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?9:12,fontWeight:'bold'},axisLabel:{color:'#a0a0b0',fontSize:isMobile?8:10,fontWeight:'bold',interval:0,rotate:isMobile?45:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
-    yAxis:{type:'value',name:LANG==='he'?'כמות אנשים (משוערך)':'Est. people',nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?8:10},axisLabel:{color:'#a0a0b0',fontSize:isMobile?8:11,formatter:function(v){return v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?(v/1000).toFixed(0)+'K':v;}},splitLine:{lineStyle:{color:'#1e1e2e'}}},
+    xAxis:{type:'category',data:cats,name:LANG==='he'?'מספר פעמים':LANG==='ru'?'Количество раз':'Times',nameLocation:'center',nameGap:isMobile?40:45,nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?9:12,fontWeight:'bold'},axisLabel:{color:'#a0a0b0',fontSize:isMobile?8:10,fontWeight:'bold',interval:0,rotate:isMobile?45:30},axisLine:{lineStyle:{color:'#2a2a3a'}}},
+    yAxis:{type:'value',name:LANG==='he'?'כמות אנשים (משוערך)':LANG==='ru'?'Кол-во людей (оценка)':'Est. people',nameTextStyle:{color:'#a0a0b0',fontSize:isMobile?8:10},axisLabel:{color:'#a0a0b0',fontSize:isMobile?8:11,formatter:function(v){return v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?(v/1000).toFixed(0)+'K':v;}},splitLine:{lineStyle:{color:'#1e1e2e'}}},
     series:[{type:'bar',barMaxWidth:25,data:vals.map(function(v,i){
       var ratio=(i+1)/keys.length;
       var h=Math.round(120-(ratio*120));
@@ -1746,7 +1892,7 @@ var _popCityMatches=[];
 function onPopCitySearch(val){
   var dd=document.getElementById('popCityDropdown');
   if(!val||val.length<1){
-    dd.innerHTML='<div class="city-dropdown-item" onmousedown="selectPopCity(\'all\')">'+(LANG==='he'?'כל הישובים':'All cities')+'</div>';
+    dd.innerHTML='<div class="city-dropdown-item" onmousedown="selectPopCity(\'all\')">'+(LANG==='he'?'כל הישובים':LANG==='ru'?'Все города':'All cities')+'</div>';
     var shown=allCities.slice(0,20).map(function(c){return '<div class="city-dropdown-item" onmousedown="selectPopCity(\''+c.replace(/'/g,"\\'")+'\')">'+c+'</div>';}).join('');
     dd.innerHTML+= shown;
     dd.classList.add('show');
@@ -1755,7 +1901,7 @@ function onPopCitySearch(val){
   var v=val.trim();
   _popCityMatches=allCities.filter(function(c){return c.indexOf(v)!==-1;}).slice(0,15);
   if(_popCityMatches.length===0){
-    dd.innerHTML='<div class="city-dropdown-item" style="color:var(--text-muted);cursor:default;">'+(LANG==='he'?'לא נמצא':'Not found')+'</div>';
+    dd.innerHTML='<div class="city-dropdown-item" style="color:var(--text-muted);cursor:default;">'+(LANG==='he'?'לא נמצא':LANG==='ru'?'Не найдено':'Not found')+'</div>';
     dd.classList.add('show');return;
   }
   dd.innerHTML=_popCityMatches.map(function(c){return '<div class="city-dropdown-item" onmousedown="selectPopCity(\''+c.replace(/'/g,"\\'")+'\')">'+c+'</div>';}).join('');
@@ -1768,7 +1914,7 @@ function selectPopCity(city){
   if(city==='all'){
     popSelectedCity='all';
     document.getElementById('popCityBadge').style.display='none';
-    document.getElementById('popCitySearchInput').placeholder=LANG==='he'?'כל הישובים':'All cities';
+    document.getElementById('popCitySearchInput').placeholder=LANG==='he'?'כל הישובים':LANG==='ru'?'Все города':'All cities';
   } else {
     popSelectedCity=city;
     document.getElementById('popCityBadge').style.display='flex';
@@ -1781,7 +1927,7 @@ function selectPopCity(city){
 function clearPopCity(){
   popSelectedCity='all';
   document.getElementById('popCityBadge').style.display='none';
-  document.getElementById('popCitySearchInput').placeholder=LANG==='he'?'כל הישובים':'All cities';
+  document.getElementById('popCitySearchInput').placeholder=LANG==='he'?'כל הישובים':LANG==='ru'?'Все города':'All cities';
   renderPopChart();
 }
 
@@ -1801,9 +1947,10 @@ function showPopCitiesPanelBinned(binLabel,cityData){
   cityData.sort(function(a,b){return b.count-a.count||a.city.localeCompare(b.city);});
   var title=LANG==='he'
     ?'<b>'+cityData.length+' ישובים שקיבלו '+binLabel+' אזעקות:</b>'
+    :LANG==='ru'?'<b>'+cityData.length+' городов с '+binLabel+' тревогами:</b>'
     :'<b>'+cityData.length+' cities with '+binLabel+' alerts:</b>';
   var list=cityData.map(function(cd){
-    return '<span style="display:inline-block;background:var(--bg-card);border:1px solid var(--border-color);border-radius:6px;padding:3px 8px;margin:3px;font-size:11px;color:var(--text-primary);">'+cd.city+' <span style="color:var(--accent-yellow);font-weight:700;">('+cd.count+')</span></span>';
+    return '<span style="display:inline-block;background:var(--bg-card);border:1px solid var(--border-color);border-radius:6px;padding:3px 8px;margin:3px;font-size:11px;color:var(--text-primary);">'+cityName(cd.city)+' <span style="color:var(--accent-yellow);font-weight:700;">('+cd.count+')</span></span>';
   }).join('');
   panel.innerHTML='<div style="margin-bottom:6px;font-size:12px;color:var(--accent-yellow);">'+title+'</div><div>'+list+'</div>';
   panel.style.display='block';
@@ -1820,9 +1967,10 @@ function showPopCitiesPanel(count,cities){
   panel.dataset.count=String(count);
   var title=LANG==='he'
     ?'<b>'+cities.length+' ישובים שקיבלו '+count+' אזעקות:</b>'
+    :LANG==='ru'?'<b>'+cities.length+' городов с '+count+' тревогами:</b>'
     :'<b>'+cities.length+' cities with '+count+' alerts:</b>';
   var list=cities.sort().map(function(c){
-    return '<span style="display:inline-block;background:var(--bg-card);border:1px solid var(--border-color);border-radius:6px;padding:3px 8px;margin:3px;font-size:11px;color:var(--text-primary);">'+c+'</span>';
+    return '<span style="display:inline-block;background:var(--bg-card);border:1px solid var(--border-color);border-radius:6px;padding:3px 8px;margin:3px;font-size:11px;color:var(--text-primary);">'+cityName(c)+'</span>';
   }).join('');
   panel.innerHTML='<div style="margin-bottom:6px;font-size:12px;color:var(--accent-yellow);">'+title+'</div><div>'+list+'</div>';
   panel.style.display='block';
@@ -1842,7 +1990,7 @@ function renderSummaryTable(){
     var rawO=a[5];
     var ol=originLabels[rawO]||(rawO&&rawO!=='FA'?rawO:t('unknown'));
     var tl=threatLabels[a[2]]||(a[4]||a[2]);
-    return [a[0],a[1],tl,ol,a[3]];
+    return [a[0],cityName(a[1]),tl,ol,a[3]];
   });
   if(summaryDT){
     summaryDT.clear();
@@ -1854,11 +2002,11 @@ function renderSummaryTable(){
       pageLength:25,
       order:[[0,'desc']],
       language:{
-        search:LANG==='he'?'חיפוש:':'Search:',
-        lengthMenu:LANG==='he'?'הצג _MENU_ שורות':'Show _MENU_ entries',
-        info:LANG==='he'?'מציג _START_ עד _END_ מתוך _TOTAL_':'Showing _START_ to _END_ of _TOTAL_',
-        paginate:{first:LANG==='he'?'ראשון':'First',last:LANG==='he'?'אחרון':'Last',next:LANG==='he'?'הבא':'Next',previous:LANG==='he'?'הקודם':'Previous'},
-        zeroRecords:LANG==='he'?'לא נמצאו תוצאות':'No matching records'
+        search:LANG==='he'?'חיפוש:':LANG==='ru'?'Поиск:':'Search:',
+        lengthMenu:LANG==='he'?'הצג _MENU_ שורות':LANG==='ru'?'Показать _MENU_ записей':'Show _MENU_ entries',
+        info:LANG==='he'?'מציג _START_ עד _END_ מתוך _TOTAL_':LANG==='ru'?'Показаны _START_-_END_ из _TOTAL_':'Showing _START_ to _END_ of _TOTAL_',
+        paginate:{first:LANG==='he'?'ראשון':LANG==='ru'?'Первая':'First',last:LANG==='he'?'אחרון':LANG==='ru'?'Последняя':'Last',next:LANG==='he'?'הבא':LANG==='ru'?'Далее':'Next',previous:LANG==='he'?'הקודם':LANG==='ru'?'Назад':'Previous'},
+        zeroRecords:LANG==='he'?'לא נמצאו תוצאות':LANG==='ru'?'Совпадений не найдено':'No matching records'
       },
       columnDefs:[{targets:'_all',className:'dt-body-right dt-head-right'}],
       destroy:true
@@ -1913,7 +2061,7 @@ function refreshAll(){
 // POPULATE FILTER DROPDOWNS
 // ═══════════════════════════════════════════════════════════════════════
 function populateFilters(){
-  var dayNames=LANG==='he'?['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת']:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var dayNames=LANG==='he'?['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת']:LANG==='ru'?['Вс','Пн','Вт','Ср','Чт','Пт','Сб']:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   var daySet=new Set();
   RAW.forEach(function(a){daySet.add(a[0].substring(0,10));});
   var days=Array.from(daySet).sort();
