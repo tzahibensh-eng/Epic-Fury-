@@ -393,7 +393,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <button class="nav-btn" id="navIranTrends" onclick="document.getElementById('section-iran-ma').scrollIntoView({behavior:'smooth'})">&#127919; מגמות ירי מאיראן</button>
   <button class="nav-btn" id="navMap" onclick="document.getElementById('section-map').scrollIntoView({behavior:'smooth'})">&#128506; מפה</button>
   <button class="nav-btn" id="navShelter" onclick="document.getElementById('section-population').scrollIntoView({behavior:'smooth'})">&#128737; כמה נכנסנו למקלט?</button>
-  <button class="nav-btn" id="navRegions" onclick="document.getElementById('section-regions').scrollIntoView({behavior:'smooth'})">&#128293; מי ספג הרבה, מי קצת</button>
+  <button class="nav-btn" id="navRegions" onclick="document.getElementById('section-regions').scrollIntoView({behavior:'smooth'})">&#128293; הכי הרבה / הכי פחות התראות</button>
 </nav>
 
 
@@ -469,7 +469,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 
   <!-- Map -->
   <div id="section-map" class="card" style="position:relative;">
-    <div class="card-header" id="mapHeader">איפה נפלו? מפת ישובים <span id="mapStats" style="font-size:10px;color:var(--accent-green);font-weight:600;">טוען...</span></div>
+    <div class="card-header" id="mapHeader">איפה הכי הרבה התראות? <span id="mapStats" style="font-size:10px;color:var(--accent-green);font-weight:600;">טוען...</span></div>
     <div id="map"></div>
     <button onclick="focusIsrael()" style="position:absolute;top:130px;left:10px;z-index:1000;background:#fff;border:2px solid rgba(0,0,0,0.3);border-radius:4px;width:30px;height:30px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.3);" title="מרכז על ישראל" id="focusIsraelBtn"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#333" stroke-width="1.5"/><circle cx="8" cy="8" r="1.5" fill="#333"/><line x1="8" y1="0" x2="8" y2="4" stroke="#333" stroke-width="1.5"/><line x1="8" y1="12" x2="8" y2="16" stroke="#333" stroke-width="1.5"/><line x1="0" y1="8" x2="4" y2="8" stroke="#333" stroke-width="1.5"/><line x1="12" y1="8" x2="16" y2="8" stroke="#333" stroke-width="1.5"/></svg></button>
     </div>
@@ -493,11 +493,11 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   </div>
   <div id="section-regions" class="regions-pair">
   <div class="card">
-    <div class="card-header" id="topRegionsHeader" style="color:var(--accent-red);">הישובים שספגו הכי הרבה</div>
+    <div class="card-header" id="topRegionsHeader" style="color:var(--accent-red);">היישובים עם הכי הרבה התראות</div>
     <div class="region-bars-container" id="topRegions"></div>
   </div>
   <div class="card">
-    <div class="card-header" id="bottomRegionsHeader" style="color:var(--accent-green);">הישובים שספגו הכי פחות</div>
+    <div class="card-header" id="bottomRegionsHeader" style="color:var(--accent-green);">היישובים עם הכי פחות התראות</div>
     <div class="region-bars-container" id="bottomRegions"></div>
   </div>
   </div>
@@ -506,7 +506,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 
 <!-- Population Impact (prominent) -->
 <div id="section-population" class="card pop-impact-card" style="margin-bottom:16px;">
-  <div class="card-header" style="font-size:16px;font-weight:900;" id="popSectionTitle">מספר אזעקות לפי אוכלוסייה</div>
+  <div class="card-header" style="font-size:16px;font-weight:900;" id="popSectionTitle">מספר התראות לפי אוכלוסייה</div>
   <div class="card-body">
     <div class="pop-explanation" id="popExplanationEl">
       כמה אנשים (באומדן) נכנסו למקלט? הגרף מציג את כמות האוכלוסייה המשוערת שקיבלה אזעקות לאורך כל התקופה. ככל שעמודה גבוהה יותר, כך יותר אנשים חוו את אותו מספר אזעקות. לחצו על עמודה כדי לראות אילו יישובים נמצאים בה. <span class="pop-note">&#9888; נתוני אוכלוסייה הם אומדן בלבד.</span>
@@ -631,18 +631,18 @@ var T = {
     eventsDetected: 'אירועים שזוהו', alertsInCities: 'התרעות בישובים', eventsToday: 'אירועים היום',
     citiesAttacked: 'ישובים שהותקפו', uniqueCities: 'ישובים ייחודיים', uniqueId: 'מזהה ייחודי לכל אירוע', eachCity: 'כל ישוב = התרעה אחת',
     sourceGaza: 'מקור: עזה', sourceLebanon: 'מקור: לבנון', sourceIran: 'מקור: איראן',
-    popTitle: 'מספר אזעקות לפי אוכלוסייה',
+    popTitle: 'מספר התראות לפי אוכלוסייה',
     popExplanation: 'כמה אנשים (באומדן) נכנסו למקלט? הגרף מציג את כמות האוכלוסייה המשוערת שקיבלה אזעקות לאורך כל התקופה. ככל שעמודה גבוהה יותר, כך יותר אנשים חוו את אותו מספר אזעקות. לחצו על עמודה כדי לראות אילו יישובים נמצאים בה. <span class="pop-note">&#9888; נתוני אוכלוסייה הם אומדן בלבד.</span>',
     popKpiSub: 'אוכלוסייה שקיבלה אזעקות ב-',
     popPctSuffix: '% מהאוכלוסייה במאגר)',
     popOnce: 'נכנסו פעם אחת', popTwice: 'נכנסו פעמיים', popNTimes: 'נכנסו {n} פעמים',
-    mapTitle: 'איפה נפלו? מפת ישובים',
+    mapTitle: 'איפה הכי הרבה התראות?',
     dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
     dailyLaunchTitle: 'מתי היו אירועים? לפי יום', dailyAlertTitle: 'מתי התריעו? לפי יום',
     originTitle: 'מאיפה שיגרו?', threatTitle: 'מה שיגרו? סוג האיום',
     hourlyLaunchTitle: 'באיזו שעה? לפי שעה', hourlyAlertTitle: 'באיזו שעה התריעו?',
     iranChartTitle: 'אירועים מאיראן: ממוצע נע 12 שעות + מצטבר',
-    topRegions: 'הישובים שספגו הכי הרבה', bottomRegions: 'הישובים שספגו הכי פחות',
+    topRegions: 'היישובים עם הכי הרבה התראות', bottomRegions: 'היישובים עם הכי פחות התראות',
     recentTitle: 'מה קרה לאחרונה?',
     cityTimelineTitle: 'ציר זמן לפי ישוב', cityTimelineDefault: 'בחרו ישוב...',
     launches: 'אירועים', alerts: 'התרעות',
@@ -671,10 +671,10 @@ var T = {
     daysAgo: 'ימים',
     originNote: 'ישנם מקרים שעוד לא עודכן מקור הירי. כטב״מ ללא מקור ידוע מוחשב כלבנון (כטב״מים מפעילים אזעקות ברוב הארץ גם משיגור מלבנון). טילים/רקטות מסווגים לפי היקף האירוע: מעל 75 יישובים — איראן, מתחת — לבנון.',
     sliderHint: '&#8592; גררו אותי &#8594;',
-    navOverview: 'מבט על', navIranTrends: 'מגמות ירי מאיראן', navMap: 'מפה', navShelter: 'כמה נכנסנו למקלט?', navRegions: 'מי ספג הרבה, מי קצת',
+    navOverview: 'מבט על', navIranTrends: 'מגמות ירי מאיראן', navMap: 'מפה', navShelter: 'כמה נכנסנו למקלט?', navRegions: 'הכי הרבה / הכי פחות התראות',
     labelTotalEvents: 'סה"כ אירועים שזוהו', labelYesterday: 'אירועי אתמול',
     dateBadge: 'מ-28.02.2026',
-    mapHeader: 'איפה נפלו? מפת ישובים',
+    mapHeader: 'איפה הכי הרבה התראות?',
     focusIsraelTitle: 'מרכז על ישראל',
     fromIran: 'מאיראן', fromLebanon: 'מלבנון',
     dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
@@ -701,14 +701,14 @@ var T = {
     popKpiSub: 'population received alerts on ',
     popPctSuffix: '% of tracked population)',
     popOnce: 'Entered once', popTwice: 'Entered twice', popNTimes: 'Entered {n} times',
-    mapTitle: 'Where did they fall? City map',
+    mapTitle: 'Where were the most alerts?',
     dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
     dailyLaunchTitle: 'When were events? By day', dailyAlertTitle: 'When were alerts? By day',
     originTitle: 'Where were they launched from?', threatTitle: 'What was launched? Threat type',
     hourlyLaunchTitle: 'What hour? By hour', hourlyAlertTitle: 'What hour were alerts?',
     iranChartTitle: 'Events from Iran: 12h moving average + cumulative',
     minuteTitle: 'What minute of the hour? (0-59)',
-    topRegions: 'Most affected cities', bottomRegions: 'Least affected cities',
+    topRegions: 'Cities with the most alerts', bottomRegions: 'Cities with the fewest alerts',
     recentTitle: 'Recent events',
     cityTimelineTitle: 'City timeline', cityTimelineDefault: 'Select a city...',
     launches: 'Events', alerts: 'Alerts',
@@ -737,10 +737,10 @@ var T = {
     daysAgo: 'days',
     originNote: 'In some cases the launch origin has not yet been updated. UAVs with unknown origin are classified as Lebanon (UAVs trigger nationwide alerts even from Lebanon). Rockets/missiles are classified by event size: 75+ cities \u2192 Iran, fewer \u2192 Lebanon.',
     sliderHint: '&#8592; drag me &#8594;',
-    navOverview: 'Overview', navIranTrends: 'Iran launch trends', navMap: 'Map', navShelter: 'How many went to shelter?', navRegions: 'Who got hit most, who least',
+    navOverview: 'Overview', navIranTrends: 'Iran launch trends', navMap: 'Map', navShelter: 'How many went to shelter?', navRegions: 'Most / fewest alerts',
     labelTotalEvents: 'Total events detected', labelYesterday: 'Yesterday\'s events',
     dateBadge: 'From 28.02.2026',
-    mapHeader: 'Where did they fall? City map',
+    mapHeader: 'Where were the most alerts?',
     focusIsraelTitle: 'Focus on Israel',
     fromIran: 'from Iran', fromLebanon: 'from Lebanon',
     dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
@@ -767,13 +767,13 @@ var T = {
     popKpiSub: 'население получило тревоги за ',
     popPctSuffix: '% отслеживаемого населения)',
     popOnce: 'Укрывались 1 раз', popTwice: 'Укрывались 2 раза', popNTimes: 'Укрывались {n} раз',
-    mapTitle: 'Куда упали? Карта городов',
+    mapTitle: 'Где больше всего тревог?',
     dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
     dailyLaunchTitle: 'Когда были события? По дням', dailyAlertTitle: 'Когда были тревоги? По дням',
     originTitle: 'Откуда стреляли?', threatTitle: 'Чем стреляли? Тип угрозы',
     hourlyLaunchTitle: 'В какое время? По часам', hourlyAlertTitle: 'В какое время были тревоги?',
     iranChartTitle: 'События из Ирана: скользящее среднее 12ч + нарастающий итог',
-    topRegions: 'Наиболее пострадавшие города', bottomRegions: 'Наименее пострадавшие города',
+    topRegions: 'Города с наибольшим числом тревог', bottomRegions: 'Города с наименьшим числом тревог',
     recentTitle: 'Последние события',
     cityTimelineTitle: 'Хронология города', cityTimelineDefault: 'Выберите город...',
     launches: 'События', alerts: 'Тревоги',
@@ -802,10 +802,10 @@ var T = {
     daysAgo: 'дней',
     originNote: 'В некоторых случаях источник запуска ещё не определён. БПЛА с неизвестным источником классифицируются как Ливан (БПЛА вызывают тревоги по всей стране даже из Ливана). Ракеты/снаряды классифицируются по масштабу: 75+ городов — Иран, менее — Ливан.',
     sliderHint: '&#8592; перетащите &#8594;',
-    navOverview: 'Обзор', navIranTrends: 'Тренды обстрелов Ирана', navMap: 'Карта', navShelter: 'Сколько укрылись?', navRegions: 'Кто пострадал больше/меньше',
+    navOverview: 'Обзор', navIranTrends: 'Тренды обстрелов Ирана', navMap: 'Карта', navShelter: 'Сколько укрылись?', navRegions: 'Больше / меньше всего тревог',
     labelTotalEvents: 'Всего обнаружено событий', labelYesterday: 'Вчерашние события',
     dateBadge: 'С 28.02.2026',
-    mapHeader: 'Куда упали? Карта городов',
+    mapHeader: 'Где больше всего тревог?',
     focusIsraelTitle: 'Фокус на Израиль',
     fromIran: 'из Ирана', fromLebanon: 'из Ливана',
     dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
