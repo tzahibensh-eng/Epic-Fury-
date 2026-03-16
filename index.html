@@ -472,6 +472,16 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <button class="clear-all-btn" id="clearAllBtn" onclick="clearAllFilters()">נקה הכל</button>
 </div>
 
+<!-- Global Toggle: Events / Alerts -->
+<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 0 8px 0;">
+  <div class="toggle-container" style="transform:scale(1.1);">
+    <button class="toggle-btn active-launches" id="btnLaunchesBig" onclick="setMode('launches')">אירועים</button>
+    <button class="toggle-btn" id="btnAlertsBig" onclick="setMode('alerts')">התרעות</button>
+  </div>
+  <span data-tip="&lt;b&gt;אירוע&lt;/b&gt; = אירוע במערכת ההתרעה. יכול לכלול מספר שיגורים ממקומות שונים, אבל מזוהה כ-event אחד ע&quot;י המערכת.&lt;br&gt;אירועים מופרדים לפי: מקור (איראן/לבנון), סוג איום (טילים/כטב&quot;מ), והפרש של 3+ דקות.&lt;br&gt;&lt;br&gt;&lt;b&gt;התרעה&lt;/b&gt; = אזעקה בודדת ביישוב אחד.&lt;br&gt;לדוגמה: אירוע אחד עם אזעקות ב-5 יישובים = &lt;b&gt;אירוע 1, התרעות 5&lt;/b&gt;." style="cursor:help;font-size:16px;color:var(--text-muted);opacity:0.7;">&#9432;</span>
+  <span id="toggleHintText" style="font-size:12px;color:var(--text-muted);"></span>
+</div>
+
 <!-- Stats Row: 2 cards only -->
 <div class="stats-row-top" style="grid-template-columns:1fr 1fr 1fr;gap:12px;">
   <div class="stat-card total"><div class="stat-label" id="labelTotalEvents">סה"כ אירועים שזוהו</div><div class="stat-value" id="totalMain">--</div><div style="font-size:11px;color:var(--text-secondary);margin-top:6px;line-height:1.5;" id="mainBreakdown"></div></div>
@@ -675,7 +685,7 @@ var T = {
     hourlyLaunchTitle: 'באיזו שעה? לפי שעה', hourlyAlertTitle: 'באיזו שעה התריעו?',
     iranChartTitle: 'אירועים מאיראן: ממוצע נע 12 שעות + מצטבר',
     lebChartTitle: 'אירועים מלבנון: ממוצע נע 12 שעות + מצטבר',
-    topRegions: 'היישובים עם הכי הרבה התראות', bottomRegions: 'היישובים עם הכי פחות התראות',
+    topRegions: 'היישובים עם הכי הרבה התראות', bottomRegions: 'היישובים עם הכי פחות התראות', topRegionsEvents: 'היישובים עם הכי הרבה אירועים', bottomRegionsEvents: 'היישובים עם הכי פחות אירועים',
     recentTitle: 'מה קרה לאחרונה?',
     cityTimelineTitle: 'ציר זמן לפי ישוב', cityTimelineDefault: 'בחרו ישוב...',
     launches: 'אירועים', alerts: 'התרעות',
@@ -705,9 +715,9 @@ var T = {
     originNote: 'ישנם מקרים שעוד לא עודכן מקור הירי. כטב״מ ללא מקור ידוע מוחשב כלבנון (כטב״מים מפעילים אזעקות ברוב הארץ גם משיגור מלבנון). טילים/רקטות מסווגים לפי היקף האירוע: מעל 75 יישובים — איראן, מתחת — לבנון.',
     sliderHint: '&#8592; גררו אותי &#8594;',
     navOverview: 'מבט על', navIranTrends: 'מגמות ירי מאיראן', navMap: 'מפה', navShelter: 'כמה נכנסנו למקלט?', navRegions: 'הכי הרבה / הכי פחות התראות',
-    labelTotalEvents: 'סה"כ אירועים שזוהו', labelYesterday: 'אירועי אתמול',
+    labelTotalEvents: 'סה"כ אירועים שזוהו', labelTotalAlerts: 'סה"כ התרעות', labelYesterday: 'אירועי אתמול', labelYesterdayAlerts: 'התרעות אתמול',
     dateBadge: 'מ-28.02.2026',
-    mapHeader: 'איפה הכי הרבה התראות?',
+    mapHeader: 'איפה הכי הרבה התראות?', mapHeaderEvents: 'איפה הכי הרבה אירועים?',
     focusIsraelTitle: 'מרכז על ישראל',
     fromIran: 'מאיראן', fromLebanon: 'מלבנון',
     dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
@@ -743,7 +753,7 @@ var T = {
     iranChartTitle: 'Events from Iran: 12h moving average + cumulative',
     lebChartTitle: 'Events from Lebanon: 12h moving average + cumulative',
     minuteTitle: 'What minute of the hour? (0-59)',
-    topRegions: 'Cities with the most alerts', bottomRegions: 'Cities with the fewest alerts',
+    topRegions: 'Cities with the most alerts', bottomRegions: 'Cities with the fewest alerts', topRegionsEvents: 'Cities with the most events', bottomRegionsEvents: 'Cities with the fewest events',
     recentTitle: 'Recent events',
     cityTimelineTitle: 'City timeline', cityTimelineDefault: 'Select a city...',
     launches: 'Events', alerts: 'Alerts',
@@ -773,9 +783,9 @@ var T = {
     originNote: 'In some cases the launch origin has not yet been updated. UAVs with unknown origin are classified as Lebanon (UAVs trigger nationwide alerts even from Lebanon). Rockets/missiles are classified by event size: 75+ cities \u2192 Iran, fewer \u2192 Lebanon.',
     sliderHint: '&#8592; drag me &#8594;',
     navOverview: 'Overview', navIranTrends: 'Iran launch trends', navMap: 'Map', navShelter: 'How many went to shelter?', navRegions: 'Most / fewest alerts',
-    labelTotalEvents: 'Total events detected', labelYesterday: 'Yesterday\'s events',
+    labelTotalEvents: 'Total events detected', labelTotalAlerts: 'Total alerts', labelYesterday: 'Yesterday\'s events', labelYesterdayAlerts: 'Yesterday\'s alerts',
     dateBadge: 'From 28.02.2026',
-    mapHeader: 'Where were the most alerts?',
+    mapHeader: 'Where were the most alerts?', mapHeaderEvents: 'Where were the most events?',
     focusIsraelTitle: 'Focus on Israel',
     fromIran: 'from Iran', fromLebanon: 'from Lebanon',
     dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
@@ -810,7 +820,7 @@ var T = {
     hourlyLaunchTitle: 'В какое время? По часам', hourlyAlertTitle: 'В какое время были тревоги?',
     iranChartTitle: 'События из Ирана: скользящее среднее 12ч + нарастающий итог',
     lebChartTitle: 'События из Ливана: скользящее среднее 12ч + нарастающий итог',
-    topRegions: 'Города с наибольшим числом тревог', bottomRegions: 'Города с наименьшим числом тревог',
+    topRegions: 'Города с наибольшим числом тревог', bottomRegions: 'Города с наименьшим числом тревог', topRegionsEvents: 'Города с наибольшим числом событий', bottomRegionsEvents: 'Города с наименьшим числом событий',
     recentTitle: 'Последние события',
     cityTimelineTitle: 'Хронология города', cityTimelineDefault: 'Выберите город...',
     launches: 'События', alerts: 'Тревоги',
@@ -840,9 +850,9 @@ var T = {
     originNote: 'В некоторых случаях источник запуска ещё не определён. БПЛА с неизвестным источником классифицируются как Ливан (БПЛА вызывают тревоги по всей стране даже из Ливана). Ракеты/снаряды классифицируются по масштабу: 75+ городов — Иран, менее — Ливан.',
     sliderHint: '&#8592; перетащите &#8594;',
     navOverview: 'Обзор', navIranTrends: 'Тренды обстрелов Ирана', navMap: 'Карта', navShelter: 'Сколько укрылись?', navRegions: 'Больше / меньше всего тревог',
-    labelTotalEvents: 'Всего обнаружено событий', labelYesterday: 'Вчерашние события',
+    labelTotalEvents: 'Всего обнаружено событий', labelTotalAlerts: 'Всего тревог', labelYesterday: 'Вчерашние события', labelYesterdayAlerts: 'Вчерашние тревоги',
     dateBadge: 'С 28.02.2026',
-    mapHeader: 'Где больше всего тревог?',
+    mapHeader: 'Где больше всего тревог?', mapHeaderEvents: 'Где больше всего событий?',
     focusIsraelTitle: 'Фокус на Израиль',
     fromIran: 'из Ирана', fromLebanon: 'из Ливана',
     dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
@@ -915,11 +925,13 @@ function computeAll(){
     dailyOriginCounts[d][o]=(dailyOriginCounts[d][o]||0)+1;
   });
   var days=[];
-  var _dc=new Date(START_DATE+'T00:00:00');
-  var _dt=new Date(TODAY+'T00:00:00');
-  while(_dc<=_dt){
-    days.push(_dc.toISOString().substring(0,10));
-    _dc=new Date(_dc.getTime()+86400000);
+  var lastDataDate=TODAY;
+  alerts.forEach(function(a){var ad=a[0].substring(0,10);if(ad>lastDataDate)lastDataDate=ad;});
+  var _dcs=START_DATE;
+  while(_dcs<=lastDataDate){
+    days.push(_dcs);
+    var _p=_dcs.split('-');var _nd=new Date(Date.UTC(+_p[0],+_p[1]-1,+_p[2]+1));
+    _dcs=_nd.toISOString().substring(0,10);
   }
 
   // Hourly
@@ -1078,12 +1090,13 @@ function applyLang(){
   var _nr=document.getElementById('navRegions');if(_nr)_nr.innerHTML='&#128293; '+t('navRegions');
 
   // Stat cards
-  var _lt=document.getElementById('labelTotalEvents');if(_lt)_lt.textContent=t('labelTotalEvents');
-  var _ly=document.getElementById('labelYesterday');if(_ly)_ly.textContent=t('labelYesterday');
+  var _isL=viewMode==='launches';
+  var _lt=document.getElementById('labelTotalEvents');if(_lt)_lt.textContent=_isL?t('labelTotalEvents'):t('labelTotalAlerts');
+  var _ly=document.getElementById('labelYesterday');if(_ly)_ly.textContent=_isL?t('labelYesterday'):t('labelYesterdayAlerts');
   var _db=document.getElementById('dateBadge');if(_db)_db.textContent=t('dateBadge');
 
   // Map
-  var _mh=document.getElementById('mapHeader');if(_mh){var ms=document.getElementById('mapStats');_mh.innerHTML=t('mapHeader')+' ';if(ms)_mh.appendChild(ms);}
+  var _mh=document.getElementById('mapHeader');if(_mh){var ms=document.getElementById('mapStats');_mh.innerHTML=(_isL?t('mapHeaderEvents'):t('mapHeader'))+' ';if(ms)_mh.appendChild(ms);}
   var _fb=document.getElementById('focusIsraelBtn');if(_fb)_fb.title=t('focusIsraelTitle');
 
   // Iran MA
@@ -1093,8 +1106,8 @@ function applyLang(){
   var _cth=document.getElementById('cityTimelineHeader');if(_cth)_cth.textContent=t('cityTimelineTitle');
 
   // Region headers
-  var _trh=document.getElementById('topRegionsHeader');if(_trh)_trh.textContent=t('topRegions');
-  var _brh=document.getElementById('bottomRegionsHeader');if(_brh)_brh.textContent=t('bottomRegions');
+  var _trh=document.getElementById('topRegionsHeader');if(_trh)_trh.textContent=_isL?t('topRegionsEvents'):t('topRegions');
+  var _brh=document.getElementById('bottomRegionsHeader');if(_brh)_brh.textContent=_isL?t('bottomRegionsEvents'):t('bottomRegions');
 
   // Toggle buttons on charts
   var _ibe=document.getElementById('iranBtnEvents');if(_ibe)_ibe.textContent=t('launches');
@@ -1332,9 +1345,15 @@ function setMode(mode){
   if(bLB) bLB.className='toggle-btn'+(mode==='launches'?' active-launches':'');
   if(bAB) bAB.className='toggle-btn'+(mode==='alerts'?' active-alerts':'');
   var isL=mode==='launches';
+  var dailyMode=isL?'events':'alerts';
+  setDailyIranView(dailyMode);
+  setDailyLebView(dailyMode);
   if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=t('dailyIranTitle');
   if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=t('dailyLebTitle');
   document.getElementById('hourlyChartTitle').textContent=isL?t('hourlyLaunchTitle'):t('hourlyAlertTitle');
+  var _trh=document.getElementById('topRegionsHeader');if(_trh)_trh.textContent=isL?t('topRegionsEvents'):t('topRegions');
+  var _brh=document.getElementById('bottomRegionsHeader');if(_brh)_brh.textContent=isL?t('bottomRegionsEvents'):t('bottomRegions');
+  var _mh=document.getElementById('mapHeader');if(_mh){var ms=document.getElementById('mapStats');_mh.innerHTML=(isL?t('mapHeaderEvents'):t('mapHeader'))+' ';if(ms)_mh.appendChild(ms);}
   refreshAll();
 }
 
@@ -1356,11 +1375,16 @@ function getIntensityColor(ratio){
 }
 
 function renderStats(d){
-  document.getElementById('totalMain').textContent=fmt(d.totalLaunches);
+  var isL=viewMode==='launches';
+  document.getElementById('totalMain').textContent=fmt(isL?d.totalLaunches:d.totalAlerts);
   var gaza=d.originCounts['Gaza']||0;
   var leb=d.originCounts['Lebanon']||0;
   var iran=d.originCounts['Iran']||0;
-  var total=d.totalLaunches;
+  var total=isL?d.totalLaunches:d.totalAlerts;
+
+  // Update KPI labels based on viewMode
+  var _lt=document.getElementById('labelTotalEvents');if(_lt)_lt.textContent=isL?t('labelTotalEvents'):t('labelTotalAlerts');
+  var _ly=document.getElementById('labelYesterday');if(_ly)_ly.textContent=isL?t('labelYesterday'):t('labelYesterdayAlerts');
 
   // Drone vs Rocket breakdown per origin
   var iranDrones=0,iranRockets=0,lebDrones=0,lebRockets=0;
@@ -1369,12 +1393,18 @@ function renderStats(d){
     if(origin==='Iran'){if(threatCode==='5')iranDrones++;else iranRockets++;}
     if(origin==='Lebanon'){if(threatCode==='5')lebDrones++;else lebRockets++;}
   });
-  // Yesterday counts by unique launches
+  // Yesterday counts
   var YESTERDAY=new Date(new Date().getTime()-86400000).toISOString().substring(0,10);
   var yesterdayIranL=0,yesterdayLebL=0,yesterdayTotal=0;
-  d.launches.forEach(function(l){
-    if(l.time.startsWith(YESTERDAY)){yesterdayTotal++;if(normOrigin(l.origin)==='Iran')yesterdayIranL++;if(normOrigin(l.origin)==='Lebanon')yesterdayLebL++;}
-  });
+  if(isL){
+    d.launches.forEach(function(l){
+      if(l.time.startsWith(YESTERDAY)){yesterdayTotal++;if(normOrigin(l.origin)==='Iran')yesterdayIranL++;if(normOrigin(l.origin)==='Lebanon')yesterdayLebL++;}
+    });
+  } else {
+    d.alerts.forEach(function(a){
+      if(a[0].substring(0,10)===YESTERDAY){yesterdayTotal++;if(normOrigin(a[5])==='Iran')yesterdayIranL++;if(normOrigin(a[5])==='Lebanon')yesterdayLebL++;}
+    });
+  }
   // Populate main card breakdown (all origins with flags)
   var mainBreak=document.getElementById('mainBreakdown');
   if(mainBreak){
@@ -2303,16 +2333,17 @@ function splitLaunches(){
 function refreshFromGitHub(){
   var btn=document.querySelector('.refresh-btn');
   btn.textContent=t('refreshing');
-  fetch('https://cdn.jsdelivr.net/gh/yuval-harpaz/alarms@master/data/alarms.csv')
-    .then(function(r){return r.text();})
-    .then(function(csv){
+  function doRefresh(url){
+    return fetch(url).then(function(r){
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.text();
+    }).then(function(csv){
       var lines=csv.trim().split('\n');
       var newRaw=[];
       for(var i=1;i<lines.length;i++){
         var v=parseCSVLine(lines[i]);
         if(v[0]>=START_DATE) newRaw.push([v[0],v[1],v[2],v[3],v[4],(v[5]||'').trim()]);
       }
-      // Classify unknown origins: UAV→Lebanon, Rockets≥75cities→Iran, else→Lebanon
       var _linfo={};
       newRaw.forEach(function(a,i){
         var lid=a[3].split('_')[0];
@@ -2329,6 +2360,7 @@ function refreshFromGitHub(){
         info.idxs.forEach(function(idx){newRaw[idx][5]=o;});
       }
       RAW=newRaw;
+      TODAY=new Date().toISOString().substring(0,10);
       splitLaunches();
       populateFilters();
       populateCityTimelineSelect();
@@ -2339,7 +2371,10 @@ function refreshFromGitHub(){
       var ts=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
       btn.textContent=t('refreshed')+' '+ts;
       setTimeout(function(){btn.textContent=t('refreshBtn');},3000);
-    })
+    });
+  }
+  doRefresh('https://raw.githubusercontent.com/yuval-harpaz/alarms/master/data/alarms.csv?_='+Date.now())
+    .catch(function(e){console.warn('GitHub raw refresh failed, trying CDN...',e);return doRefresh('https://cdn.jsdelivr.net/gh/yuval-harpaz/alarms@master/data/alarms.csv?_='+Date.now());})
     .catch(function(e){btn.textContent=t('refreshError');console.error(e);});
 }
 
@@ -2393,31 +2428,30 @@ window.addEventListener('load',function(){
     return newRaw.length;
   }
 
-  var cached=null;
-  try{cached=localStorage.getItem('alarms_csv');}catch(e){}
-  if(cached){
-    console.log('Loading from cache...');
-    parseAndBoot(cached);
-    bootWithData();
-    console.log('Cache loaded:',RAW.length,'alerts. Fetching fresh in background...');
+  try{localStorage.removeItem('alarms_csv');localStorage.removeItem('alarms_ts');}catch(e){}
+
+  function fetchData(url,label){
+    console.log('Fetching from '+label+'...');
+    return fetch(url).then(function(r){
+      if(!r.ok) throw new Error(label+' HTTP '+r.status);
+      return r.text();
+    }).then(function(csv){
+      var count=parseAndBoot(csv);
+      TODAY=new Date().toISOString().substring(0,10);
+      console.log(label+': '+count+' alerts loaded, TODAY='+TODAY);
+      return count;
+    });
   }
 
-  var DATA_URL='https://cdn.jsdelivr.net/gh/yuval-harpaz/alarms@master/data/alarms.csv';
-  fetch(DATA_URL)
-    .then(function(r){return r.text();})
-    .then(function(csv){
-      try{localStorage.setItem('alarms_csv',csv);}catch(e){}
-      var count=parseAndBoot(csv);
-      console.log('Fresh data loaded:',count,'alerts');
-      if(!cached){bootWithData();}
-      else{
-        try{splitLaunches();}catch(e){console.error(e);}
-        try{refreshAll();}catch(e){console.error(e);}
-      }
-    })
+  var RAW_URL='https://raw.githubusercontent.com/yuval-harpaz/alarms/master/data/alarms.csv?_='+Date.now();
+  var CDN_URL='https://cdn.jsdelivr.net/gh/yuval-harpaz/alarms@master/data/alarms.csv?_='+Date.now();
+
+  fetchData(RAW_URL,'GitHub raw')
+    .catch(function(e){console.warn('GitHub raw failed:',e);return fetchData(CDN_URL,'jsDelivr');})
+    .then(function(){bootWithData();})
     .catch(function(e){
-      console.warn('Fetch failed:',e);
-      if(!cached) bootWithData();
+      console.error('All fetches failed:',e);
+      bootWithData();
     });
 
   setInterval(refreshFromGitHub,3600000);
