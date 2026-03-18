@@ -21,24 +21,34 @@
   --gaza-color:#ff3b5c;--lebanon-color:#ff8c42;--iran-color:#a855f7;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html,body{overflow-x:hidden;}
+html,body{overflow-x:clip;}
 body{font-family:'Heebo','Segoe UI',sans-serif;background:var(--bg-primary);color:var(--text-primary);min-height:100vh;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
 body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 20%,rgba(255,59,92,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(255,140,66,0.04) 0%,transparent 50%);pointer-events:none;z-index:-1;}
 .container{max-width:1800px;margin:0 auto;padding:20px;}
-header{display:flex;justify-content:space-between;align-items:center;padding:16px 0 20px;border-bottom:1px solid var(--border-color);margin-bottom:16px;flex-wrap:wrap;gap:12px;}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid var(--border-color);margin-bottom:0;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:1000;background:var(--bg-primary);backdrop-filter:blur(12px);}
 .logo{display:flex;align-items:center;gap:14px;}
 .logo-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--accent-red),var(--accent-orange));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 30px rgba(255,59,92,0.3);}
 .logo-text h1{font-size:24px;font-weight:900;background:linear-gradient(135deg,var(--text-primary),var(--text-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 .logo-text span{font-size:11px;color:var(--text-muted);}
 .header-controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
 .badge{padding:5px 10px;border-radius:6px;font-weight:600;font-size:11px;}
+.share-btn{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Heebo',sans-serif;display:flex;align-items:center;gap:6px;transition:transform 0.15s,box-shadow 0.2s;box-shadow:0 2px 8px rgba(34,197,94,0.3);}
+.share-btn:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(34,197,94,0.4);}
+.share-btn:active{transform:scale(0.97);}
 .badge.date{background:var(--accent-purple);color:white;}
 .toggle-container{display:flex;align-items:center;gap:0;background:var(--bg-secondary);border-radius:12px;border:1px solid var(--border-color);overflow:hidden;}
 .toggle-btn{padding:12px 32px;font-size:18px;font-weight:800;cursor:pointer;transition:all 0.25s;border:none;background:transparent;color:var(--text-muted);font-family:'Heebo','Segoe UI',sans-serif;letter-spacing:0.5px;}
 .toggle-btn.active-launches{background:var(--accent-red);color:#fff;}
 .toggle-btn.active-alerts{background:var(--accent-blue);color:#fff;}
-.refresh-btn{background:var(--accent-blue);color:white;border:none;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:600;font-family:'Heebo','Segoe UI',sans-serif;}
-.refresh-btn:hover{opacity:0.9;}
+.global-toggle{display:inline-flex;align-items:center;gap:0;background:rgba(255,255,255,0.06);border-radius:16px;border:2px solid rgba(255,255,255,0.12);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.25);}
+.global-toggle .gt-btn{padding:14px 36px;font-size:17px;font-weight:800;cursor:pointer;border:none;background:transparent;color:var(--text-muted);font-family:'Heebo',sans-serif;letter-spacing:0.5px;transition:all 0.3s cubic-bezier(.4,0,.2,1);position:relative;}
+.global-toggle .gt-btn:hover{color:var(--text-primary);background:rgba(255,255,255,0.06);}
+.global-toggle .gt-btn.active-launches{background:linear-gradient(135deg,#ff3b5c,#ff6644);color:#fff;box-shadow:0 0 20px rgba(255,59,92,0.4);}
+.global-toggle .gt-btn.active-alerts{background:linear-gradient(135deg,#3b82f6,#6366f1);color:#fff;box-shadow:0 0 20px rgba(59,130,246,0.4);}
+.info-pill{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;cursor:help;font-size:12px;color:var(--text-secondary);transition:all 0.2s;}
+.info-pill:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.25);color:var(--text-primary);}
+.refresh-btn{background:#374151;color:#9ca3af;border:1px solid #4b5563;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:600;font-family:'Heebo','Segoe UI',sans-serif;transition:all 0.2s;}
+.refresh-btn:hover{background:#4b5563;color:#e5e7eb;}
 
 /* Dashboard Intro */
 .dashboard-intro{background:var(--bg-secondary);border:1px solid var(--border-color);border-right:3px solid var(--accent-blue);border-radius:3px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 100%,0 100%);padding:14px 18px;margin-bottom:14px;font-size:16px;line-height:1.9;color:var(--text-secondary);direction:rtl;}
@@ -60,7 +70,8 @@ header{display:flex;justify-content:space-between;align-items:center;padding:16p
 .city-dropdown-item:hover{background:var(--bg-secondary);}
 
 /* Active Filters */
-.active-filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;min-height:28px;align-items:center;}
+.active-filters{display:none;gap:6px;flex-wrap:wrap;min-height:0;align-items:center;padding:6px 12px;border-radius:8px;transition:background 0.3s,box-shadow 0.3s;width:100%;}
+.active-filters.has-filters{display:flex;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.25);}
 .filter-badge{display:flex;align-items:center;gap:4px;background:var(--accent-blue);color:white;padding:3px 8px;border-radius:12px;font-size:11px;font-weight:600;cursor:pointer;}
 .filter-badge:hover{opacity:0.8;}
 .filter-badge .x{font-size:13px;margin-right:2px;}
@@ -210,7 +221,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   table.dataTable tbody tr:hover{background:transparent!important;}
 
   /* Force everything within viewport */
-  .container{padding:6px;width:100%;max-width:100vw;overflow-x:hidden;}
+  .container{padding:6px;width:100%;max-width:100vw;overflow-x:clip;}
   .card{max-width:100%;overflow:hidden;}
   .card-body{max-width:100%;overflow:hidden;}
   .chart-container,.chart-container-wide{max-width:100%;overflow:hidden;}
@@ -218,7 +229,9 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   .pop-slider-row{flex-wrap:wrap;max-width:100%;}
   .main-layout{max-width:100%;overflow:hidden;}
   .left-column,.right-sidebar{max-width:100%;overflow:hidden;min-width:0;}
-  header{flex-direction:column;align-items:flex-start;gap:6px;padding:8px 0 10px;}
+  header{flex-direction:column;align-items:flex-start;gap:6px;padding:8px 12px 10px;}
+  .active-filters.has-filters{display:flex;}
+  .share-btn{padding:6px 12px;font-size:11px;}
   .logo{gap:8px;}
   .logo-icon{width:30px;height:30px;font-size:15px;border-radius:6px;box-shadow:0 0 12px rgba(255,59,92,0.2);}
   .logo-text h1{font-size:15px;}
@@ -233,8 +246,10 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   .iran-filter-btn{width:auto;text-align:center;padding:8px 14px;font-size:11px;border-radius:3px;}
   .toggle-container{border-radius:3px;}
   .toggle-btn{padding:6px 14px;font-size:12px;letter-spacing:0;}
+  .global-toggle{border-radius:10px;}
+  .global-toggle .gt-btn{padding:10px 22px;font-size:14px;}
+  .info-pill{font-size:11px;padding:4px 10px;}
   div[style*="scale(1.3)"]{transform:scale(1.0)!important;}
-  #toggleHintText{font-size:10px;}
 
   /* Filters */
   .filter-bar{overflow-x:auto;flex-wrap:wrap;-webkit-overflow-scrolling:touch;padding-bottom:3px;gap:6px;margin-bottom:10px;}
@@ -353,6 +368,8 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   .chart-container{height:130px;}
   .chart-container-wide{height:110px;}
   .toggle-btn{padding:5px 10px;font-size:10px;}
+  .global-toggle .gt-btn{padding:8px 16px;font-size:12px;}
+  .info-pill{font-size:10px;padding:3px 8px;}
   .card-header{font-size:8px;padding:4px 5px;}
   .charts-grid{grid-template-columns:1fr;}
   .logo-text h1{font-size:13px;}
@@ -374,7 +391,6 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 <div class="loading-overlay" id="loadingOverlay"><div class="loader"></div><div class="loading-text">טוען נתונים...</div></div>
 <script>setTimeout(function(){document.getElementById('loadingOverlay').classList.add('hidden');},15000);</script>
 
-<div class="container">
 <header>
   <div class="logo">
     <div class="logo-icon">🚀</div>
@@ -387,8 +403,12 @@ footer a{color:var(--accent-blue);text-decoration:none;}
       <button class="toggle-btn" id="btnEn" onclick="setLang('en')" style="padding:8px 16px;font-size:13px;">EN</button>
       <button class="toggle-btn" id="btnRu" onclick="setLang('ru')" style="padding:8px 16px;font-size:13px;">RU</button>
     </div>
+    <button class="share-btn" id="shareBtn" onclick="shareDashboard()">&#128279; שתפו</button>
     <button class="refresh-btn" onclick="refreshFromGitHub()">רענן מ-GitHub</button>
     <span id="lastUpdateTime" style="font-size:11px;color:var(--text-muted);min-width:100px;" data-i18n-template="lastUpdate"></span>
+  </div>
+  <div class="active-filters" id="activeFilters">
+    <button class="clear-all-btn" id="clearAllBtn" onclick="clearAllFilters()">נקה הכל</button>
   </div>
 </header>
 <nav class="nav-bar" id="dashNavBar">
@@ -399,7 +419,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <button class="nav-btn" id="navRegions" onclick="document.getElementById('section-regions').scrollIntoView({behavior:'smooth'})">&#128293; הכי הרבה / הכי פחות התראות</button>
 </nav>
 
-
+<div class="container">
 <!-- Dashboard Intro -->
 <div class="dashboard-intro">
   <strong>מה מציג הדשבורד?</strong> נתוני התרעות ואירועים בזמן אמת מ-28 בפברואר 2026, מתוך מאגר פתוח.
@@ -421,12 +441,22 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <br>אם באותו ID (לאחר הפיצולים לעיל) חולפות יותר מ-3 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש. הסיבה: גל שיגור בודד נמשך בדרך כלל עד 3 דקות. פער גדול יותר מעיד על גל שיגור נוסף.
   <br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל — אם לא מאתרים אותו, הוא מתקדם ומפעיל אזעקות ביישובים נוספים. למרות פערי הזמן, מדובר באותו אירוע.</em>
 </div>
-<div onclick="document.getElementById('whatsNewBox').style.display=document.getElementById('whatsNewBox').style.display==='none'?'block':'none'" style="cursor:pointer;margin:0 auto 10px;padding:10px 16px;background:linear-gradient(90deg,rgba(74,222,128,0.15),rgba(74,222,128,0.05));border:1px solid rgba(74,222,128,0.4);border-radius:8px;text-align:center;direction:rtl;max-width:1400px;">
-  <span style="font-size:15px;font-weight:700;color:var(--accent-green);">&#127381; מה חדש? (15.3.2026)</span>
-  <span style="font-size:12px;color:var(--text-secondary);margin-right:8px;">לחצו לפירוט &#9660;</span>
+<div id="whatsNewBanner" onclick="document.getElementById('whatsNewBox').style.display=document.getElementById('whatsNewBox').style.display==='none'?'block':'none'" style="cursor:pointer;margin:0 auto 10px;padding:10px 16px;background:linear-gradient(90deg,rgba(74,222,128,0.15),rgba(74,222,128,0.05));border:1px solid rgba(74,222,128,0.4);border-radius:8px;text-align:center;direction:rtl;max-width:1400px;">
+  <span id="whatsNewBannerTitle" style="font-size:15px;font-weight:700;color:var(--accent-green);">&#127381; מה חדש? (16.3.2026)</span>
+  <span id="whatsNewBannerClick" style="font-size:12px;color:var(--text-secondary);margin-right:8px;">לחצו לפירוט &#9660;</span>
 </div>
 <div id="whatsNewBox" style="display:none;margin:0 auto 12px;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(74,222,128,0.25);border-radius:8px;font-size:13px;line-height:1.8;direction:rtl;max-width:1400px;">
-  <strong style="font-size:14px;color:var(--accent-green);">&#127381; מה חדש? (עדכון 15.3.2026)</strong>
+  <strong style="font-size:14px;color:var(--accent-green);">&#127381; חדש היום — 16.3.2026</strong>
+  <br><br><strong>1. כפתור שיתוף</strong>
+  <br>כפתור "שתפו" בולט בראש הדף מאפשר להעתיק קישור ישיר לדשבורד עם כל הפילטרים הפעילים. ניתן לשתף תצוגה מסוננת לעיר/מקור/יום ספציפי.
+  <br><br><strong>2. קישורים עם פילטרים (URL params)</strong>
+  <br>כל פילטר שמופעל מעדכן את ה-URL אוטומטית. כשנכנסים דרך קישור עם פרמטרים — הדשבורד נטען ישירות עם הפילטרים. לדוגמה: <code>?city=1281</code> = פתח תקווה.
+  <br><br><strong>3. סינכרון toggle אירועים/התרעות לגרפים יומיים</strong>
+  <br>ה-toggle הגלובלי (אירועים/התרעות) מסנכרן כעת גם את הגרפים היומיים של איראן ולבנון אוטומטית.
+  <br><br><strong>4. Header ופילטרים דביקים (Sticky)</strong>
+  <br>ראש הדף (לוגו, שפה, שיתוף) ושורת הפילטרים הפעילים נשארים גלויים תמיד בעת גלילה — כך שתמיד ברור אם ואיזה פילטר מופעל.
+  <br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;">
+  <strong style="font-size:14px;color:var(--accent-green);">עדכון 15.3.2026</strong>
   <br><br><strong>1. שיפור מתודולוגיית זיהוי אירועים</strong>
   <br>נוספו שלושה כללי פיצול חכמים: פיצול לפי מקור שיגור, לפי סוג איום (רקטות vs. כטב״מים), וחוק 3 הדקות מההתרעה הראשונה (חל על רקטות/טילים בלבד — כטב״מ הוא אירוע מתגלגל ולכן לא מפוצל לפי זמן). <a href="javascript:void(0)" onclick="document.getElementById('whatsNewBox').style.display='none';document.getElementById('methodologyBox').style.display='block';" style="color:var(--accent-blue);text-decoration:underline;">ראו פירוט המתודולוגיה</a>
   <br><br><strong>2. הוספת מדד חשיפות</strong>
@@ -467,19 +497,13 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   </div>
 </div>
 
-<!-- Active Filters -->
-<div class="active-filters" id="activeFilters">
-  <button class="clear-all-btn" id="clearAllBtn" onclick="clearAllFilters()">נקה הכל</button>
-</div>
-
 <!-- Global Toggle: Events / Alerts -->
-<div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 0 8px 0;">
-  <div class="toggle-container" style="transform:scale(1.1);">
-    <button class="toggle-btn active-launches" id="btnLaunchesBig" onclick="setMode('launches')">אירועים</button>
-    <button class="toggle-btn" id="btnAlertsBig" onclick="setMode('alerts')">התרעות</button>
+<div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:16px 0 12px 0;">
+  <div class="global-toggle">
+    <button class="gt-btn active-launches" id="btnLaunchesBig" onclick="setMode('launches')">&#128640; אירועים</button>
+    <button class="gt-btn" id="btnAlertsBig" onclick="setMode('alerts')">&#128276; התרעות</button>
   </div>
-  <span data-tip="&lt;b&gt;אירוע&lt;/b&gt; = אירוע במערכת ההתרעה. יכול לכלול מספר שיגורים ממקומות שונים, אבל מזוהה כ-event אחד ע&quot;י המערכת.&lt;br&gt;אירועים מופרדים לפי: מקור (איראן/לבנון), סוג איום (טילים/כטב&quot;מ), והפרש של 3+ דקות.&lt;br&gt;&lt;br&gt;&lt;b&gt;התרעה&lt;/b&gt; = אזעקה בודדת ביישוב אחד.&lt;br&gt;לדוגמה: אירוע אחד עם אזעקות ב-5 יישובים = &lt;b&gt;אירוע 1, התרעות 5&lt;/b&gt;." style="cursor:help;font-size:16px;color:var(--text-muted);opacity:0.7;">&#9432;</span>
-  <span id="toggleHintText" style="font-size:12px;color:var(--text-muted);"></span>
+  <span class="info-pill" data-tip="&lt;b&gt;אירוע&lt;/b&gt; = אירוע במערכת ההתרעה. יכול לכלול מספר שיגורים ממקומות שונים, אבל מזוהה כ-event אחד ע&quot;י המערכת.&lt;br&gt;אירועים מופרדים לפי: מקור (איראן/לבנון), סוג איום (טילים/כטב&quot;מ), והפרש של 3+ דקות.&lt;br&gt;&lt;br&gt;&lt;b&gt;התרעה&lt;/b&gt; = אזעקה בודדת ביישוב אחד.&lt;br&gt;לדוגמה: אירוע אחד עם אזעקות ב-5 יישובים = &lt;b&gt;אירוע 1, התרעות 5&lt;/b&gt;.">&#9432; מה ההבדל?</span>
 </div>
 
 <!-- Stats Row: 2 cards only -->
@@ -609,6 +633,49 @@ var POP = {"אבו גוש": 8847, "אבו סנאן": 14543, "אבו קרינאת
 var TODAY = new Date().toISOString().substring(0,10);
 var START_DATE = "2026-02-28";
 
+var _sortedCities=Object.keys(COORDS).sort();
+var CITY_ID={};var ID_CITY={};
+_sortedCities.forEach(function(name,i){var id=i+1;CITY_ID[name]=id;ID_CITY[id]=name;});
+
+function syncFiltersToURL(){
+  var p=new URLSearchParams();
+  if(filters.city) p.set('city',CITY_ID[filters.city]||filters.city);
+  if(filters.origin) p.set('origin',filters.origin);
+  if(filters.threat) p.set('threat',filters.threat);
+  if(filters.day) p.set('day',filters.day);
+  if(filters.hour!==null&&filters.hour!=='') p.set('hour',filters.hour);
+  if(viewMode==='alerts') p.set('mode','alerts');
+  var qs=p.toString();
+  var newUrl=window.location.pathname+(qs?'?'+qs:'');
+  history.replaceState(null,'',newUrl);
+}
+
+function readFiltersFromURL(){
+  var p=new URLSearchParams(window.location.search);
+  var cityId=p.get('city');
+  if(cityId&&ID_CITY[parseInt(cityId)]){
+    var cn=ID_CITY[parseInt(cityId)];
+    filters.city=cn;
+    document.getElementById('citySearch').value=cn;
+    var coords=COORDS[cn];
+    if(coords&&typeof map!=='undefined'&&map) map.setView(coords,12);
+  }
+  var origin=p.get('origin');
+  if(origin){filters.origin=origin;document.getElementById('filterOrigin').value=origin;}
+  var threat=p.get('threat');
+  if(threat){filters.threat=threat;document.getElementById('filterThreat').value=threat;}
+  var day=p.get('day');
+  if(day){filters.day=day;document.getElementById('filterDay').value=day;}
+  var hour=p.get('hour');
+  if(hour!==null&&hour!==''){filters.hour=hour;document.getElementById('filterHour').value=hour;}
+  var mode=p.get('mode');
+  if(mode==='alerts') setMode('alerts');
+  if(cityId||origin||threat||day||hour){
+    renderFilterBadges();
+    refreshAll();
+  }
+}
+
 // Fix missing POP entries for area-cities (e.g. "תל אביב - מזרח")
 (function(){
   var knownPop={"תל אביב":597000,"כוכב יאיר":26000};
@@ -664,7 +731,7 @@ var T = {
     dashboardTitle: 'שאגת הארי דשבורד',
     dashboardSubtitle: 'התרעות ואירועים מ-28 בפברואר 2026',
     credits: 'פותח על ידי <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">צחי בן שימול</a> בסיוע <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">ברק ליטוינוב</a> | נתוני ההתראות באמצעות הגיט הפתוח של <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">יובל הרפז</a>',
-    introText: '<strong>מה מציג הדשבורד?</strong> נתוני התרעות ואירועים בזמן אמת מ-28 בפברואר 2026, מתוך מאגר פתוח. <br><strong>אירוע</strong> = הפעלה של מערכת ההתרעה. באירוע אחד יכולים להישמע צופרים בכמה יישובים בו-זמנית. כל אירוע מזוהה לפי מספר ייחודי (ID) מהמקור. <br><strong>התרעה</strong> = כל ישוב שקיבל צופר באותו אירוע. אירוע אחד יכול ליצור עשרות התרעות (ישוב אחד = התרעה אחת). <br><strong>פילטרים דינמיים:</strong> לחצו על כל אלמנט בגרף, במפה, או בסיידבר כדי לסנן את כל הדשבורד. לחיצה נוספת מבטלת את הפילטר. ניתן גם להשתמש בתפריטים למעלה.',
+    introText: '<strong>מה מציג הדשבורד?</strong> נתוני התרעות ואירועים בזמן אמת מ-28 בפברואר 2026, מתוך מאגר פתוח. <br><strong>אירוע</strong> = הפעלה של מערכת ההתרעה. באירוע אחד יכולים להישמע צופרים בכמה יישובים בו-זמנית. כל אירוע מזוהה לפי מספר ייחודי (ID) מהמקור. <a href="javascript:void(0)" onclick="document.getElementById(\'methodologyBox\').style.display=document.getElementById(\'methodologyBox\').style.display===\'none\'?\'block\':\'none\'" style="color:var(--accent-blue);text-decoration:underline;font-weight:600;font-size:inherit;">לפירוט המתודולוגיה לחץ כאן</a><br><strong>התרעה</strong> = כל ישוב שקיבל צופר באותו אירוע. אירוע אחד יכול ליצור עשרות התרעות (ישוב אחד = התרעה אחת). <br><strong>חשיפות</strong> = התרעות &times; אוכלוסייה. מודד כמה אנשים חוו אזעקה. לדוגמה: אם נתניה מזרח (~117K תושבים) קיבלה 3 התרעות ביום מסוים, זה 351K חשיפות. נתוני אוכלוסייה מבוססים על נתוני הלמ&quot;ס 2024. <br><strong>פילטרים דינמיים:</strong> לחצו על כל אלמנט בגרף, במפה, או בסיידבר כדי לסנן את כל הדשבורד. לחיצה נוספת מבטלת את הפילטר. ניתן גם להשתמש בתפריטים למעלה.',
     iranBtn: '&#127470;&#127479; לחצו כאן לסינון איראן בלבד',
     allOrigins: 'כל המקורות', gaza: 'עזה', lebanon: 'לבנון', iran: 'איראן', fa: 'FA', unknown: 'לא ידוע',
     allThreats: 'כל סוגי האיום', rockets: 'ירי רקטות וטילים', aircraft: 'חדירת כלי טיס עוין', infiltration: 'חדירת מחבלים',
@@ -685,6 +752,7 @@ var T = {
     hourlyLaunchTitle: 'באיזו שעה? לפי שעה', hourlyAlertTitle: 'באיזו שעה התריעו?',
     iranChartTitle: 'אירועים מאיראן: ממוצע נע 12 שעות + מצטבר',
     lebChartTitle: 'אירועים מלבנון: ממוצע נע 12 שעות + מצטבר',
+    minuteTitle: 'באיזו דקה בשעה? (0-59)',
     topRegions: 'היישובים עם הכי הרבה התראות', bottomRegions: 'היישובים עם הכי פחות התראות', topRegionsEvents: 'היישובים עם הכי הרבה אירועים', bottomRegionsEvents: 'היישובים עם הכי פחות אירועים',
     recentTitle: 'מה קרה לאחרונה?',
     cityTimelineTitle: 'ציר זמן לפי ישוב', cityTimelineDefault: 'בחרו ישוב...',
@@ -726,12 +794,16 @@ var T = {
     seriesDrones: 'כטב"מים', seriesRockets: 'רקטות/טילים', seriesExposures: 'חשיפות',
     btnExposures: 'חשיפות',
     footerPrefix: 'נתונים מ-',
+    whatsNewBanner: '&#127381; מה חדש? (16.3.2026)',
+    whatsNewClick: 'לחצו לפירוט &#9660;',
+    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; חדש היום — 16.3.2026</strong><br><br><strong>1. כפתור שיתוף</strong><br>כפתור "שתפו" בולט בראש הדף מאפשר להעתיק קישור ישיר לדשבורד עם כל הפילטרים הפעילים.<br><br><strong>2. קישורים עם פילטרים (URL params)</strong><br>כל פילטר שמופעל מעדכן את ה-URL אוטומטית. לדוגמה: <code>?city=1281</code> = פתח תקווה.<br><br><strong>3. סינכרון toggle אירועים/התרעות</strong><br>ה-toggle הגלובלי מסנכרן גם את הגרפים היומיים אוטומטית.<br><br><strong>4. Header ופילטרים דביקים</strong><br>ראש הדף ושורת הפילטרים נשארים גלויים תמיד בעת גלילה.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">עדכון 15.3.2026</strong><br><br><strong>1. שיפור מתודולוגיית זיהוי אירועים</strong><br>נוספו שלושה כללי פיצול חכמים.<br><br><strong>2. מדד חשיפות</strong><br>חשיפות = התרעות &times; אוכלוסייה.<br><br><strong>3. ממוצע נע גם עבור לבנון</strong><br><strong>4. גלילה ברשימת יישובים</strong><br><strong>5. תיוג בגרפים</strong>',
+    methodologyContent: '<strong style="font-size:14px;">מתודולוגיה: זיהוי אירועים</strong><br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל שלושה כללים כדי לפצל אירועים שקיבלו אותו ID אך הם למעשה אירועים נפרדים:<br><br><strong>1. פיצול לפי מקור שיגור</strong><br>אם באותו ID יש התרעות ממקורות שונים (למשל איראן ולבנון בו-זמנית), כל מקור נחשב כאירוע נפרד.<br><br><strong>2. פיצול לפי סוג איום</strong><br>אם באותו ID יש גם ירי רקטות/טילים וגם חדירת כלי טיס עוין (כטב״מ), כל סוג איום נחשב כאירוע נפרד.<br><br><strong>3. חוק 3 הדקות (רקטות/טילים בלבד)</strong><br>אם חולפות יותר מ-3 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש.<br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל.</em>',
   },
   en: {
     dashboardTitle: 'Lion\'s Roar Dashboard',
     dashboardSubtitle: 'Alerts and events from February 28, 2026',
     credits: 'Developed by <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Tsachi Ben Shimol</a> with <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Barak Litvinov</a> | Alert data powered by <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Yuval Harpaz</a>\'s open-source repo',
-    introText: '<strong>What does this dashboard show?</strong> Real-time alert and event data from February 28, 2026, from an open-source repository. <br><strong>Event</strong> = activation of the alert system. One event can trigger sirens in multiple cities simultaneously. Each event is identified by a unique ID from the source. <br><strong>Alert</strong> = each city that received a siren in that event. One event can generate dozens of alerts (one city = one alert). <br><strong>3-Minute Rule:</strong> If the same city appears under the same event ID with a time gap greater than 3 minutes between alerts, subsequent occurrences count as separate events. <br><strong>Dynamic filters:</strong> Click any element in a chart, map, or sidebar to filter the entire dashboard. Click again to remove the filter. You can also use the dropdown menus above.',
+    introText: '<strong>What does this dashboard show?</strong> Real-time alert and event data from February 28, 2026, from an open-source repository. <br><strong>Event</strong> = activation of the alert system. One event can trigger sirens in multiple cities simultaneously. Each event is identified by a unique ID from the source. <a href="javascript:void(0)" onclick="document.getElementById(\'methodologyBox\').style.display=document.getElementById(\'methodologyBox\').style.display===\'none\'?\'block\':\'none\'" style="color:var(--accent-blue);text-decoration:underline;font-weight:600;font-size:inherit;">Click here for methodology details</a><br><strong>Alert</strong> = each city that received a siren in that event. One event can generate dozens of alerts (one city = one alert). <br><strong>Exposures</strong> = alerts &times; population. Measures how many people experienced a siren. For example: if Netanya East (~117K residents) received 3 alerts in a day, that is 351K exposures. Population data based on CBS 2024 estimates. <br><strong>Dynamic filters:</strong> Click any element in a chart, map, or sidebar to filter the entire dashboard. Click again to remove the filter. You can also use the dropdown menus above.',
     iranBtn: '&#127470;&#127479; Click here to filter Iran only',
     allOrigins: 'All origins', gaza: 'Gaza', lebanon: 'Lebanon', iran: 'Iran', fa: 'FA', unknown: 'Unknown',
     allThreats: 'All threat types', rockets: 'Rockets & Missiles', aircraft: 'Hostile Aircraft', infiltration: 'Terrorist Infiltration',
@@ -794,12 +866,16 @@ var T = {
     seriesDrones: 'UAVs', seriesRockets: 'Rockets/Missiles', seriesExposures: 'Exposures',
     btnExposures: 'Exposures',
     footerPrefix: 'Data from ',
+    whatsNewBanner: '&#127381; What\'s New? (16.3.2026)',
+    whatsNewClick: 'Click for details &#9660;',
+    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; New today — 16.3.2026</strong><br><br><strong>1. Share button</strong><br>A prominent "Share" button at the top lets you copy a direct link with all active filters.<br><br><strong>2. URL parameters for filters</strong><br>Every active filter updates the URL automatically. Example: <code>?city=1281</code> = Petah Tikva.<br><br><strong>3. Events/Alerts toggle syncs daily charts</strong><br>The global toggle now also syncs the daily Iran and Lebanon charts automatically.<br><br><strong>4. Sticky header &amp; filters</strong><br>The header and active filter badges stay visible while scrolling.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Update 15.3.2026</strong><br><br><strong>1. Improved event identification methodology</strong><br>Three smart splitting rules added.<br><br><strong>2. Exposures metric</strong><br>Exposures = alerts &times; population.<br><br><strong>3. Moving average for Lebanon</strong><br><strong>4. Expanded city lists</strong><br><strong>5. Chart labels</strong>',
+    methodologyContent: '<strong style="font-size:14px;">Methodology: Event Identification</strong><br>Home Front Command assigns a unique ID to each alert wave. The dashboard applies three rules to split events that share the same ID but are actually separate incidents:<br><br><strong>1. Split by launch origin</strong><br>If the same ID contains alerts from different origins (e.g. Iran and Lebanon simultaneously), each origin is treated as a separate event.<br><br><strong>2. Split by threat type</strong><br>If the same ID contains both rocket/missile fire and hostile aircraft (UAV), each threat type is treated as a separate event.<br><br><strong>3. 3-Minute Rule (rockets/missiles only)</strong><br>If more than 3 minutes pass from the first alert in an event, subsequent alerts are counted as a new event.<br><em style="color:var(--text-muted);">&#9432; This rule does not apply to UAV events: a UAV is a rolling event.</em>',
   },
   ru: {
     dashboardTitle: 'Панель «Рёв Льва»',
     dashboardSubtitle: 'Тревоги и события с 28 февраля 2026',
     credits: 'Разработано <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Цахи Бен Шимол</a> при содействии <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Барак Литвинов</a> | Данные тревог из открытого репозитория <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Юваль Харпаз</a>',
-    introText: '<strong>Что показывает панель?</strong> Данные тревог и событий в реальном времени с 28 февраля 2026 года из открытого источника. <br><strong>Событие</strong> = активация системы оповещения. Одно событие может вызвать сирены в нескольких городах одновременно. Каждое событие имеет уникальный ID. <br><strong>Тревога</strong> = каждый город, получивший сирену в рамках события. Одно событие может породить десятки тревог (один город = одна тревога). <br><strong>Динамические фильтры:</strong> нажмите на любой элемент графика, карты или боковой панели, чтобы отфильтровать всю панель. Повторное нажатие снимает фильтр. Также можно использовать выпадающие меню выше.',
+    introText: '<strong>Что показывает панель?</strong> Данные тревог и событий в реальном времени с 28 февраля 2026 года из открытого источника. <br><strong>Событие</strong> = активация системы оповещения. Одно событие может вызвать сирены в нескольких городах одновременно. Каждое событие имеет уникальный ID. <a href="javascript:void(0)" onclick="document.getElementById(\'methodologyBox\').style.display=document.getElementById(\'methodologyBox\').style.display===\'none\'?\'block\':\'none\'" style="color:var(--accent-blue);text-decoration:underline;font-weight:600;font-size:inherit;">Подробнее о методологии</a><br><strong>Тревога</strong> = каждый город, получивший сирену в рамках события. Одно событие может породить десятки тревог (один город = одна тревога). <br><strong>Экспозиции</strong> = тревоги &times; население. Показывает, сколько людей пережили сирену. Например: если в восточной Нетании (~117 тыс. жителей) было 3 тревоги за день, это 351 тыс. экспозиций. Данные о населении — ЦСБ 2024. <br><strong>Динамические фильтры:</strong> нажмите на любой элемент графика, карты или боковой панели, чтобы отфильтровать всю панель. Повторное нажатие снимает фильтр. Также можно использовать выпадающие меню выше.',
     iranBtn: '&#127470;&#127479; Нажмите для фильтрации только по Ирану',
     allOrigins: 'Все источники', gaza: 'Газа', lebanon: 'Ливан', iran: 'Иран', fa: 'FA', unknown: 'Неизвестно',
     allThreats: 'Все типы угроз', rockets: 'Ракеты и снаряды', aircraft: 'Враждебный БПЛА', infiltration: 'Проникновение террористов',
@@ -820,6 +896,7 @@ var T = {
     hourlyLaunchTitle: 'В какое время? По часам', hourlyAlertTitle: 'В какое время были тревоги?',
     iranChartTitle: 'События из Ирана: скользящее среднее 12ч + нарастающий итог',
     lebChartTitle: 'События из Ливана: скользящее среднее 12ч + нарастающий итог',
+    minuteTitle: 'Какая минута часа? (0-59)',
     topRegions: 'Города с наибольшим числом тревог', bottomRegions: 'Города с наименьшим числом тревог', topRegionsEvents: 'Города с наибольшим числом событий', bottomRegionsEvents: 'Города с наименьшим числом событий',
     recentTitle: 'Последние события',
     cityTimelineTitle: 'Хронология города', cityTimelineDefault: 'Выберите город...',
@@ -860,7 +937,11 @@ var T = {
     popCityPickerLabel: 'Выберите город:',
     seriesDrones: 'БПЛА', seriesRockets: 'Ракеты/снаряды', seriesExposures: 'Экспозиции',
     btnExposures: 'Экспозиции',
-    footerPrefix: 'Данные из '
+    footerPrefix: 'Данные из ',
+    whatsNewBanner: '&#127381; Что нового? (16.3.2026)',
+    whatsNewClick: 'Нажмите для подробностей &#9660;',
+    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; Новое сегодня — 16.3.2026</strong><br><br><strong>1. Кнопка «Поделиться»</strong><br>Позволяет скопировать прямую ссылку со всеми активными фильтрами.<br><br><strong>2. URL-параметры фильтров</strong><br>Каждый активный фильтр обновляет URL автоматически. Пример: <code>?city=1281</code> = Петах-Тиква.<br><br><strong>3. Синхронизация переключателя с дневными графиками</strong><br>Глобальный переключатель теперь синхронизирует дневные графики Ирана и Ливана автоматически.<br><br><strong>4. Закреплённые заголовок и фильтры</strong><br>Заголовок и активные фильтры остаются видимыми при прокрутке.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Обновление 15.3.2026</strong><br><br><strong>1. Улучшенная методология</strong><br>Три правила разделения событий.<br><br><strong>2. Метрика экспозиций</strong><br>Экспозиции = тревоги &times; население.<br><br><strong>3. Скользящее среднее для Ливана</strong><br><strong>4. Расширенные списки городов</strong><br><strong>5. Подписи на графиках</strong>',
+    methodologyContent: '<strong style="font-size:14px;">Методология: Идентификация событий</strong><br>Командование тыла присваивает каждой волне тревог уникальный ID. Панель применяет три правила для разделения событий с одинаковым ID, которые на самом деле являются отдельными инцидентами:<br><br><strong>1. Разделение по источнику запуска</strong><br>Если один ID содержит тревоги из разных источников (например, Иран и Ливан одновременно), каждый источник считается отдельным событием.<br><br><strong>2. Разделение по типу угрозы</strong><br>Если один ID содержит ракетный обстрел и БПЛА, каждый тип угрозы считается отдельным событием.<br><br><strong>3. Правило 3 минут (только ракеты/снаряды)</strong><br>Если от первой тревоги в событии проходит более 3 минут, последующие тревоги считаются новым событием.<br><em style="color:var(--text-muted);">&#9432; Правило не применяется к БПЛА: БПЛА — катящееся событие.</em>'
   }
 };
 
@@ -989,6 +1070,7 @@ function setFilter(key,value){
   if(key==='origin'){document.querySelectorAll('.iran-filter-btn').forEach(function(b){if(value==='Iran')b.classList.add('active-iran');else b.classList.remove('active-iran');});}
   renderFilterBadges();
   refreshAll();
+  syncFiltersToURL();
 }
 
 function clearAllFilters(){
@@ -1001,6 +1083,7 @@ function clearAllFilters(){
   document.querySelectorAll('.iran-filter-btn').forEach(function(b){b.classList.remove('active-iran');});
   renderFilterBadges();
   refreshAll();
+  syncFiltersToURL();
 }
 
 function toggleIranFilter(){
@@ -1040,11 +1123,15 @@ function applyLang(){
   if(_logoSpans[0])_logoSpans[0].textContent=t('dashboardSubtitle');
   if(_logoSpans[1])_logoSpans[1].innerHTML=t('credits');
   document.querySelector('.dashboard-intro').innerHTML=t('introText')+'<br><span style="color:var(--accent-yellow);font-size:13px;">&#9888; '+t('originNote')+'</span>';
+  var _wnbt=document.getElementById('whatsNewBannerTitle');if(_wnbt)_wnbt.innerHTML=t('whatsNewBanner');
+  var _wnbc=document.getElementById('whatsNewBannerClick');if(_wnbc)_wnbc.innerHTML=t('whatsNewClick');
+  var _wnb=document.getElementById('whatsNewBox');if(_wnb){_wnb.innerHTML=t('whatsNewContent');_wnb.style.direction=(lang==='he'?'rtl':'ltr');}
+  var _wnbn=document.getElementById('whatsNewBanner');if(_wnbn)_wnbn.style.direction=(lang==='he'?'rtl':'ltr');
+  var _mb=document.getElementById('methodologyBox');if(_mb){_mb.innerHTML=t('methodologyContent');_mb.style.direction=(lang==='he'?'rtl':'ltr');}
   document.getElementById('popSectionTitle').textContent=t('popTitle');
   document.getElementById('popExplanationEl').innerHTML=t('popExplanation');
-  var tht=document.getElementById('toggleHintText');if(tht)tht.innerHTML=t('toggleHint');
-  var blb=document.getElementById('btnLaunchesBig');if(blb)blb.textContent=t('launches');
-  var bab=document.getElementById('btnAlertsBig');if(bab)bab.textContent=t('alerts');
+  var blb=document.getElementById('btnLaunchesBig');if(blb)blb.innerHTML='&#128640; '+t('launches');
+  var bab=document.getElementById('btnAlertsBig');if(bab)bab.innerHTML='&#128276; '+t('alerts');
 
   var fo=document.getElementById('filterOrigin');
   fo.options[0].textContent=t('allOrigins');
@@ -1294,6 +1381,25 @@ function renderFilterBadges(){
   el.innerHTML=badges+(any?'':'');
   btn.style.display=any?'inline-block':'none';
   el.appendChild(btn);
+  if(any) el.classList.add('has-filters'); else el.classList.remove('has-filters');
+}
+
+function shareDashboard(){
+  syncFiltersToURL();
+  var url=window.location.href;
+  var btn=document.getElementById('shareBtn');
+  if(navigator.share){
+    navigator.share({title:'שאגת הארי דשבורד',url:url}).catch(function(){});
+  } else if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(url).then(function(){
+      btn.innerHTML='&#10003; הקישור הועתק!';
+      setTimeout(function(){btn.innerHTML='&#128279; שתפו';},2000);
+    });
+  } else {
+    var ta=document.createElement('textarea');ta.value=url;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    btn.innerHTML='&#10003; הקישור הועתק!';
+    setTimeout(function(){btn.innerHTML='&#128279; שתפו';},2000);
+  }
 }
 
 function removeFilter(key){
@@ -1305,6 +1411,7 @@ function removeFilter(key){
   if(key==='city') document.getElementById('citySearch').value='';
   renderFilterBadges();
   refreshAll();
+  syncFiltersToURL();
 }
 
 // City search
@@ -1342,8 +1449,8 @@ function setMode(mode){
   viewMode=mode;
   var bLB=document.getElementById('btnLaunchesBig');
   var bAB=document.getElementById('btnAlertsBig');
-  if(bLB) bLB.className='toggle-btn'+(mode==='launches'?' active-launches':'');
-  if(bAB) bAB.className='toggle-btn'+(mode==='alerts'?' active-alerts':'');
+  if(bLB) bLB.className='gt-btn'+(mode==='launches'?' active-launches':'');
+  if(bAB) bAB.className='gt-btn'+(mode==='alerts'?' active-alerts':'');
   var isL=mode==='launches';
   var dailyMode=isL?'events':'alerts';
   setDailyIranView(dailyMode);
@@ -1355,6 +1462,7 @@ function setMode(mode){
   var _brh=document.getElementById('bottomRegionsHeader');if(_brh)_brh.textContent=isL?t('bottomRegionsEvents'):t('bottomRegions');
   var _mh=document.getElementById('mapHeader');if(_mh){var ms=document.getElementById('mapStats');_mh.innerHTML=(isL?t('mapHeaderEvents'):t('mapHeader'))+' ';if(ms)_mh.appendChild(ms);}
   refreshAll();
+  syncFiltersToURL();
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -2393,6 +2501,7 @@ window.addEventListener('load',function(){
     try{initPopSlider();console.log('Pop slider OK');}catch(e){errors.push('Pop:'+e.message);console.error(e);}
     try{refreshAll();console.log('Refresh OK');}catch(e){errors.push('Refresh:'+e.message);console.error(e);}
     try{updateLastUpdateTime();}catch(e){console.error(e);}
+    try{readFiltersFromURL();console.log('URL filters OK');}catch(e){console.error('URL filters:',e);}
     document.getElementById('loadingOverlay').classList.add('hidden');
     if(errors.length>0){
       var d=document.createElement('div');
