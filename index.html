@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>שאגת הארי דשבורד | 2026-03-06 17:26</title>
+<title>Epic Fury Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -1125,9 +1125,9 @@ function applyLang(){
   document.querySelector('.dashboard-intro').innerHTML=t('introText')+'<br><span style="color:var(--accent-yellow);font-size:13px;">&#9888; '+t('originNote')+'</span>';
   var _wnbt=document.getElementById('whatsNewBannerTitle');if(_wnbt)_wnbt.innerHTML=t('whatsNewBanner');
   var _wnbc=document.getElementById('whatsNewBannerClick');if(_wnbc)_wnbc.innerHTML=t('whatsNewClick');
-  var _wnb=document.getElementById('whatsNewBox');if(_wnb){_wnb.innerHTML=t('whatsNewContent');_wnb.style.direction=(lang==='he'?'rtl':'ltr');}
-  var _wnbn=document.getElementById('whatsNewBanner');if(_wnbn)_wnbn.style.direction=(lang==='he'?'rtl':'ltr');
-  var _mb=document.getElementById('methodologyBox');if(_mb){_mb.innerHTML=t('methodologyContent');_mb.style.direction=(lang==='he'?'rtl':'ltr');}
+  var _wnb=document.getElementById('whatsNewBox');if(_wnb){_wnb.innerHTML=t('whatsNewContent');_wnb.style.direction=(LANG==='he'?'rtl':'ltr');}
+  var _wnbn=document.getElementById('whatsNewBanner');if(_wnbn)_wnbn.style.direction=(LANG==='he'?'rtl':'ltr');
+  var _mb=document.getElementById('methodologyBox');if(_mb){_mb.innerHTML=t('methodologyContent');_mb.style.direction=(LANG==='he'?'rtl':'ltr');}
   document.getElementById('popSectionTitle').textContent=t('popTitle');
   document.getElementById('popExplanationEl').innerHTML=t('popExplanation');
   var blb=document.getElementById('btnLaunchesBig');if(blb)blb.innerHTML='&#128640; '+t('launches');
