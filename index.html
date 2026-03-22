@@ -186,8 +186,62 @@ table.dataTable tbody tr:hover{background:var(--bg-secondary)!important;}
 .dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--text-secondary)!important;}
 .dataTables_wrapper .dataTables_paginate .paginate_button.current{background:var(--accent-blue)!important;color:white!important;border:none!important;}
 .dataTables_wrapper .dataTables_filter label,.dataTables_wrapper .dataTables_length label{color:var(--text-muted)!important;}
+.evt-row{cursor:pointer;transition:background 0.15s;}
+.evt-row:hover{background:rgba(59,130,246,0.12)!important;}
+.evt-row td:first-child{position:relative;padding-right:22px!important;}
+.evt-toggle{display:inline-block;width:16px;height:16px;text-align:center;line-height:16px;font-size:12px;color:var(--accent-blue);font-weight:700;transition:transform 0.2s;margin-left:4px;}
+.evt-row.expanded .evt-toggle{transform:rotate(90deg);}
+.child-row{background:var(--bg-secondary)!important;}
+.child-row td{padding:3px 8px!important;font-size:11px!important;color:var(--text-secondary)!important;border-bottom:1px solid rgba(42,42,58,0.5)!important;}
+.child-row:last-of-type td{border-bottom:2px solid var(--border-color)!important;}
+.evt-badge{display:inline-block;padding:1px 6px;border-radius:4px;font-size:10px;font-weight:700;}
+.evt-badge.gaza{background:rgba(255,59,92,0.2);color:var(--gaza-color);}
+.evt-badge.lebanon{background:rgba(255,140,66,0.2);color:var(--lebanon-color);}
+.evt-badge.iran{background:rgba(168,85,247,0.2);color:var(--iran-color);}
+.evt-badge.unknown{background:rgba(100,100,100,0.2);color:var(--text-muted);}
+.evt-pop{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);}
 
 /* Loading */
+.stf-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center;}
+.stf-bar select,.stf-bar .stf-multi{background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-color);border-radius:3px;padding:5px 8px;font-size:12px;font-family:'Heebo','Segoe UI',sans-serif;cursor:pointer;min-width:100px;}
+.stf-multi-wrap{position:relative;display:inline-block;}
+.stf-multi{min-width:140px;text-align:right;}
+.stf-dropdown{position:absolute;top:100%;right:0;left:0;background:var(--bg-card);border:1px solid var(--border-color);border-radius:0 0 6px 6px;max-height:220px;overflow-y:auto;z-index:600;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+.stf-dropdown.show{display:block;}
+.stf-dropdown label{display:block;padding:5px 10px;font-size:12px;cursor:pointer;color:var(--text-primary);white-space:nowrap;}
+.stf-dropdown label:hover{background:rgba(59,130,246,0.15);}
+.stf-dropdown input[type=checkbox]{margin-left:6px;accent-color:var(--accent-blue);}
+.ws-card{margin-top:20px;background:linear-gradient(135deg,rgba(239,68,68,0.08) 0%,rgba(59,130,246,0.08) 100%);border:2px solid rgba(239,68,68,0.3);box-shadow:0 4px 20px rgba(239,68,68,0.15);}
+.ws-pickers{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px;align-items:center;justify-content:center;}
+.ws-pick-wrap{position:relative;flex:1;min-width:160px;max-width:260px;}
+.ws-pick-input{width:100%;background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border-color);border-radius:6px;padding:8px 12px;font-size:13px;font-family:'Heebo','Segoe UI',sans-serif;box-sizing:border-box;text-align:center;}
+.ws-pick-input::placeholder{color:var(--text-muted);}
+.ws-pick-dd{position:absolute;top:100%;right:0;left:0;background:var(--bg-card);border:1px solid var(--border-color);border-radius:0 0 6px 6px;max-height:200px;overflow-y:auto;z-index:700;display:none;box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+.ws-pick-dd.show{display:block;}
+.ws-pick-dd div{padding:6px 12px;font-size:12px;cursor:pointer;color:var(--text-primary);text-align:right;}
+.ws-pick-dd div:hover{background:rgba(59,130,246,0.15);}
+.ws-vs{font-size:18px;font-weight:900;color:var(--accent-yellow);align-self:center;padding:0 2px;}
+.ws-go-btn{background:var(--accent-blue);color:#fff;border:none;border-radius:6px;padding:6px 20px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;transition:transform 0.15s;display:block;margin:0 auto;}
+.ws-go-btn:hover{transform:scale(1.05);}
+.ws-results{display:none;margin-top:10px;}
+.ws-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:start;}
+.ws-col{text-align:center;}
+.ws-city-name{font-size:14px;font-weight:900;color:var(--text-primary);margin-bottom:8px;}
+.ws-divider{width:2px;background:var(--border-color);align-self:stretch;margin:0 8px;}
+.ws-stat-row{display:flex;justify-content:center;gap:6px;margin-bottom:4px;flex-wrap:wrap;}
+.ws-stat{background:var(--bg-secondary);border-radius:4px;padding:4px 10px;text-align:center;min-width:50px;border:1px solid var(--border-color);}
+.ws-stat-val{font-size:16px;font-weight:900;color:var(--text-primary);}
+.ws-stat-lbl{font-size:9px;color:var(--text-muted);margin-top:1px;}
+.ws-stat.iran-stat{border-color:var(--iran-color);}.ws-stat.iran-stat .ws-stat-val{color:var(--iran-color);}
+.ws-stat.leb-stat{border-color:var(--lebanon-color);}.ws-stat.leb-stat .ws-stat-val{color:var(--lebanon-color);}
+.ws-section-label{font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin:8px 0 4px;border-top:1px solid var(--border-color);padding-top:6px;}
+.ws-winner{position:relative;}.ws-winner::after{content:'👑';position:absolute;top:-6px;right:-6px;font-size:12px;}
+.ws-winner .ws-stat-val{text-shadow:0 0 8px rgba(255,215,0,0.4);}
+.map-lock-overlay{position:absolute;top:0;left:0;right:0;bottom:0;z-index:999;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.15);cursor:pointer;transition:opacity 0.3s;}
+.map-lock-overlay.hidden{display:none;}
+.map-lock-btn{background:rgba(59,130,246,0.9);color:#fff;border:none;border-radius:8px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;box-shadow:0 4px 12px rgba(0,0,0,0.4);transition:transform 0.15s;}
+.map-lock-btn:hover{transform:scale(1.05);}
+.map-exit-btn{position:absolute;top:8px;right:8px;z-index:1001;background:rgba(220,38,38,0.85);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;display:none;box-shadow:0 2px 8px rgba(0,0,0,0.4);}
 .loading-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-primary);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2000;transition:opacity 0.5s,visibility 0.5s;}
 .loading-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none;}
 .loader{width:50px;height:50px;border:3px solid var(--border-color);border-top-color:var(--accent-red);border-radius:50%;animation:spin 1s linear infinite;}
@@ -433,7 +487,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 </style>
 </head>
 <body>
-<div class="loading-overlay" id="loadingOverlay"><div class="loader"></div><div class="loading-text">טוען נתונים...</div></div>
+<div class="loading-overlay hidden" id="loadingOverlay"><div class="loader"></div><div class="loading-text">טוען נתונים...</div></div>
 <script>setTimeout(function(){document.getElementById('loadingOverlay').classList.add('hidden');},15000);</script>
 
 <header>
@@ -462,6 +516,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 </header>
 <nav class="nav-bar" id="dashNavBar">
   <button class="nav-btn" id="navOverview" onclick="document.getElementById('section-charts').scrollIntoView({behavior:'smooth'})">&#128202; מבט על</button>
+  <button class="nav-btn" id="navWhoSuffers" onclick="document.getElementById('section-whosuffers').scrollIntoView({behavior:'smooth'})">&#129354; מי סובל יותר?</button>
   <button class="nav-btn" id="navIranTrends" onclick="document.getElementById('section-iran-ma').scrollIntoView({behavior:'smooth'})">&#127919; מגמות ירי מאיראן</button>
   <button class="nav-btn" id="navMap" onclick="document.getElementById('section-map').scrollIntoView({behavior:'smooth'})">&#128506; מפה</button>
   <button class="nav-btn" id="navProb" onclick="document.getElementById('section-probability').scrollIntoView({behavior:'smooth'})">&#127922; מה הסיכוי שהאזעקה אצלך?</button>
@@ -482,29 +537,31 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 </div>
 <div id="methodologyBox" style="display:none;margin:0 auto 12px;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;font-size:13px;line-height:1.8;direction:rtl;max-width:1400px;">
   <strong style="font-size:14px;">מתודולוגיה: זיהוי אירועים</strong>
-  <br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל שלושה כללים כדי לפצל אירועים שקיבלו אותו ID אך הם למעשה אירועים נפרדים:
-  <br><br><strong>1. פיצול לפי מקור שיגור</strong>
+  <br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל ארבעה כללים — אחד לאיחוד ושלושה לפיצול — כדי לשקף נכון את מספר האירועים בפועל:
+  <br><br><strong>1. איחוד התרעות מאיחור באיראן (עד 10 יישובים, עד 3 דקות)</strong>
+  <br>לעיתים פיקוד העורף מקצה ID חדש להתרעה מאוחרת שהגיעה מספר דקות אחרי הגל העיקרי, למרות שמדובר באותו שיגור. אם אירוע איראני קטן (עד 10 יישובים) מתרחש תוך 3 דקות מסיום האירוע הקודם — הוא מאוחד לאירוע הקודם. דוגמה: ב-21.3 כסייפה קיבלה התרעה דקה ו-35 שניות אחרי גל של 17 יישובים באזור דימונה — ID נפרד מהמקור, אך בפועל אותו שיגור.
+  <br><br><strong>2. פיצול לפי מקור שיגור</strong>
   <br>אם באותו ID יש התרעות ממקורות שונים (למשל איראן ולבנון בו-זמנית), כל מקור נחשב כאירוע נפרד. מתקפה מתואמת מאיראן ומלבנון זה שני שיגורים, לא אחד.
-  <br><br><strong>2. פיצול לפי סוג איום</strong>
+  <br><br><strong>3. פיצול לפי סוג איום</strong>
   <br>אם באותו ID יש גם ירי רקטות/טילים וגם חדירת כלי טיס עוין (כטב״מ), כל סוג איום נחשב כאירוע נפרד. מדובר בכלי נשק שונים עם מאפיינים שונים.
-  <br><br><strong>3. חוק 3 הדקות (רקטות/טילים בלבד)</strong>
+  <br><br><strong>4. חוק 3 הדקות (רקטות/טילים בלבד)</strong>
   <br>אם באותו ID (לאחר הפיצולים לעיל) חולפות יותר מ-3 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש. הסיבה: גל שיגור בודד נמשך בדרך כלל עד 3 דקות. פער גדול יותר מעיד על גל שיגור נוסף.
   <br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל — אם לא מאתרים אותו, הוא מתקדם ומפעיל אזעקות ביישובים נוספים. למרות פערי הזמן, מדובר באותו אירוע.</em>
 </div>
 <div id="whatsNewBanner" onclick="document.getElementById('whatsNewBox').style.display=document.getElementById('whatsNewBox').style.display==='none'?'block':'none'" style="cursor:pointer;margin:0 auto 10px;padding:10px 16px;background:linear-gradient(90deg,rgba(74,222,128,0.15),rgba(74,222,128,0.05));border:1px solid rgba(74,222,128,0.4);border-radius:8px;text-align:center;direction:rtl;max-width:1400px;">
-  <span id="whatsNewBannerTitle" style="font-size:15px;font-weight:700;color:var(--accent-green);">&#127381; מה חדש? (20.3.2026)</span>
+  <span id="whatsNewBannerTitle" style="font-size:15px;font-weight:700;color:var(--accent-green);">&#127381; מה חדש? (23.3.2026)</span>
   <span id="whatsNewBannerClick" style="font-size:12px;color:var(--text-secondary);margin-right:8px;">לחצו לפירוט &#9660;</span>
 </div>
 <div id="whatsNewBox" style="display:none;margin:0 auto 12px;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(74,222,128,0.25);border-radius:8px;font-size:13px;line-height:1.8;direction:rtl;max-width:1400px;">
-  <strong style="font-size:14px;color:var(--accent-green);">&#127381; עדכון — 20.3.2026</strong>
-  <br><br><strong>1. סיכוי לאזעקה (7 ימים אחרונים)</strong>
-  <br>מדד חדש בסיידבר — מה ההסתברות שכשיש אירוע, האזעקה תהיה באזור שלך? מחושב לפי 7 ימים אחרונים בלבד, עם פילוח לפי מקור (איראן/לבנון).
-  <br><br><strong>2. שיפור סיווג מקור ירי</strong>
-  <br>לוגיקת סיווג אירועים ממקור לא ידוע שופרה: כטב״מ מסווג לפי מיקום גיאוגרפי (צפון/דרום לחיפה), טילים לפי היקף. אירועים שעברו 3 ימים ללא עדכון נשארים "לא ידוע".
-  <br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;">
+  <strong style="font-size:14px;color:var(--accent-green);">&#127381; חדש היום — 23.3.2026</strong>
+  <br><br><strong>1. מי סובל יותר? 🥊</strong>
+  <br>משחק חדש! בחרו שני ישובים והשוו ביניהם — סה"כ התרעות, 7 ימים אחרונים, ובלילה (מ-02.03). עם פילוח לפי איראן/לבנון וכתרים למנצח.
+  <br><br><strong>2. טבלת נתונים מסכמת חדשה</strong>
+  <br>ארגון מחדש של הנתונים לפי אירועים עם אפשרות לפתוח כל אירוע לרשימת התרעות. פילטרים לפי מקור (איראן/לבנון) ובחירת ימים.
+  <br><br><strong>3. עדכון מתודולוגיה</strong>
+  <br>שיפור קטן בלוגיקת זיהוי אירועים.
+  <br><br><strong>4. נעילת מפה</strong>
   <strong style="font-size:14px;color:var(--accent-green);">עדכון 16.3.2026</strong>
-  <br><br><strong>1. כפתור שיתוף</strong>
-  <br>כפתור "שתפו" בולט בראש הדף מאפשר להעתיק קישור ישיר לדשבורד עם כל הפילטרים הפעילים. ניתן לשתף תצוגה מסוננת לעיר/מקור/יום ספציפי.
   <br><br><strong>2. קישורים עם פילטרים (URL params)</strong>
   <br>כל פילטר שמופעל מעדכן את ה-URL אוטומטית. כשנכנסים דרך קישור עם פרמטרים — הדשבורד נטען ישירות עם הפילטרים. לדוגמה: <code>?city=1281</code> = פתח תקווה.
   <br><br><strong>3. סינכרון toggle אירועים/התרעות לגרפים יומיים</strong>
@@ -572,6 +629,27 @@ footer a{color:var(--accent-blue);text-decoration:none;}
     <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="hourlyChartTitle">באיזו שעה? לפי שעה</span><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="hourlyBtnIran" onclick="setHourlyOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button><button class="hourly-view-btn" id="hourlyBtnLebanon" onclick="setHourlyOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button></div></div><div class="card-body"><div class="chart-container" id="hourlyChart"></div></div></div>
   </div>
 
+
+  <!-- Who Suffers More? -->
+  <div id="section-whosuffers" class="card ws-card">
+    <div class="card-header" id="wsHeader" style="font-size:15px;text-align:center;">&#129354; מי סובל יותר?</div>
+    <div class="card-body" style="padding:16px;">
+      <div class="ws-pickers">
+        <div class="ws-pick-wrap">
+          <input type="text" class="ws-pick-input" id="wsCity1Input" placeholder="בחרו עיר..." autocomplete="off" oninput="wsFilterCities(1)" onfocus="wsFilterCities(1)">
+          <div class="ws-pick-dd" id="wsCity1DD"></div>
+        </div>
+        <div class="ws-vs">VS</div>
+        <div class="ws-pick-wrap">
+          <input type="text" class="ws-pick-input" id="wsCity2Input" placeholder="בחרו עיר..." autocomplete="off" oninput="wsFilterCities(2)" onfocus="wsFilterCities(2)">
+          <div class="ws-pick-dd" id="wsCity2DD"></div>
+        </div>
+      </div>
+      <button class="ws-go-btn" id="wsGoBtn" onclick="wsCompare()">&#9876;&#65039; השוו!</button>
+      <div class="ws-results" id="wsResults"></div>
+    </div>
+  </div>
+
   <!-- Origin moving average + cumulative -->
   <div id="section-iran-ma" class="card">
     <div class="card-header" id="iranMAHeader" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;color:var(--iran-color);"><span id="maChartTitleText">אירועים מאיראן: ממוצע נע 12 שעות + מצטבר</span><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="maBtnIran" onclick="setMAOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button><button class="hourly-view-btn" id="maBtnLebanon" onclick="setMAOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button></div></div>
@@ -585,6 +663,8 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <div id="section-map" class="card" style="position:relative;">
     <div class="card-header" id="mapHeader">איפה הכי הרבה התראות? <span id="mapStats" style="font-size:10px;color:var(--accent-green);font-weight:600;">טוען...</span></div>
     <div id="map"></div>
+    <div class="map-lock-overlay" id="mapLockOverlay" onclick="unlockMap()"><button class="map-lock-btn" id="mapLockBtn">👆 כניסה למפה</button></div>
+    <button class="map-exit-btn" id="mapExitBtn" onclick="lockMap()">&#10005; יציאה מהמפה</button>
     <button onclick="focusIsrael()" style="position:absolute;top:130px;left:10px;z-index:1000;background:#fff;border:2px solid rgba(0,0,0,0.3);border-radius:4px;width:30px;height:30px;cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,0.3);" title="מרכז על ישראל" id="focusIsraelBtn"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="none" stroke="#333" stroke-width="1.5"/><circle cx="8" cy="8" r="1.5" fill="#333"/><line x1="8" y1="0" x2="8" y2="4" stroke="#333" stroke-width="1.5"/><line x1="8" y1="12" x2="8" y2="16" stroke="#333" stroke-width="1.5"/><line x1="0" y1="8" x2="4" y2="8" stroke="#333" stroke-width="1.5"/><line x1="12" y1="8" x2="16" y2="8" stroke="#333" stroke-width="1.5"/></svg></button>
     </div>
 
@@ -670,13 +750,25 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 <div class="card" style="margin-top:20px;">
   <div class="card-header" id="summaryTableHeader" data-i18n="summaryTableTitle" style="font-size:15px;">טבלת נתונים מסכמת</div>
   <div class="card-body" style="padding:14px;overflow-x:auto;">
+    <div class="stf-bar" id="stfBar">
+      <select id="stfOrigin" class="filter-select" onchange="renderSummaryTable()" style="min-width:100px;">
+        <option value="" data-i18n="stfAllSources">כל המקורות</option>
+        <option value="Iran" data-i18n="stfIran">איראן</option>
+        <option value="Lebanon" data-i18n="stfLebanon">לבנון</option>
+      </select>
+      <div class="stf-multi-wrap">
+        <button class="stf-multi" id="stfDayBtn" onclick="toggleStfDayDropdown()" type="button" data-i18n="stfAllDays">כל הימים</button>
+        <div class="stf-dropdown" id="stfDayDropdown"></div>
+      </div>
+    </div>
     <table id="summaryTable" class="display" style="width:100%;font-size:12px;">
       <thead><tr>
-        <th data-i18n="colTimestamp">זמן</th>
-        <th data-i18n="colCity">ישוב</th>
-        <th data-i18n="colThreat">סוג איום</th>
-        <th data-i18n="colOrigin">מקור</th>
         <th data-i18n="colLaunchId">מזהה אירוע</th>
+        <th data-i18n="colFirstTime">שעה</th>
+        <th data-i18n="colOrigin">מקור</th>
+        <th data-i18n="colThreat">סוג איום</th>
+        <th data-i18n="colCityCount">ישובים</th>
+        <th data-i18n="colPopulation">אוכלוסייה</th>
       </tr></thead>
       <tbody></tbody>
     </table>
@@ -701,6 +793,7 @@ var UNKNOWN_CUTOFF_DAYS = 3;
 var HAIFA_LAT = 32.8;
 var NEGEV_LAT = 31.5;
 var IRAN_CITY_THRESHOLD = 75;
+var IRAN_POP_MERGE_THRESHOLD = 50000;
 
 // Origin classification (reusable — called after initial load AND after live refresh):
 // 1. UAV marked Lebanon but reaching Negev (lat<31.5) → fix to Iran (source error)
@@ -713,9 +806,9 @@ function classifyOrigins(){
   var eventInfo = {};
   RAW.forEach(function(a){
     var eid = a[3];
-    if(!eventInfo[eid]) eventInfo[eid] = { origin:null, threat:null, alerts:[], hasSouthCity:false, hasNorthCity:false, hasDeepSouthCity:false, ageMs:nowMs - new Date(a[0]).getTime(), uniqueCities:{} };
+    if(!eventInfo[eid]) eventInfo[eid] = { origin:null, threat:null, alerts:[], hasSouthCity:false, hasNorthCity:false, hasDeepSouthCity:false, ageMs:nowMs - new Date(a[0]).getTime(), uniqueCities:{}, knownOrigins:{} };
     eventInfo[eid].alerts.push(a);
-    if(a[5] && a[5]!=='' && a[5]!=='FA') eventInfo[eid].origin = a[5];
+    if(a[5] && a[5]!=='' && a[5]!=='FA'){ eventInfo[eid].origin = a[5]; eventInfo[eid].knownOrigins[a[5]]=1; }
     if(a[2]) eventInfo[eid].threat = a[2];
     eventInfo[eid].uniqueCities[a[1]] = true;
     var coord = COORDS[a[1]];
@@ -741,7 +834,7 @@ function classifyOrigins(){
         newOrigin = cityCount >= IRAN_CITY_THRESHOLD ? 'Iran' : 'Lebanon';
       }
       ev.alerts.forEach(function(a){ a[5] = newOrigin; });
-    } else if(isUAV && ev.origin === 'Lebanon' && ev.hasDeepSouthCity){
+    } else if(isUAV && ev.origin === 'Lebanon' && ev.hasDeepSouthCity && Object.keys(ev.knownOrigins).length<=1){
       ev.alerts.forEach(function(a){ a[5] = 'Iran'; });
     }
   });
@@ -886,7 +979,9 @@ var T = {
     popTrendFormula: 'נוסחה: (1×אוכלוסייה שקיבלה אזעקה פעם + 2×אוכלוסייה שקיבלה פעמיים + ...) / סה״כ אוכלוסייה במאגר',
     popTrendTotalPop: 'סה״כ אוכלוסייה במאגר',
     summaryTableTitle: 'טבלת נתונים מסכמת',
-    colTimestamp: 'זמן', colCity: 'ישוב', colThreat: 'סוג איום', colOrigin: 'מקור', colLaunchId: 'מזהה אירוע',
+    stfAllSources: 'כל המקורות', stfIran: 'איראן', stfLebanon: 'לבנון', stfAllDays: 'כל הימים', stfDaysSelected: 'ימים נבחרו', mapEnter: 'כניסה למפה', mapExit: 'יציאה מהמפה',
+    wsTitle: 'מי סובל יותר?', wsPickCity: 'בחרו עיר...', wsCompare: 'השווו!', wsTotal: 'סה"כ מתחילת המלחמה', wsLast7: '7 ימים אחרונים', wsNight: 'בלילה (23:00-06:00)', wsAlerts: 'התרעות', wsFromIran: 'מאיראן', wsFromLeb: 'מלבנון', wsNightSince: 'מה-02.03',
+    colTimestamp: 'זמן', colCity: 'ישוב', colThreat: 'סוג איום', colOrigin: 'מקור', colLaunchId: 'מזהה אירוע', colFirstTime: 'שעה', colCityCount: 'ישובים', colPopulation: 'אוכלוסייה',
     threat0: 'רקטות וטילים', threat5: 'כלי טיס עוין', threat2: 'חדירת מחבלים',
     residents: 'תושבים', cities: 'ישובים',
     popCitiesBadge: 'ישובים (ממ״ד)',
@@ -909,9 +1004,9 @@ var T = {
     seriesDrones: 'כטב"מים', seriesRockets: 'רקטות/טילים', seriesExposures: 'חשיפות',
     btnExposures: 'חשיפות',
     footerPrefix: 'נתונים מ-',
-    whatsNewBanner: '&#127381; מה חדש? (20.3.2026)',
+    whatsNewBanner: '&#127381; מה חדש? (23.3.2026)',
     whatsNewClick: 'לחצו לפירוט &#9660;',
-    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; חדש היום — 16.3.2026</strong><br><br><strong>1. כפתור שיתוף</strong><br>כפתור "שתפו" בולט בראש הדף מאפשר להעתיק קישור ישיר לדשבורד עם כל הפילטרים הפעילים.<br><br><strong>2. קישורים עם פילטרים (URL params)</strong><br>כל פילטר שמופעל מעדכן את ה-URL אוטומטית. לדוגמה: <code>?city=1281</code> = פתח תקווה.<br><br><strong>3. סינכרון toggle אירועים/התרעות</strong><br>ה-toggle הגלובלי מסנכרן גם את הגרפים היומיים אוטומטית.<br><br><strong>4. Header ופילטרים דביקים</strong><br>ראש הדף ושורת הפילטרים נשארים גלויים תמיד בעת גלילה.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">עדכון 15.3.2026</strong><br><br><strong>1. שיפור מתודולוגיית זיהוי אירועים</strong><br>נוספו שלושה כללי פיצול חכמים.<br><br><strong>2. מדד חשיפות</strong><br>חשיפות = התרעות &times; אוכלוסייה.<br><br><strong>3. ממוצע נע גם עבור לבנון</strong><br><strong>4. גלילה ברשימת יישובים</strong><br><strong>5. תיוג בגרפים</strong>',
+    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; חדש היום — 23.3.2026</strong><br><br><strong>1. מי סובל יותר? 🥊</strong><br>משחק חדש! בחרו שני ישובים והשוו ביניהם — סה"כ התרעות, 7 ימים אחרונים, ובלילה (מ-02.03). עם פילוח לפי איראן/לבנון וכתרים למנצח.<br><br><strong>2. טבלת נתונים מסכמת חדשה</strong><br>ארגון מחדש של הנתונים לפי אירועים עם אפשרות לפתוח כל אירוע לרשימת התרעות. פילטרים לפי מקור (איראן/לבנון) ובחירת ימים מרובים.<br><br><strong>3. עדכון מתודולוגיה</strong><br>שיפור קטן בלוגיקת זיהוי אירועים.<br><br><strong>4. נעילת מפה</strong><br>לחצו "כניסה למפה" כדי לאפשר גלילה/זום במפה — מונע גלילה בטעות.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">עדכון 16.3.2026</strong><br><br><strong>1. כפתור שיתוף</strong><br>כפתור "שתפו" להעתקת קישור עם פילטרים.<br><br><strong>2. Header ופילטרים דביקים</strong><br>ראש הדף נשאר גלוי בעת גלילה.',
     methodologyContent: '<strong style="font-size:14px;">מתודולוגיה: זיהוי אירועים</strong><br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל שלושה כללים כדי לפצל אירועים שקיבלו אותו ID אך הם למעשה אירועים נפרדים:<br><br><strong>1. פיצול לפי מקור שיגור</strong><br>אם באותו ID יש התרעות ממקורות שונים (למשל איראן ולבנון בו-זמנית), כל מקור נחשב כאירוע נפרד.<br><br><strong>2. פיצול לפי סוג איום</strong><br>אם באותו ID יש גם ירי רקטות/טילים וגם חדירת כלי טיס עוין (כטב״מ), כל סוג איום נחשב כאירוע נפרד.<br><br><strong>3. חוק 3 הדקות (רקטות/טילים בלבד)</strong><br>אם חולפות יותר מ-3 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש.<br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל.</em>',
   },
   en: {
@@ -958,7 +1053,8 @@ var T = {
     popTrendFormula: 'Formula: (1×pop alerted once + 2×pop alerted twice + ...) / total tracked population',
     popTrendTotalPop: 'Total tracked population',
     summaryTableTitle: 'Summary data table',
-    colTimestamp: 'Time', colCity: 'City', colThreat: 'Threat type', colOrigin: 'Origin', colLaunchId: 'Event ID',
+    stfAllSources: 'All sources', stfIran: 'Iran', stfLebanon: 'Lebanon', stfAllDays: 'All days', stfDaysSelected: 'days selected', mapEnter: 'Enter map', mapExit: 'Exit map', wsTitle: 'Who suffers more?', wsPickCity: 'Choose city...', wsCompare: 'Compare!', wsTotal: 'Total since war start', wsLast7: 'Last 7 days', wsNight: 'Nighttime (23:00-06:00)', wsAlerts: 'Alerts', wsFromIran: 'From Iran', wsFromLeb: 'From Lebanon', wsNightSince: 'since 02.03',
+    colTimestamp: 'Time', colCity: 'City', colThreat: 'Threat type', colOrigin: 'Origin', colLaunchId: 'Event ID', colFirstTime: 'Time', colCityCount: 'Settlements', colPopulation: 'Population',
     threat0: 'Rockets & Missiles', threat5: 'Hostile aircraft', threat2: 'Terrorist infiltration',
     residents: 'residents', cities: 'cities',
     popCitiesBadge: 'cities (shelters)',
@@ -981,9 +1077,9 @@ var T = {
     seriesDrones: 'UAVs', seriesRockets: 'Rockets/Missiles', seriesExposures: 'Exposures',
     btnExposures: 'Exposures',
     footerPrefix: 'Data from ',
-    whatsNewBanner: '&#127381; What\'s New? (20.3.2026)',
+    whatsNewBanner: '&#127381; What\'s New? (23.3.2026)',
     whatsNewClick: 'Click for details &#9660;',
-    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; New today — 16.3.2026</strong><br><br><strong>1. Share button</strong><br>A prominent "Share" button at the top lets you copy a direct link with all active filters.<br><br><strong>2. URL parameters for filters</strong><br>Every active filter updates the URL automatically. Example: <code>?city=1281</code> = Petah Tikva.<br><br><strong>3. Events/Alerts toggle syncs daily charts</strong><br>The global toggle now also syncs the daily Iran and Lebanon charts automatically.<br><br><strong>4. Sticky header &amp; filters</strong><br>The header and active filter badges stay visible while scrolling.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Update 15.3.2026</strong><br><br><strong>1. Improved event identification methodology</strong><br>Three smart splitting rules added.<br><br><strong>2. Exposures metric</strong><br>Exposures = alerts &times; population.<br><br><strong>3. Moving average for Lebanon</strong><br><strong>4. Expanded city lists</strong><br><strong>5. Chart labels</strong>',
+    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; New today — 23.3.2026</strong><br><br><strong>1. Who suffers more? 🥊</strong><br>New game! Pick two cities and compare — total alerts, last 7 days, and nighttime (from 02.03). With Iran/Lebanon breakdown and crowns for the winner.<br><br><strong>2. New summary table</strong><br>Data reorganized by events with expandable alert lists. Filter by source (Iran/Lebanon) and multi-select days.<br><br><strong>3. Methodology update</strong><br>Minor improvement in event detection logic.<br><br><strong>4. Map lock</strong><br>Click "Enter map" to enable scrolling/zooming — prevents accidental map interaction.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Update 16.3.2026</strong><br><br><strong>1. Share button</strong><br>Copy link with all active filters.<br><br><strong>2. Sticky header &amp; filters</strong><br>Header stays visible while scrolling.',
     methodologyContent: '<strong style="font-size:14px;">Methodology: Event Identification</strong><br>Home Front Command assigns a unique ID to each alert wave. The dashboard applies three rules to split events that share the same ID but are actually separate incidents:<br><br><strong>1. Split by launch origin</strong><br>If the same ID contains alerts from different origins (e.g. Iran and Lebanon simultaneously), each origin is treated as a separate event.<br><br><strong>2. Split by threat type</strong><br>If the same ID contains both rocket/missile fire and hostile aircraft (UAV), each threat type is treated as a separate event.<br><br><strong>3. 3-Minute Rule (rockets/missiles only)</strong><br>If more than 3 minutes pass from the first alert in an event, subsequent alerts are counted as a new event.<br><em style="color:var(--text-muted);">&#9432; This rule does not apply to UAV events: a UAV is a rolling event.</em>',
   },
   ru: {
@@ -1030,7 +1126,8 @@ var T = {
     popTrendFormula: 'Формула: (1×население с 1 тревогой + 2×население с 2 тревогами + ...) / всё отслеживаемое население',
     popTrendTotalPop: 'Всё отслеживаемое население',
     summaryTableTitle: 'Сводная таблица данных',
-    colTimestamp: 'Время', colCity: 'Город', colThreat: 'Тип угрозы', colOrigin: 'Источник', colLaunchId: 'ID события',
+    stfAllSources: 'Все источники', stfIran: 'Иран', stfLebanon: 'Ливан', stfAllDays: 'Все дни', stfDaysSelected: 'дней выбрано', mapEnter: 'Войти в карту', mapExit: 'Выйти из карты', wsTitle: 'Кто страдает больше?', wsPickCity: 'Выберите город...', wsCompare: 'Сравнить!', wsTotal: 'Всего с начала войны', wsLast7: 'Последние 7 дней', wsNight: 'Ночью (23:00-06:00)', wsAlerts: 'Тревоги', wsFromIran: 'Из Ирана', wsFromLeb: 'Из Ливана', wsNightSince: 'с 02.03',
+    colTimestamp: 'Время', colCity: 'Город', colThreat: 'Тип угрозы', colOrigin: 'Источник', colLaunchId: 'ID события', colFirstTime: 'Время', colCityCount: 'Населённые пункты', colPopulation: 'Население',
     threat0: 'Ракеты и снаряды', threat5: 'Враждебный БПЛА', threat2: 'Проникновение террористов',
     residents: 'жителей', cities: 'городов',
     popCitiesBadge: 'города (убежища)',
@@ -1053,9 +1150,9 @@ var T = {
     seriesDrones: 'БПЛА', seriesRockets: 'Ракеты/снаряды', seriesExposures: 'Экспозиции',
     btnExposures: 'Экспозиции',
     footerPrefix: 'Данные из ',
-    whatsNewBanner: '&#127381; Что нового? (20.3.2026)',
+    whatsNewBanner: '&#127381; Что нового? (23.3.2026)',
     whatsNewClick: 'Нажмите для подробностей &#9660;',
-    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; Новое сегодня — 16.3.2026</strong><br><br><strong>1. Кнопка «Поделиться»</strong><br>Позволяет скопировать прямую ссылку со всеми активными фильтрами.<br><br><strong>2. URL-параметры фильтров</strong><br>Каждый активный фильтр обновляет URL автоматически. Пример: <code>?city=1281</code> = Петах-Тиква.<br><br><strong>3. Синхронизация переключателя с дневными графиками</strong><br>Глобальный переключатель теперь синхронизирует дневные графики Ирана и Ливана автоматически.<br><br><strong>4. Закреплённые заголовок и фильтры</strong><br>Заголовок и активные фильтры остаются видимыми при прокрутке.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Обновление 15.3.2026</strong><br><br><strong>1. Улучшенная методология</strong><br>Три правила разделения событий.<br><br><strong>2. Метрика экспозиций</strong><br>Экспозиции = тревоги &times; население.<br><br><strong>3. Скользящее среднее для Ливана</strong><br><strong>4. Расширенные списки городов</strong><br><strong>5. Подписи на графиках</strong>',
+    whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; Новое сегодня — 23.3.2026</strong><br><br><strong>1. Кто страдает больше? 🥊</strong><br>Новая игра! Выберите два города и сравните — всего тревог, за 7 дней, ночью (с 02.03). С разбивкой Иран/Ливан и коронами для победителя.<br><br><strong>2. Новая сводная таблица</strong><br>Данные реорганизованы по событиям с раскрывающимися списками тревог. Фильтр по источнику (Иран/Ливан) и выбор нескольких дней.<br><br><strong>3. Обновление методологии</strong><br>Небольшое улучшение логики определения событий.<br><br><strong>4. Блокировка карты</strong><br>Нажмите "Войти в карту" для прокрутки/зума — предотвращает случайное взаимодействие.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Обновление 16.3.2026</strong><br><br><strong>1. Кнопка «Поделиться»</strong><br>Копирование ссылки с фильтрами.<br><br><strong>2. Закреплённый заголовок</strong><br>Заголовок остаётся видимым при прокрутке.',
     methodologyContent: '<strong style="font-size:14px;">Методология: Идентификация событий</strong><br>Командование тыла присваивает каждой волне тревог уникальный ID. Панель применяет три правила для разделения событий с одинаковым ID, которые на самом деле являются отдельными инцидентами:<br><br><strong>1. Разделение по источнику запуска</strong><br>Если один ID содержит тревоги из разных источников (например, Иран и Ливан одновременно), каждый источник считается отдельным событием.<br><br><strong>2. Разделение по типу угрозы</strong><br>Если один ID содержит ракетный обстрел и БПЛА, каждый тип угрозы считается отдельным событием.<br><br><strong>3. Правило 3 минут (только ракеты/снаряды)</strong><br>Если от первой тревоги в событии проходит более 3 минут, последующие тревоги считаются новым событием.<br><em style="color:var(--text-muted);">&#9432; Правило не применяется к БПЛА: БПЛА — катящееся событие.</em>'
   }
 };
@@ -1336,8 +1433,18 @@ function applyLang(){
 
   // Summary table header
   var _sth=document.getElementById('summaryTableHeader');if(_sth)_sth.textContent=t('summaryTableTitle');
+  var _stfO=document.getElementById('stfOrigin');if(_stfO){_stfO.options[0].textContent=t('stfAllSources');_stfO.options[1].textContent=t('stfIran');_stfO.options[2].textContent=t('stfLebanon');}
+  var _stfD=document.getElementById('stfDayBtn');if(_stfD&&getStfSelectedDays().length===0)_stfD.textContent=t('stfAllDays');
+  var _mlb=document.getElementById('mapLockBtn');if(_mlb&&!document.getElementById('mapLockOverlay').classList.contains('hidden'))_mlb.innerHTML='👆 '+t('mapEnter');
+  var _meb=document.getElementById('mapExitBtn');if(_meb&&_meb.style.display==='block')_meb.textContent='\u2715 '+t('mapExit');
+  buildStfDayDropdown();
+  var _wsh=document.getElementById('wsHeader');if(_wsh)_wsh.innerHTML='&#129354; '+t('wsTitle');
+  var _wsg=document.getElementById('wsGoBtn');if(_wsg)_wsg.innerHTML='&#9876;&#65039; '+t('wsCompare');
+  var _wsi1=document.getElementById('wsCity1Input');if(_wsi1&&!wsCity1)_wsi1.placeholder=t('wsPickCity');
+  var _wsi2=document.getElementById('wsCity2Input');if(_wsi2&&!wsCity2)_wsi2.placeholder=t('wsPickCity');
   // Summary table column headers
   var thEls=document.querySelectorAll('#summaryTable thead th');
+  if(summaryDT){summaryDT.destroy();summaryDT=null;$('#summaryTable tbody').empty();renderSummaryTable();}
   if(thEls.length>=5){thEls[0].textContent=t('colTimestamp');thEls[1].textContent=t('colCity');thEls[2].textContent=t('colThreat');thEls[3].textContent=t('colOrigin');thEls[4].textContent=t('colLaunchId');}
 
   // Footer
@@ -1653,7 +1760,7 @@ function renderStats(d){
 function focusIsrael(){if(map) map.setView([31.5,35.0],7);}
 
 function initMap(){
-  map=L.map('map',{center:[31.5,35.0],zoom:7});
+  map=L.map('map',{center:[31.5,35.0],zoom:7,dragging:false,touchZoom:false,doubleClickZoom:false,scrollWheelZoom:false,boxZoom:false,tap:false});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
     attribution:'&copy; OpenStreetMap &copy; CARTO',maxZoom:19
   }).addTo(map);
@@ -2364,36 +2471,272 @@ function showPopCitiesPanel(count,cities){
 // SUMMARY TABLE
 // ═══════════════════════════════════════════════════════════════════════
 var summaryDT=null;
+var summaryEvtData={};
+function _summaryRowClick(tr){
+  if(!summaryDT) return;
+  var row=summaryDT.row(tr);
+  var d=row.data();
+  if(!d) return;
+  var eid=d[0].replace(/<[^>]*>/g,'').replace(/&[^;]*;/g,'').replace(/[^a-zA-Z0-9_]/g,' ').trim();
+  var evt=summaryEvtData[eid];
+  if(!evt) return;
+  var $tr=$(tr);
+  if($tr.hasClass('expanded')){
+    $tr.removeClass('expanded');
+    $tr.nextUntil(':not(.child-row)').remove();
+    return;
+  }
+  $tr.addClass('expanded');
+  var threatLabelsL={'0':t('threat0'),'5':t('threat5'),'2':t('threat2')};
+  var originLabelsL={Gaza:t('gaza'),Lebanon:t('lebanon'),Iran:t('iran')};
+  var childHtml='';
+  evt.alerts.forEach(function(a){
+    var ol2=originLabelsL[a[5]]||(a[5]&&a[5]!=='FA'?a[5]:t('unknown'));
+    var tl2=threatLabelsL[a[2]]||(a[4]||a[2]);
+    var p=POP[a[1]]||0;
+    var pStr=p>=1000?Math.round(p/1000)+'K':p.toString();
+    childHtml+='<tr class="child-row"><td></td><td>'+a[0].substring(5,19)+'</td><td>'+cityName(a[1])+'</td><td>'+tl2+'</td><td colspan="1">'+ol2+'</td><td>'+pStr+'</td></tr>';
+  });
+  $tr.after(childHtml);
+}
 function renderSummaryTable(){
   var filtered=getFilteredAlerts();
+  var stfOrigin=document.getElementById('stfOrigin').value;
+  var stfDays=getStfSelectedDays();
+  if(stfOrigin) filtered=filtered.filter(function(a){return normOrigin(a[5])===stfOrigin;});
+  if(stfDays.length>0) filtered=filtered.filter(function(a){return stfDays.indexOf(a[0].substring(0,10))>=0;});
   var originLabels={Gaza:t('gaza'),Lebanon:t('lebanon'),Iran:t('iran')};
   var threatLabels={'0':t('threat0'),'5':t('threat5'),'2':t('threat2')};
-  var rows=filtered.map(function(a){
-    var rawO=a[5];
-    var ol=originLabels[rawO]||(rawO&&rawO!=='FA'?rawO:t('unknown'));
-    var tl=threatLabels[a[2]]||(a[4]||a[2]);
-    return [a[0],cityName(a[1]),tl,ol,a[3]];
+  var evtMap={};
+  filtered.forEach(function(a){
+    var eid=a[3];
+    if(!evtMap[eid]) evtMap[eid]={id:eid,ft:a[0],lt:a[0],origin:a[5],threat:a[2],cities:{},alerts:[],pop:0};
+    var e=evtMap[eid];
+    if(a[0]<e.ft) e.ft=a[0];
+    if(a[0]>e.lt) e.lt=a[0];
+    if(a[5]&&a[5]!=='FA'&&a[5]!=='') e.origin=a[5];
+    e.cities[a[1]]=1;
+    e.pop+=(POP[a[1]]||0);
+    e.alerts.push(a);
   });
-  if(summaryDT){
-    summaryDT.clear();
-    summaryDT.rows.add(rows);
-    summaryDT.draw();
-  } else {
-    summaryDT=$('#summaryTable').DataTable({
-      data:rows,
-      pageLength:25,
-      order:[[0,'desc']],
-      language:{
-        search:LANG==='he'?'חיפוש:':LANG==='ru'?'Поиск:':'Search:',
-        lengthMenu:LANG==='he'?'הצג _MENU_ שורות':LANG==='ru'?'Показать _MENU_ записей':'Show _MENU_ entries',
-        info:LANG==='he'?'מציג _START_ עד _END_ מתוך _TOTAL_':LANG==='ru'?'Показаны _START_-_END_ из _TOTAL_':'Showing _START_ to _END_ of _TOTAL_',
-        paginate:{first:LANG==='he'?'ראשון':LANG==='ru'?'Первая':'First',last:LANG==='he'?'אחרון':LANG==='ru'?'Последняя':'Last',next:LANG==='he'?'הבא':LANG==='ru'?'Далее':'Next',previous:LANG==='he'?'הקודם':LANG==='ru'?'Назад':'Previous'},
-        zeroRecords:LANG==='he'?'לא נמצאו תוצאות':LANG==='ru'?'Совпадений не найдено':'No matching records'
-      },
-      columnDefs:[{targets:'_all',className:'dt-body-right dt-head-right'}],
-      destroy:true
+  var evts=Object.values(evtMap);
+  evts.forEach(function(e){
+    e.nc=Object.keys(e.cities).length;
+    e.alerts.sort(function(a,b){return a[0].localeCompare(b[0]);});
+  });
+  evts.sort(function(a,b){return b.ft.localeCompare(a.ft);});
+  summaryEvtData={};
+  var rows=evts.map(function(e){
+    summaryEvtData[e.id]=e;
+    var rawO=e.origin;
+    var oClass=normOrigin(rawO).toLowerCase();
+    var ol=originLabels[rawO]||(rawO&&rawO!=='FA'?rawO:t('unknown'));
+    var tl=threatLabels[e.threat]||(e.threat||'');
+    var originHtml='<span class="evt-badge '+oClass+'">'+ol+'</span>';
+    var popStr=e.pop>=1000000?(e.pop/1000000).toFixed(1)+'M':e.pop>=1000?Math.round(e.pop/1000)+'K':e.pop.toString();
+    return ['<span class="evt-toggle">&#9654;</span> '+e.id, e.ft.substring(5,16), originHtml, tl, e.nc, '<span class="evt-pop">'+popStr+'</span>'];
+  });
+  if(summaryDT){summaryDT.destroy();summaryDT=null;}
+  $('#summaryTable tbody').empty();
+  summaryDT=$('#summaryTable').DataTable({
+    data:rows,
+    pageLength:25,
+    order:[[1,'desc']],
+    language:{
+      search:LANG==='he'?'חיפוש:':LANG==='ru'?'Поиск:':'Search:',
+      lengthMenu:LANG==='he'?'הצג _MENU_ שורות':LANG==='ru'?'Показать _MENU_ записей':'Show _MENU_ entries',
+      info:LANG==='he'?'מציג _START_ עד _END_ מתוך _TOTAL_':LANG==='ru'?'Показаны _START_-_END_ из _TOTAL_':'Showing _START_ to _END_ of _TOTAL_',
+      paginate:{first:LANG==='he'?'ראשון':LANG==='ru'?'Первая':'First',last:LANG==='he'?'אחרון':LANG==='ru'?'Последняя':'Last',next:LANG==='he'?'הבא':LANG==='ru'?'Далее':'Next',previous:LANG==='he'?'הקודם':LANG==='ru'?'Назад':'Previous'},
+      zeroRecords:LANG==='he'?'לא נמצאו תוצאות':LANG==='ru'?'Совпадений не найдено':'No matching records'
+    },
+    columnDefs:[
+      {targets:'_all',className:'dt-body-right dt-head-right'},
+      {targets:[0,2,5],orderable:true},
+      {targets:[0,2],type:'html'}
+    ],
+    createdRow:function(row){row.classList.add('evt-row');},
+    destroy:true
+  });
+}
+document.addEventListener('click',function(e){
+  var tr=e.target.closest('#summaryTable tbody tr.evt-row');
+  if(tr) _summaryRowClick(tr);
+});
+
+var stfDayState=[];
+function getStfSelectedDays(){
+  var cbs=document.querySelectorAll('#stfDayDropdown input[type=checkbox]:checked');
+  var arr=[];cbs.forEach(function(cb){arr.push(cb.value);});
+  return arr;
+}
+function buildStfDayDropdown(){
+  var days={};
+  RAW.forEach(function(a){if(a[0]>=START_DATE){var d=a[0].substring(0,10);days[d]=1;}});
+  var sorted=Object.keys(days).sort();
+  var dow=['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
+  var dowEn=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var dowRu=['Вс','Пн','Вт','Ср','Чт','Пт','Сб'];
+  var html='';
+  sorted.forEach(function(d){
+    var dt=new Date(d+'T00:00:00');
+    var dayName=LANG==='he'?dow[dt.getDay()]:LANG==='ru'?dowRu[dt.getDay()]:dowEn[dt.getDay()];
+    var label=d.substring(5)+' ('+dayName+')';
+    html+='<label><input type="checkbox" value="'+d+'" onchange="onStfDayChange()"> '+label+'</label>';
+  });
+  document.getElementById('stfDayDropdown').innerHTML=html;
+}
+function toggleStfDayDropdown(){
+  document.getElementById('stfDayDropdown').classList.toggle('show');
+}
+function onStfDayChange(){
+  var sel=getStfSelectedDays();
+  var btn=document.getElementById('stfDayBtn');
+  if(sel.length===0) btn.textContent=t('stfAllDays');
+  else btn.textContent=sel.length+' '+t('stfDaysSelected');
+  renderSummaryTable();
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('#stfDayBtn')&&!e.target.closest('#stfDayDropdown'))
+    document.getElementById('stfDayDropdown').classList.remove('show');
+});
+
+function lockMap(){
+  if(!map) return;
+  map.dragging.disable();
+  map.touchZoom.disable();
+  map.doubleClickZoom.disable();
+  map.scrollWheelZoom.disable();
+  map.boxZoom.disable();
+  if(map.tap) map.tap.disable();
+  document.getElementById('mapLockOverlay').classList.remove('hidden');
+  document.getElementById('mapExitBtn').style.display='none';
+  document.getElementById('mapLockBtn').innerHTML='👆 '+t('mapEnter');
+}
+function unlockMap(){
+  if(!map) return;
+  map.dragging.enable();
+  map.touchZoom.enable();
+  map.doubleClickZoom.enable();
+  map.scrollWheelZoom.enable();
+  map.boxZoom.enable();
+  if(map.tap) map.tap.enable();
+  document.getElementById('mapLockOverlay').classList.add('hidden');
+  document.getElementById('mapExitBtn').style.display='block';
+  document.getElementById('mapExitBtn').textContent='\u2715 '+t('mapExit');
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// WHO SUFFERS MORE?
+// ═══════════════════════════════════════════════════════════════════════
+var wsCity1='',wsCity2='';
+function wsGetAllCities(){
+  var s={};RAW.forEach(function(a){if(a[0]>=START_DATE) s[a[1]]=1;});
+  return Object.keys(s).sort(function(a,b){return a.localeCompare(b,'he');});
+}
+function wsFilterCities(n){
+  var inp=document.getElementById('wsCity'+n+'Input');
+  var dd=document.getElementById('wsCity'+n+'DD');
+  var q=inp.value.trim();
+  var cities=wsGetAllCities();
+  if(q) cities=cities.filter(function(c){return c.indexOf(q)>=0;});
+  cities=cities.slice(0,40);
+  dd.innerHTML='';
+  cities.forEach(function(c){
+    var d=document.createElement('div');
+    d.textContent=cityName(c);
+    d.setAttribute('data-city',c);
+    d.onclick=function(){wsSelectCity(n,c);};
+    dd.appendChild(d);
+  });
+  dd.classList.add('show');
+}
+function wsSelectCity(n,c){
+  if(n===1) wsCity1=c; else wsCity2=c;
+  document.getElementById('wsCity'+n+'Input').value=cityName(c);
+  document.getElementById('wsCity'+n+'DD').classList.remove('show');
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('#wsCity1Input')&&!e.target.closest('#wsCity1DD')) document.getElementById('wsCity1DD').classList.remove('show');
+  if(!e.target.closest('#wsCity2Input')&&!e.target.closest('#wsCity2DD')) document.getElementById('wsCity2DD').classList.remove('show');
+});
+
+function wsCompare(){
+  if(!wsCity1||!wsCity2) return;
+  var now=new Date();
+  var d7=new Date(now.getTime()-7*24*3600000);
+  var d7str=d7.toISOString().substring(0,10);
+  
+  function stats(city){
+    var total=0,totalIran=0,totalLeb=0;
+    var last7=0,last7Iran=0,last7Leb=0;
+    var night=0,nightIran=0,nightLeb=0;
+    RAW.forEach(function(a){
+      if(a[0]<START_DATE||a[1]!==city) return;
+      var o=normOrigin(a[5]);
+      total++;
+      if(o==='Iran') totalIran++;
+      if(o==='Lebanon') totalLeb++;
+      if(a[0]>=d7str){
+        last7++;
+        if(o==='Iran') last7Iran++;
+        if(o==='Lebanon') last7Leb++;
+      }
+      var dt=a[0].substring(0,10);
+      var hr=parseInt(a[0].substring(11,13));
+      if((hr>=23||hr<6)&&dt>='2026-03-02'){
+        night++;
+        if(o==='Iran') nightIran++;
+        if(o==='Lebanon') nightLeb++;
+      }
     });
+    return {total:total,totalIran:totalIran,totalLeb:totalLeb,last7:last7,last7Iran:last7Iran,last7Leb:last7Leb,night:night,nightIran:nightIran,nightLeb:nightLeb};
   }
+  var s1=stats(wsCity1),s2=stats(wsCity2);
+  
+  function card(val,lbl,cls){
+    cls=cls||'';
+    return '<div class="ws-stat '+cls+'"><div class="ws-stat-val">'+val+'</div><div class="ws-stat-lbl">'+lbl+'</div></div>';
+  }
+  function winCls(a,b,cls){return a>b?(cls+' ws-winner'):cls;}
+  
+  function renderCol(s,other,name){
+    var h='<div class="ws-col">';
+    h+='<div class="ws-city-name">'+name+'</div>';
+    h+='<div class="ws-section-label">'+t('wsTotal')+'</div>';
+    h+='<div class="ws-stat-row">';
+    h+=card(s.total,t('wsAlerts'),s.total>other.total?'ws-winner':'');
+    h+='</div><div class="ws-stat-row">';
+    h+=card(s.totalIran,t('wsFromIran'),winCls(s.totalIran,other.totalIran,'iran-stat'));
+    h+=card(s.totalLeb,t('wsFromLeb'),winCls(s.totalLeb,other.totalLeb,'leb-stat'));
+    h+='</div>';
+    h+='<div class="ws-section-label">'+t('wsLast7')+'</div>';
+    h+='<div class="ws-stat-row">';
+    h+=card(s.last7,t('wsAlerts'),s.last7>other.last7?'ws-winner':'');
+    h+='</div><div class="ws-stat-row">';
+    h+=card(s.last7Iran,t('wsFromIran'),winCls(s.last7Iran,other.last7Iran,'iran-stat'));
+    h+=card(s.last7Leb,t('wsFromLeb'),winCls(s.last7Leb,other.last7Leb,'leb-stat'));
+    h+='</div>';
+    h+='<div class="ws-section-label">'+t('wsNight')+' <small style="color:var(--text-muted);">('+t('wsNightSince')+')</small></div>';
+    h+='<div class="ws-stat-row">';
+    h+=card(s.night,t('wsAlerts'),s.night>other.night?'ws-winner':'');
+    h+='</div><div class="ws-stat-row">';
+    h+=card(s.nightIran,t('wsFromIran'),winCls(s.nightIran,other.nightIran,'iran-stat'));
+    h+=card(s.nightLeb,t('wsFromLeb'),winCls(s.nightLeb,other.nightLeb,'leb-stat'));
+    h+='</div>';
+    h+='</div>';
+    return h;
+  }
+  
+  var html='<div class="ws-grid">';
+  html+=renderCol(s1,s2,cityName(wsCity1));
+  html+='<div class="ws-divider"></div>';
+  html+=renderCol(s2,s1,cityName(wsCity2));
+  html+='</div>';
+  
+  var res=document.getElementById('wsResults');
+  res.innerHTML=html;
+  res.style.display='block';
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
 // ═══════════════════════════════════════════════════════════════════════
@@ -2743,6 +3086,7 @@ function refreshAll(){
   renderRegions(d);
   renderProbSection();
   renderPopChart();
+  buildStfDayDropdown();
   renderSummaryTable();
   updateTimeSince();
   var cts=document.getElementById('cityTimelineSelect');
@@ -2804,6 +3148,67 @@ function parseCSVLine(line){
 }
 
 function splitLaunches(){
+  // Phase 0: Merge small Iran stragglers into nearest Iran event (bidirectional).
+  // "Small" = <=10 cities OR total population < IRAN_POP_MERGE_THRESHOLD.
+  // Pikud HaOref sometimes assigns a separate ID to late alerts from the same salvo.
+  var evtMeta={};
+  RAW.forEach(function(a,idx){
+    var eid=a[3];
+    if(!evtMeta[eid]) evtMeta[eid]={origins:{},threats:{},ft:a[0],lt:a[0],idxs:[],cities:{}};
+    var m=evtMeta[eid];
+    m.origins[a[5]]=(m.origins[a[5]]||0)+1;
+    m.threats[a[4]]=(m.threats[a[4]]||0)+1;
+    if(a[0]<m.ft) m.ft=a[0];
+    if(a[0]>m.lt) m.lt=a[0];
+    m.idxs.push(idx);
+    m.cities[a[1]]=1;
+  });
+  var evtList=Object.keys(evtMeta).map(function(eid){
+    var m=evtMeta[eid];
+    var po=Object.keys(m.origins).sort(function(a,b){return m.origins[b]-m.origins[a];})[0];
+    var pt=Object.keys(m.threats).sort(function(a,b){return m.threats[b]-m.threats[a];})[0];
+    var tp=0;m.idxs.forEach(function(idx){tp+=(POP[RAW[idx][1]]||0);});
+    return {eid:eid,origin:po,threat:pt,ft:m.ft,lt:m.lt,idxs:m.idxs,nc:Object.keys(m.cities).length,tp:tp};
+  });
+  evtList.sort(function(a,b){return a.ft.localeCompare(b.ft);});
+  var iranEvts=[];
+  for(var i=0;i<evtList.length;i++){if(evtList[i].origin==='Iran') iranEvts.push(evtList[i]);}
+  var mergedEids={};
+  function isSmall(e){return e.nc<=10||e.tp<IRAN_POP_MERGE_THRESHOLD;}
+  // Forward pass: merge small into previous Iran event
+  for(var i=1;i<iranEvts.length;i++){
+    var cur=iranEvts[i];
+    if(!isSmall(cur)) continue;
+    var prev=null;
+    for(var j=i-1;j>=0;j--){if(!mergedEids[iranEvts[j].eid]){prev=iranEvts[j];break;}}
+    if(prev){
+      var gap=(new Date(cur.ft.replace(' ','T'))-new Date(prev.lt.replace(' ','T')))/60000;
+      if(gap<=3){
+        cur.idxs.forEach(function(idx){RAW[idx][3]=prev.eid;RAW[idx][6]='m';});
+        prev.idxs=prev.idxs.concat(cur.idxs);
+        if(cur.lt>prev.lt) prev.lt=cur.lt;
+        mergedEids[cur.eid]=true;
+      }
+    }
+  }
+  // Backward pass: remaining small events → merge into next Iran event
+  for(var i=iranEvts.length-2;i>=0;i--){
+    var cur=iranEvts[i];
+    if(mergedEids[cur.eid]) continue;
+    if(!isSmall(cur)) continue;
+    var next=null;
+    for(var j=i+1;j<iranEvts.length;j++){if(!mergedEids[iranEvts[j].eid]){next=iranEvts[j];break;}}
+    if(next){
+      var gap=(new Date(next.ft.replace(' ','T'))-new Date(cur.lt.replace(' ','T')))/60000;
+      if(gap<=3){
+        cur.idxs.forEach(function(idx){RAW[idx][3]=next.eid;RAW[idx][6]='m';});
+        next.idxs=next.idxs.concat(cur.idxs);
+        if(cur.ft<next.ft) next.ft=cur.ft;
+        if(cur.lt>next.lt) next.lt=cur.lt;
+        mergedEids[cur.eid]=true;
+      }
+    }
+  }
   // Phase 1: different origins under same event ID → separate events
   var byEvent={};
   RAW.forEach(function(a,idx){
@@ -2856,6 +3261,7 @@ function splitLaunches(){
     var sub=1;var subs=[1];
     var hasSplit=false;
     for(var i=1;i<idxs.length;i++){
+      if(RAW[idxs[i]][6]==='m'){subs.push(sub);continue;}
       var curTime=new Date(RAW[idxs[i]][0].replace(' ','T'));
       if((curTime-subStartTime)/60000>3){sub++;hasSplit=true;subStartTime=curTime;}
       subs.push(sub);
