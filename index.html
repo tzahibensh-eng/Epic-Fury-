@@ -538,14 +538,14 @@ footer a{color:var(--accent-blue);text-decoration:none;}
 <div id="methodologyBox" style="display:none;margin:0 auto 12px;padding:14px 16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:8px;font-size:13px;line-height:1.8;direction:rtl;max-width:1400px;">
   <strong style="font-size:14px;">מתודולוגיה: זיהוי אירועים</strong>
   <br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל ארבעה כללים — אחד לאיחוד ושלושה לפיצול — כדי לשקף נכון את מספר האירועים בפועל:
-  <br><br><strong>1. איחוד התרעות מאיחור באיראן (עד 10 יישובים, עד 3 דקות)</strong>
-  <br>לעיתים פיקוד העורף מקצה ID חדש להתרעה מאוחרת שהגיעה מספר דקות אחרי הגל העיקרי, למרות שמדובר באותו שיגור. אם אירוע איראני קטן (עד 10 יישובים) מתרחש תוך 3 דקות מסיום האירוע הקודם — הוא מאוחד לאירוע הקודם. דוגמה: ב-21.3 כסייפה קיבלה התרעה דקה ו-35 שניות אחרי גל של 17 יישובים באזור דימונה — ID נפרד מהמקור, אך בפועל אותו שיגור.
+  <br><br><strong>1. איחוד התרעות מאיחור באיראן (עד 10 יישובים, עד 5 דקות)</strong>
+  <br>לעיתים פיקוד העורף מקצה ID חדש להתרעה מאוחרת שהגיעה מספר דקות אחרי הגל העיקרי, למרות שמדובר באותו שיגור. אם אירוע איראני קטן (עד 10 יישובים) מתרחש תוך 5 דקות מסיום האירוע הקודם — הוא מאוחד לאירוע הקודם. דוגמה: ב-21.3 כסייפה קיבלה התרעה דקה ו-35 שניות אחרי גל של 17 יישובים באזור דימונה — ID נפרד מהמקור, אך בפועל אותו שיגור.
   <br><br><strong>2. פיצול לפי מקור שיגור</strong>
   <br>אם באותו ID יש התרעות ממקורות שונים (למשל איראן ולבנון בו-זמנית), כל מקור נחשב כאירוע נפרד. מתקפה מתואמת מאיראן ומלבנון זה שני שיגורים, לא אחד.
   <br><br><strong>3. פיצול לפי סוג איום</strong>
   <br>אם באותו ID יש גם ירי רקטות/טילים וגם חדירת כלי טיס עוין (כטב״מ), כל סוג איום נחשב כאירוע נפרד. מדובר בכלי נשק שונים עם מאפיינים שונים.
-  <br><br><strong>4. חוק 3 הדקות (רקטות/טילים בלבד)</strong>
-  <br>אם באותו ID (לאחר הפיצולים לעיל) חולפות יותר מ-3 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש. הסיבה: גל שיגור בודד נמשך בדרך כלל עד 3 דקות. פער גדול יותר מעיד על גל שיגור נוסף.
+  <br><br><strong>4. חוק 5 הדקות (רקטות/טילים בלבד)</strong>
+  <br>אם באותו ID (לאחר הפיצולים לעיל) חולפות יותר מ-5 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש. הסיבה: גל שיגור בודד נמשך בדרך כלל עד 5 דקות. פער גדול יותר מעיד על גל שיגור נוסף.
   <br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל — אם לא מאתרים אותו, הוא מתקדם ומפעיל אזעקות ביישובים נוספים. למרות פערי הזמן, מדובר באותו אירוע.</em>
 </div>
 <div id="whatsNewBanner" onclick="document.getElementById('whatsNewBox').style.display=document.getElementById('whatsNewBox').style.display==='none'?'block':'none'" style="cursor:pointer;margin:0 auto 10px;padding:10px 16px;background:linear-gradient(90deg,rgba(74,222,128,0.15),rgba(74,222,128,0.05));border:1px solid rgba(74,222,128,0.4);border-radius:8px;text-align:center;direction:rtl;max-width:1400px;">
@@ -571,7 +571,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;">
   <strong style="font-size:14px;color:var(--accent-green);">עדכון 15.3.2026</strong>
   <br><br><strong>1. שיפור מתודולוגיית זיהוי אירועים</strong>
-  <br>נוספו שלושה כללי פיצול חכמים: פיצול לפי מקור שיגור, לפי סוג איום (רקטות vs. כטב״מים), וחוק 3 הדקות מההתרעה הראשונה (חל על רקטות/טילים בלבד — כטב״מ הוא אירוע מתגלגל ולכן לא מפוצל לפי זמן). <a href="javascript:void(0)" onclick="document.getElementById('whatsNewBox').style.display='none';document.getElementById('methodologyBox').style.display='block';" style="color:var(--accent-blue);text-decoration:underline;">ראו פירוט המתודולוגיה</a>
+  <br>נוספו שלושה כללי פיצול חכמים: פיצול לפי מקור שיגור, לפי סוג איום (רקטות vs. כטב״מים), וחוק 5 הדקות מההתרעה הראשונה (חל על רקטות/טילים בלבד — כטב״מ הוא אירוע מתגלגל ולכן לא מפוצל לפי זמן). <a href="javascript:void(0)" onclick="document.getElementById('whatsNewBox').style.display='none';document.getElementById('methodologyBox').style.display='block';" style="color:var(--accent-blue);text-decoration:underline;">ראו פירוט המתודולוגיה</a>
   <br><br><strong>2. הוספת מדד חשיפות</strong>
   <br>מדד חדש: חשיפות = התרעות &times; אוכלוסייה. מאפשר להבין כמה אנשים חוו אזעקה. מוצג בכרטיסי הסטטיסטיקה ובגרפים היומיים (ניתן לבחור בין אירועים, התרעות, וחשיפות).
   <br><br><strong>3. ממוצע נע גם עבור לבנון</strong>
@@ -1007,7 +1007,7 @@ var T = {
     whatsNewBanner: '&#127381; מה חדש? (23.3.2026)',
     whatsNewClick: 'לחצו לפירוט &#9660;',
     whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; חדש היום — 23.3.2026</strong><br><br><strong>1. מי סובל יותר? 🥊</strong><br>משחק חדש! בחרו שני ישובים והשוו ביניהם — סה"כ התרעות, 7 ימים אחרונים, ובלילה (מ-02.03). עם פילוח לפי איראן/לבנון וכתרים למנצח.<br><br><strong>2. טבלת נתונים מסכמת חדשה</strong><br>ארגון מחדש של הנתונים לפי אירועים עם אפשרות לפתוח כל אירוע לרשימת התרעות. פילטרים לפי מקור (איראן/לבנון) ובחירת ימים מרובים.<br><br><strong>3. עדכון מתודולוגיה</strong><br>שיפור קטן בלוגיקת זיהוי אירועים.<br><br><strong>4. נעילת מפה</strong><br>לחצו "כניסה למפה" כדי לאפשר גלילה/זום במפה — מונע גלילה בטעות.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">עדכון 16.3.2026</strong><br><br><strong>1. כפתור שיתוף</strong><br>כפתור "שתפו" להעתקת קישור עם פילטרים.<br><br><strong>2. Header ופילטרים דביקים</strong><br>ראש הדף נשאר גלוי בעת גלילה.',
-    methodologyContent: '<strong style="font-size:14px;">מתודולוגיה: זיהוי אירועים</strong><br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל שלושה כללים כדי לפצל אירועים שקיבלו אותו ID אך הם למעשה אירועים נפרדים:<br><br><strong>1. פיצול לפי מקור שיגור</strong><br>אם באותו ID יש התרעות ממקורות שונים (למשל איראן ולבנון בו-זמנית), כל מקור נחשב כאירוע נפרד.<br><br><strong>2. פיצול לפי סוג איום</strong><br>אם באותו ID יש גם ירי רקטות/טילים וגם חדירת כלי טיס עוין (כטב״מ), כל סוג איום נחשב כאירוע נפרד.<br><br><strong>3. חוק 3 הדקות (רקטות/טילים בלבד)</strong><br>אם חולפות יותר מ-3 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש.<br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל.</em>',
+    methodologyContent: '<strong style="font-size:14px;">מתודולוגיה: זיהוי אירועים</strong><br>פיקוד העורף מקצה לכל גל התרעות מספר זיהוי (ID). הדשבורד מפעיל שלושה כללים כדי לפצל אירועים שקיבלו אותו ID אך הם למעשה אירועים נפרדים:<br><br><strong>1. פיצול לפי מקור שיגור</strong><br>אם באותו ID יש התרעות ממקורות שונים (למשל איראן ולבנון בו-זמנית), כל מקור נחשב כאירוע נפרד.<br><br><strong>2. פיצול לפי סוג איום</strong><br>אם באותו ID יש גם ירי רקטות/טילים וגם חדירת כלי טיס עוין (כטב״מ), כל סוג איום נחשב כאירוע נפרד.<br><br><strong>3. חוק 5 הדקות (רקטות/טילים בלבד)</strong><br>אם חולפות יותר מ-5 דקות מההתרעה הראשונה באירוע — ההתרעות שאחרי הפער נחשבות כאירוע חדש.<br><em style="color:var(--text-muted);">&#9432; הכלל לא חל על אירועי כטב״מ: כטב״מ הוא אירוע מתגלגל.</em>',
   },
   en: {
     dashboardTitle: 'Lion\'s Roar Dashboard',
@@ -1080,7 +1080,7 @@ var T = {
     whatsNewBanner: '&#127381; What\'s New? (23.3.2026)',
     whatsNewClick: 'Click for details &#9660;',
     whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; New today — 23.3.2026</strong><br><br><strong>1. Who suffers more? 🥊</strong><br>New game! Pick two cities and compare — total alerts, last 7 days, and nighttime (from 02.03). With Iran/Lebanon breakdown and crowns for the winner.<br><br><strong>2. New summary table</strong><br>Data reorganized by events with expandable alert lists. Filter by source (Iran/Lebanon) and multi-select days.<br><br><strong>3. Methodology update</strong><br>Minor improvement in event detection logic.<br><br><strong>4. Map lock</strong><br>Click "Enter map" to enable scrolling/zooming — prevents accidental map interaction.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Update 16.3.2026</strong><br><br><strong>1. Share button</strong><br>Copy link with all active filters.<br><br><strong>2. Sticky header &amp; filters</strong><br>Header stays visible while scrolling.',
-    methodologyContent: '<strong style="font-size:14px;">Methodology: Event Identification</strong><br>Home Front Command assigns a unique ID to each alert wave. The dashboard applies three rules to split events that share the same ID but are actually separate incidents:<br><br><strong>1. Split by launch origin</strong><br>If the same ID contains alerts from different origins (e.g. Iran and Lebanon simultaneously), each origin is treated as a separate event.<br><br><strong>2. Split by threat type</strong><br>If the same ID contains both rocket/missile fire and hostile aircraft (UAV), each threat type is treated as a separate event.<br><br><strong>3. 3-Minute Rule (rockets/missiles only)</strong><br>If more than 3 minutes pass from the first alert in an event, subsequent alerts are counted as a new event.<br><em style="color:var(--text-muted);">&#9432; This rule does not apply to UAV events: a UAV is a rolling event.</em>',
+    methodologyContent: '<strong style="font-size:14px;">Methodology: Event Identification</strong><br>Home Front Command assigns a unique ID to each alert wave. The dashboard applies three rules to split events that share the same ID but are actually separate incidents:<br><br><strong>1. Split by launch origin</strong><br>If the same ID contains alerts from different origins (e.g. Iran and Lebanon simultaneously), each origin is treated as a separate event.<br><br><strong>2. Split by threat type</strong><br>If the same ID contains both rocket/missile fire and hostile aircraft (UAV), each threat type is treated as a separate event.<br><br><strong>3. 5-Minute Rule (rockets/missiles only)</strong><br>If more than 5 minutes pass from the first alert in an event, subsequent alerts are counted as a new event.<br><em style="color:var(--text-muted);">&#9432; This rule does not apply to UAV events: a UAV is a rolling event.</em>',
   },
   ru: {
     dashboardTitle: 'Панель «Рёв Льва»',
@@ -1153,7 +1153,7 @@ var T = {
     whatsNewBanner: '&#127381; Что нового? (23.3.2026)',
     whatsNewClick: 'Нажмите для подробностей &#9660;',
     whatsNewContent: '<strong style="font-size:14px;color:var(--accent-green);">&#127381; Новое сегодня — 23.3.2026</strong><br><br><strong>1. Кто страдает больше? 🥊</strong><br>Новая игра! Выберите два города и сравните — всего тревог, за 7 дней, ночью (с 02.03). С разбивкой Иран/Ливан и коронами для победителя.<br><br><strong>2. Новая сводная таблица</strong><br>Данные реорганизованы по событиям с раскрывающимися списками тревог. Фильтр по источнику (Иран/Ливан) и выбор нескольких дней.<br><br><strong>3. Обновление методологии</strong><br>Небольшое улучшение логики определения событий.<br><br><strong>4. Блокировка карты</strong><br>Нажмите "Войти в карту" для прокрутки/зума — предотвращает случайное взаимодействие.<br><br><hr style="border-color:rgba(74,222,128,0.2);margin:12px 0;"><strong style="font-size:14px;color:var(--accent-green);">Обновление 16.3.2026</strong><br><br><strong>1. Кнопка «Поделиться»</strong><br>Копирование ссылки с фильтрами.<br><br><strong>2. Закреплённый заголовок</strong><br>Заголовок остаётся видимым при прокрутке.',
-    methodologyContent: '<strong style="font-size:14px;">Методология: Идентификация событий</strong><br>Командование тыла присваивает каждой волне тревог уникальный ID. Панель применяет три правила для разделения событий с одинаковым ID, которые на самом деле являются отдельными инцидентами:<br><br><strong>1. Разделение по источнику запуска</strong><br>Если один ID содержит тревоги из разных источников (например, Иран и Ливан одновременно), каждый источник считается отдельным событием.<br><br><strong>2. Разделение по типу угрозы</strong><br>Если один ID содержит ракетный обстрел и БПЛА, каждый тип угрозы считается отдельным событием.<br><br><strong>3. Правило 3 минут (только ракеты/снаряды)</strong><br>Если от первой тревоги в событии проходит более 3 минут, последующие тревоги считаются новым событием.<br><em style="color:var(--text-muted);">&#9432; Правило не применяется к БПЛА: БПЛА — катящееся событие.</em>'
+    methodologyContent: '<strong style="font-size:14px;">Методология: Идентификация событий</strong><br>Командование тыла присваивает каждой волне тревог уникальный ID. Панель применяет три правила для разделения событий с одинаковым ID, которые на самом деле являются отдельными инцидентами:<br><br><strong>1. Разделение по источнику запуска</strong><br>Если один ID содержит тревоги из разных источников (например, Иран и Ливан одновременно), каждый источник считается отдельным событием.<br><br><strong>2. Разделение по типу угрозы</strong><br>Если один ID содержит ракетный обстрел и БПЛА, каждый тип угрозы считается отдельным событием.<br><br><strong>3. Правило 5 минут (только ракеты/снаряды)</strong><br>Если от первой тревоги в событии проходит более 5 минут, последующие тревоги считаются новым событием.<br><em style="color:var(--text-muted);">&#9432; Правило не применяется к БПЛА: БПЛА — катящееся событие.</em>'
   }
 };
 
@@ -3183,7 +3183,7 @@ function splitLaunches(){
     for(var j=i-1;j>=0;j--){if(!mergedEids[iranEvts[j].eid]){prev=iranEvts[j];break;}}
     if(prev){
       var gap=(new Date(cur.ft.replace(' ','T'))-new Date(prev.lt.replace(' ','T')))/60000;
-      if(gap<=3){
+      if(gap<=5){
         cur.idxs.forEach(function(idx){RAW[idx][3]=prev.eid;RAW[idx][6]='m';});
         prev.idxs=prev.idxs.concat(cur.idxs);
         if(cur.lt>prev.lt) prev.lt=cur.lt;
@@ -3200,7 +3200,7 @@ function splitLaunches(){
     for(var j=i+1;j<iranEvts.length;j++){if(!mergedEids[iranEvts[j].eid]){next=iranEvts[j];break;}}
     if(next){
       var gap=(new Date(next.ft.replace(' ','T'))-new Date(cur.lt.replace(' ','T')))/60000;
-      if(gap<=3){
+      if(gap<=5){
         cur.idxs.forEach(function(idx){RAW[idx][3]=next.eid;RAW[idx][6]='m';});
         next.idxs=next.idxs.concat(cur.idxs);
         if(cur.ft<next.ft) next.ft=cur.ft;
@@ -3263,7 +3263,7 @@ function splitLaunches(){
     for(var i=1;i<idxs.length;i++){
       if(RAW[idxs[i]][6]==='m'){subs.push(sub);continue;}
       var curTime=new Date(RAW[idxs[i]][0].replace(' ','T'));
-      if((curTime-subStartTime)/60000>3){sub++;hasSplit=true;subStartTime=curTime;}
+      if((curTime-subStartTime)/60000>5){sub++;hasSplit=true;subStartTime=curTime;}
       subs.push(sub);
     }
     if(!hasSplit) return;
