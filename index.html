@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -20,7 +19,7 @@
   --border-color:#2a2a3a;--text-primary:#fff;--text-secondary:#a0a0b0;--text-muted:#606070;
   --accent-red:#ff3b5c;--accent-orange:#ff8c42;--accent-yellow:#ffd93d;
   --accent-green:#4ade80;--accent-blue:#3b82f6;--accent-purple:#a855f7;
-  --gaza-color:#ff3b5c;--lebanon-color:#ff8c42;--iran-color:#a855f7;--yemen-color:#14b8a6;
+  --gaza-color:#ff3b5c;--lebanon-color:#ff8c42;--iran-color:#a855f7;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{overflow-x:clip;}
@@ -57,9 +56,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:12p
 .iran-filter-btn{display:inline-block;margin-top:8px;padding:10px 28px;font-size:16px;font-weight:800;font-family:'Heebo','Segoe UI',sans-serif;background:var(--iran-color);color:#fff;border:2px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer;letter-spacing:0.5px;transition:all 0.2s;box-shadow:0 2px 10px rgba(168,85,247,0.35);text-decoration:none;}
 .iran-filter-btn:hover{opacity:0.9;transform:scale(1.04);border-color:rgba(255,255,255,0.6);text-decoration:underline;}
 .iran-filter-btn.active-iran{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--iran-color);}
-.yemen-filter-btn{display:inline-block;margin-top:8px;padding:10px 28px;font-size:16px;font-weight:800;font-family:'Heebo','Segoe UI',sans-serif;background:var(--yemen-color);color:#fff;border:2px solid rgba(255,255,255,0.25);border-radius:10px;cursor:pointer;letter-spacing:0.5px;transition:all 0.2s;box-shadow:0 2px 10px rgba(20,184,166,0.35);text-decoration:none;}
-.yemen-filter-btn:hover{opacity:0.9;transform:scale(1.04);border-color:rgba(255,255,255,0.6);text-decoration:underline;}
-.yemen-filter-btn.active-yemen{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--yemen-color);}
 .dashboard-intro strong{color:var(--text-primary);}
 
 /* Filter Bar */
@@ -96,7 +92,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:12p
 .stat-card.gaza::before{background:var(--gaza-color);}
 .stat-card.lebanon::before{background:var(--lebanon-color);}
 .stat-card.iran::before{background:var(--iran-color);}
-.stat-card.yemen::before{background:var(--yemen-color);}
 .stat-card.cities::before{background:var(--accent-green);}
 .stat-card.alerts-card::before{background:var(--accent-blue);}
 .stat-label{font-size:13px;color:var(--text-muted);margin-bottom:6px;font-weight:500;}
@@ -106,7 +101,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:12p
 .stat-card.gaza .stat-value{color:var(--gaza-color);}
 .stat-card.lebanon .stat-value{color:var(--lebanon-color);}
 .stat-card.iran .stat-value{color:var(--iran-color);}
-.stat-card.yemen .stat-value{color:var(--yemen-color);}
 .stat-card.cities .stat-value{color:var(--accent-green);}
 .stat-card.alerts-card .stat-value{color:var(--accent-blue);}
 .stat-change{font-size:9px;color:var(--text-muted);margin-top:2px;}
@@ -176,7 +170,6 @@ header{display:flex;justify-content:space-between;align-items:center;padding:12p
 .recent-origin.gaza{background:rgba(255,59,92,0.2);color:var(--gaza-color);}
 .recent-origin.lebanon{background:rgba(255,140,66,0.2);color:var(--lebanon-color);}
 .recent-origin.iran{background:rgba(168,85,247,0.2);color:var(--iran-color);}
-.recent-origin.yemen{background:rgba(20,184,166,0.2);color:var(--yemen-color);}
 .recent-origin.other{background:rgba(100,100,100,0.2);color:var(--text-muted);}
 .recent-cities{flex:1;font-size:10px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .recent-count{font-family:'JetBrains Mono',monospace;font-size:9px;background:var(--bg-secondary);padding:1px 4px;border-radius:3px;}
@@ -205,7 +198,6 @@ table.dataTable tbody tr:hover{background:var(--bg-secondary)!important;}
 .evt-badge.gaza{background:rgba(255,59,92,0.2);color:var(--gaza-color);}
 .evt-badge.lebanon{background:rgba(255,140,66,0.2);color:var(--lebanon-color);}
 .evt-badge.iran{background:rgba(168,85,247,0.2);color:var(--iran-color);}
-.evt-badge.yemen{background:rgba(20,184,166,0.2);color:var(--yemen-color);}
 .evt-badge.unknown{background:rgba(100,100,100,0.2);color:var(--text-muted);}
 .evt-pop{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-muted);}
 
@@ -242,7 +234,6 @@ table.dataTable tbody tr:hover{background:var(--bg-secondary)!important;}
 .ws-stat-lbl{font-size:9px;color:var(--text-muted);margin-top:1px;}
 .ws-stat.iran-stat{border-color:var(--iran-color);}.ws-stat.iran-stat .ws-stat-val{color:var(--iran-color);}
 .ws-stat.leb-stat{border-color:var(--lebanon-color);}.ws-stat.leb-stat .ws-stat-val{color:var(--lebanon-color);}
-.ws-stat.yemen-stat{border-color:var(--yemen-color);}.ws-stat.yemen-stat .ws-stat-val{color:var(--yemen-color);}
 .ws-section-label{font-size:10px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin:8px 0 4px;border-top:1px solid var(--border-color);padding-top:6px;}
 .ws-winner{position:relative;}.ws-winner::after{content:'👑';position:absolute;top:-6px;right:-6px;font-size:12px;}
 .ws-winner .ws-stat-val{text-shadow:0 0 8px rgba(255,215,0,0.4);}
@@ -640,9 +631,8 @@ footer a{color:var(--accent-blue);text-decoration:none;}
   <div id="section-charts" class="charts-grid">
     <div class="card"><div class="card-header" style="color:var(--iran-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyIranTitle">אירועים מאיראן - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="iranBtnEvents" onclick="setDailyIranView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="daily-view-btn" id="iranBtnAlerts" onclick="setDailyIranView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button><button class="daily-view-btn" id="iranBtnExposures" onclick="setDailyIranView('exposures')" data-tip="חשיפות = התרעות × אוכלוסייה.&lt;br&gt;לדוגמה: נתניה מזרח (~117K תושבים) × 3 התרעות = &lt;b&gt;351K חשיפות&lt;/b&gt;.&lt;br&gt;כלומר, כמה אנשים חוו אזעקה סה&quot;כ." style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">חשיפות</button></div></div><div class="card-body"><div class="chart-container" id="dailyIranChart"></div></div></div>
     <div class="card"><div class="card-header" style="color:var(--lebanon-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyLebTitle">אירועים מלבנון - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="lebBtnEvents" onclick="setDailyLebView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="daily-view-btn" id="lebBtnAlerts" onclick="setDailyLebView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button><button class="daily-view-btn" id="lebBtnExposures" onclick="setDailyLebView('exposures')" data-tip="חשיפות = התרעות × אוכלוסייה.&lt;br&gt;לדוגמה: נתניה מזרח (~117K תושבים) × 3 התרעות = &lt;b&gt;351K חשיפות&lt;/b&gt;.&lt;br&gt;כלומר, כמה אנשים חוו אזעקה סה&quot;כ." style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">חשיפות</button></div></div><div class="card-body"><div class="chart-container" id="dailyLebChart"></div></div></div>
-    <div class="card"><div class="card-header" style="color:var(--yemen-color);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="dailyYemenTitle">אירועים מתימן - לפי יום</span><div style="display:flex;gap:4px;"><button class="daily-view-btn" id="yemenBtnEvents" onclick="setDailyYemenView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="daily-view-btn" id="yemenBtnAlerts" onclick="setDailyYemenView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button><button class="daily-view-btn" id="yemenBtnExposures" onclick="setDailyYemenView('exposures')" data-tip="חשיפות = התרעות × אוכלוסייה.&lt;br&gt;לדוגמה: נתניה מזרח (~117K תושבים) × 3 התרעות = &lt;b&gt;351K חשיפות&lt;/b&gt;.&lt;br&gt;כלומר, כמה אנשים חוו אזעקה סה&quot;כ." style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">חשיפות</button></div></div><div class="card-body"><div class="chart-container" id="dailyYemenChart"></div></div></div>
     <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="originChartTitle">מאיפה שיגרו?</span><div style="display:flex;gap:4px;"><button class="origin-view-btn active" id="originBtnEvents" onclick="setOriginView('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="origin-view-btn" id="originBtnAlerts" onclick="setOriginView('alerts')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">התרעות</button></div></div><div class="card-body"><div class="chart-container" id="originChart"></div></div></div>
-    <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="hourlyChartTitle">באיזו שעה? לפי שעה</span><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="hourlyBtnIran" onclick="setHourlyOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button><button class="hourly-view-btn" id="hourlyBtnLebanon" onclick="setHourlyOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button><button class="hourly-view-btn" id="hourlyBtnYemen" onclick="setHourlyOrigin('Yemen')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">תימן</button></div></div><div class="card-body"><div class="chart-container" id="hourlyChart"></div></div></div>
+    <div class="card"><div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;"><span id="hourlyChartTitle">באיזו שעה? לפי שעה</span><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="hourlyBtnIran" onclick="setHourlyOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button><button class="hourly-view-btn" id="hourlyBtnLebanon" onclick="setHourlyOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button></div></div><div class="card-body"><div class="chart-container" id="hourlyChart"></div></div></div>
   </div>
 
 
@@ -665,6 +655,15 @@ footer a{color:var(--accent-blue);text-decoration:none;}
       <div class="ws-results" id="wsResults"></div>
     </div>
   </div>
+
+  <!-- Origin moving average + cumulative -->
+  <div id="section-iran-ma" class="card">
+    <div class="card-header" id="iranMAHeader" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;color:var(--iran-color);"><span id="maChartTitleText">אירועים מאיראן: ממוצע נע 12 שעות</span><div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;"><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="maBtnIran" onclick="setMAOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button><button class="hourly-view-btn" id="maBtnLebanon" onclick="setMAOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button></div><div style="display:flex;gap:4px;"><button class="hourly-view-btn" id="maBtnEvents" onclick="setMAMode('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button><button class="hourly-view-btn" id="maBtnExposures" onclick="setMAMode('exposures')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">חשיפות</button></div></div></div>
+    <div id="maExplainHourly" style="font-size:12px;color:var(--text-primary);padding:10px 16px 0;opacity:0.85;">
+    </div>
+    <div class="card-body"><div style="height:400px;" id="iranChart"></div></div>
+  </div>
+  
   <!-- Daily moving average (3 days) -->
   <div id="section-daily-ma" class="card">
     <div class="card-header" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;color:var(--accent-blue);">
@@ -672,8 +671,7 @@ footer a{color:var(--accent-blue);text-decoration:none;}
       <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
         <div style="display:flex;gap:4px;">
           <button class="hourly-view-btn" id="dailyMABtnIran" onclick="setDailyMAOrigin('Iran')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">איראן</button>
-          <button class="hourly-view-btn" id="dailyMABtnLebanon" onclick="setDailyMAOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button>
-          <button class="hourly-view-btn" id="dailyMABtnYemen" onclick="setDailyMAOrigin('Yemen')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">תימן</button>
+          <button class="hourly-view-btn" id="dailyMABtnLebanon" onclick="setDailyMAOrigin('Lebanon')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--bg-secondary);color:var(--text-secondary);cursor:pointer;font-family:'Heebo','Segoe UI',sans-serif;">לבנון</button>
         </div>
         <div style="display:flex;gap:4px;">
           <button class="hourly-view-btn" id="dailyMABtnEvents" onclick="setDailyMAMode('events')" style="padding:3px 8px;font-size:10px;border:1px solid var(--border-color);border-radius:3px;background:var(--accent-yellow);color:#000;cursor:pointer;font-weight:700;font-family:'Heebo','Segoe UI',sans-serif;">אירועים</button>
@@ -719,7 +717,6 @@ footer a{color:var(--accent-blue);text-decoration:none;}
       <div class="prob-origin-pills" id="probOriginPills" style="gap:4px;">
         <span class="prob-pill iran active" id="probPillIran" onclick="setProbOrigin('Iran')" style="font-size:11px;padding:3px 8px;">&#127470;&#127479; איראן</span>
         <span class="prob-pill leb" id="probPillLeb" onclick="setProbOrigin('Lebanon')" style="font-size:11px;padding:3px 8px;">&#127473;&#127463; לבנון</span>
-        <span class="prob-pill yemen" id="probPillYemen" onclick="setProbOrigin('Yemen')" style="font-size:11px;padding:3px 8px;">&#127486;&#127466; תימן</span>
       </div>
     </div>
     <div class="card-body" style="padding:8px 10px;">
@@ -972,26 +969,25 @@ var T = {
     credits: 'פותח על ידי <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">צחי בן שימול</a> בסיוע <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">ברק ליטוינוב</a> | נתוני ההתראות באמצעות הגיט הפתוח של <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">יובל הרפז</a>',
     introText: '<strong>מה מציג הדשבורד?</strong> נתוני התרעות ואירועים בזמן אמת מ-28 בפברואר 2026, מתוך מאגר פתוח. <br><strong>אירוע</strong> = הפעלה של מערכת ההתרעה. באירוע אחד יכולים להישמע צופרים בכמה יישובים בו-זמנית. כל אירוע מזוהה לפי מספר ייחודי (ID) מהמקור. <a href="javascript:void(0)" onclick="document.getElementById(\'methodologyBox\').style.display=document.getElementById(\'methodologyBox\').style.display===\'none\'?\'block\':\'none\'" style="color:var(--accent-blue);text-decoration:underline;font-weight:600;font-size:inherit;">לפירוט המתודולוגיה לחץ כאן</a><br><strong>התרעה</strong> = כל ישוב שקיבל צופר באותו אירוע. אירוע אחד יכול ליצור עשרות התרעות (ישוב אחד = התרעה אחת). <br><strong>חשיפות</strong> = התרעות &times; אוכלוסייה. מודד כמה אנשים חוו אזעקה. לדוגמה: אם נתניה מזרח (~117K תושבים) קיבלה 3 התרעות ביום מסוים, זה 351K חשיפות. נתוני אוכלוסייה מבוססים על נתוני הלמ&quot;ס 2024. <br><strong>פילטרים דינמיים:</strong> לחצו על כל אלמנט בגרף, במפה, או בסיידבר כדי לסנן את כל הדשבורד. לחיצה נוספת מבטלת את הפילטר. ניתן גם להשתמש בתפריטים למעלה.',
     iranBtn: '&#127470;&#127479; לחצו כאן לסינון איראן בלבד',
-    allOrigins: 'כל המקורות', gaza: 'עזה', lebanon: 'לבנון', iran: 'איראן', yemen: 'תימן', fa: 'FA', unknown: 'לא ידוע',
+    allOrigins: 'כל המקורות', gaza: 'עזה', lebanon: 'לבנון', iran: 'איראן', fa: 'FA', unknown: 'לא ידוע',
     allThreats: 'כל סוגי האיום', rockets: 'ירי רקטות וטילים', aircraft: 'חדירת כלי טיס עוין', infiltration: 'חדירת מחבלים',
     allDays: 'כל הימים', allHours: 'כל השעות', searchCity: 'חיפוש ישוב...',
     clearAll: 'נקה הכל',
     eventsDetected: 'אירועים שזוהו', alertsInCities: 'התרעות בישובים', eventsToday: 'אירועים היום',
     citiesAttacked: 'ישובים שהותקפו', uniqueCities: 'ישובים ייחודיים', uniqueId: 'מזהה ייחודי לכל אירוע', eachCity: 'כל ישוב = התרעה אחת',
-    sourceGaza: 'מקור: עזה', sourceLebanon: 'מקור: לבנון', sourceIran: 'מקור: איראן', sourceYemen: 'מקור: תימן',
+    sourceGaza: 'מקור: עזה', sourceLebanon: 'מקור: לבנון', sourceIran: 'מקור: איראן',
     popTitle: 'מספר התראות לפי אוכלוסייה',
     popExplanation: 'כמה אנשים (באומדן) נכנסו למקלט? הגרף מציג את כמות האוכלוסייה המשוערת שקיבלה אזעקות לאורך כל התקופה. ככל שעמודה גבוהה יותר, כך יותר אנשים חוו את אותו מספר אזעקות. לחצו על עמודה כדי לראות אילו יישובים נמצאים בה. <span class="pop-note">&#9888; נתוני אוכלוסייה הם אומדן בלבד.</span>',
     popKpiSub: 'אוכלוסייה שקיבלה אזעקות ב-',
     popPctSuffix: '% מהאוכלוסייה במאגר)',
     popOnce: 'נכנסו פעם אחת', popTwice: 'נכנסו פעמיים', popNTimes: 'נכנסו {n} פעמים',
     mapTitle: 'איפה הכי הרבה התראות?',
-    dailyIranTitle: 'אירועים מאיראן: ממוצע נע יומי 3 ימים', dailyLebTitle: 'אירועים מלבנון: ממוצע נע יומי 3 ימים', dailyYemenTitle: 'אירועים מתימן: ממוצע נע יומי 3 ימים',
+    dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
     dailyLaunchTitle: 'מתי היו אירועים? לפי יום', dailyAlertTitle: 'מתי התריעו? לפי יום',
     originTitle: 'מאיפה שיגרו?', threatTitle: 'מה שיגרו? סוג האיום',
     hourlyLaunchTitle: 'באיזו שעה? לפי שעה', hourlyAlertTitle: 'באיזו שעה התריעו?',
     iranChartTitle: 'אירועים מאיראן: ממוצע נע 12 שעות + מצטבר',
     lebChartTitle: 'אירועים מלבנון: ממוצע נע 12 שעות + מצטבר',
-    yemenChartTitle: 'אירועים מתימן: ממוצע נע 12 שעות + מצטבר',
     minuteTitle: 'באיזו דקה בשעה? (0-59)',
     topRegions: 'היישובים עם הכי הרבה התראות', bottomRegions: 'היישובים עם הכי פחות התראות', topRegionsEvents: 'היישובים עם הכי הרבה אירועים', bottomRegionsEvents: 'היישובים עם הכי פחות אירועים',
     recentTitle: 'מה קרה לאחרונה?',
@@ -1011,7 +1007,7 @@ var T = {
     popTrendFormula: 'נוסחה: (1×אוכלוסייה שקיבלה אזעקה פעם + 2×אוכלוסייה שקיבלה פעמיים + ...) / סה״כ אוכלוסייה במאגר',
     popTrendTotalPop: 'סה״כ אוכלוסייה במאגר',
     summaryTableTitle: 'טבלת נתונים מסכמת',
-    stfAllSources: 'כל המקורות', stfIran: 'איראן', stfLebanon: 'לבנון', stfYemen: 'תימן', stfAllDays: 'כל הימים', stfDaysSelected: 'ימים נבחרו', mapEnter: 'כניסה למפה', mapExit: 'יציאה מהמפה',
+    stfAllSources: 'כל המקורות', stfIran: 'איראן', stfLebanon: 'לבנון', stfAllDays: 'כל הימים', stfDaysSelected: 'ימים נבחרו', mapEnter: 'כניסה למפה', mapExit: 'יציאה מהמפה',
     wsTitle: 'מי סובל יותר?', navWhoSuffers: 'מי סובל יותר?', navProb: 'מה הסיכוי שהאזעקה אצלך?', probTitle: 'סיכוי לאזעקה', probLastDays: '7 ימים אחרונים', probPillIran: 'איראן', probPillLeb: 'לבנון', probCitiesOnly: 'ערים בלבד', probEventsLabel: 'אירועי שיגור', wsPickCity: 'בחרו עיר...', wsCompare: 'השווו!', wsTotal: 'סה"כ מתחילת המלחמה', wsLast7: '7 ימים אחרונים', wsNight: 'בלילה (23:00-06:00)', wsAlerts: 'התרעות', wsFromIran: 'מאיראן', wsFromLeb: 'מלבנון', wsNightSince: 'מה-02.03',
     colTimestamp: 'זמן', colCity: 'ישוב', colThreat: 'סוג איום', colOrigin: 'מקור', colLaunchId: 'מזהה אירוע', colFirstTime: 'שעה', colCityCount: 'ישובים', colPopulation: 'אוכלוסייה',
     threat0: 'רקטות וטילים', threat5: 'כלי טיס עוין', threat2: 'חדירת מחבלים',
@@ -1029,8 +1025,8 @@ var T = {
     dateBadge: 'מ-28.02.2026',
     mapHeader: 'איפה הכי הרבה התראות?', mapHeaderEvents: 'איפה הכי הרבה אירועים?',
     focusIsraelTitle: 'מרכז על ישראל',
-    fromIran: 'מאיראן', fromLebanon: 'מלבנון', fromYemen: 'מתימן',
-    dailyIranTitle: 'אירועים מאיראן: ממוצע נע יומי 3 ימים', dailyLebTitle: 'אירועים מלבנון: ממוצע נע יומי 3 ימים', dailyYemenTitle: 'אירועים מתימן: ממוצע נע יומי 3 ימים',
+    fromIran: 'מאיראן', fromLebanon: 'מלבנון',
+    dailyIranTitle: 'אירועים מאיראן - לפי יום', dailyLebTitle: 'אירועים מלבנון - לפי יום',
     popClickHintText: 'לחצו על עמודה כדי לראות את הערים וכמות הפעמים',
     popCityPickerLabel: 'בחרו ישוב:',
     seriesDrones: 'כטב"מים', seriesRockets: 'רקטות/טילים', seriesExposures: 'חשיפות',
@@ -1047,26 +1043,25 @@ var T = {
     credits: 'Developed by <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Tsachi Ben Shimol</a> with <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Barak Litvinov</a> | Alert data powered by <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Yuval Harpaz</a>\'s open-source repo',
     introText: '<strong>What does this dashboard show?</strong> Real-time alert and event data from February 28, 2026, from an open-source repository. <br><strong>Event</strong> = activation of the alert system. One event can trigger sirens in multiple cities simultaneously. Each event is identified by a unique ID from the source. <a href="javascript:void(0)" onclick="document.getElementById(\'methodologyBox\').style.display=document.getElementById(\'methodologyBox\').style.display===\'none\'?\'block\':\'none\'" style="color:var(--accent-blue);text-decoration:underline;font-weight:600;font-size:inherit;">Click here for methodology details</a><br><strong>Alert</strong> = each city that received a siren in that event. One event can generate dozens of alerts (one city = one alert). <br><strong>Exposures</strong> = alerts &times; population. Measures how many people experienced a siren. For example: if Netanya East (~117K residents) received 3 alerts in a day, that is 351K exposures. Population data based on CBS 2024 estimates. <br><strong>Dynamic filters:</strong> Click any element in a chart, map, or sidebar to filter the entire dashboard. Click again to remove the filter. You can also use the dropdown menus above.',
     iranBtn: '&#127470;&#127479; Click here to filter Iran only',
-    allOrigins: 'All origins', gaza: 'Gaza', lebanon: 'Lebanon', iran: 'Iran', yemen: 'Yemen', fa: 'FA', unknown: 'Unknown',
+    allOrigins: 'All origins', gaza: 'Gaza', lebanon: 'Lebanon', iran: 'Iran', fa: 'FA', unknown: 'Unknown',
     allThreats: 'All threat types', rockets: 'Rockets & Missiles', aircraft: 'Hostile Aircraft', infiltration: 'Terrorist Infiltration',
     allDays: 'All days', allHours: 'All hours', searchCity: 'Search city...',
     clearAll: 'Clear all',
     eventsDetected: 'Events detected', alertsInCities: 'Alerts in cities', eventsToday: 'Events today',
     citiesAttacked: 'Cities attacked', uniqueCities: 'Unique cities', uniqueId: 'Unique ID per event', eachCity: 'Each city = one alert',
-    sourceGaza: 'Source: Gaza', sourceLebanon: 'Source: Lebanon', sourceIran: 'Source: Iran', sourceYemen: 'Source: Yemen',
+    sourceGaza: 'Source: Gaza', sourceLebanon: 'Source: Lebanon', sourceIran: 'Source: Iran',
     popTitle: 'Alerts by population',
     popExplanation: 'How many people (estimated) went to shelters? This chart shows the estimated population that received alerts throughout the entire period. The higher the bar, the more people experienced that number of alerts. Click a bar to see which cities are in it. <span class="pop-note">&#9888; Population data is estimation only.</span>',
     popKpiSub: 'population received alerts on ',
     popPctSuffix: '% of tracked population)',
     popOnce: 'Entered once', popTwice: 'Entered twice', popNTimes: 'Entered {n} times',
     mapTitle: 'Where were the most alerts?',
-    dailyIranTitle: 'Iran events - 3-day moving average', dailyLebTitle: 'Lebanon events - 3-day moving average', dailyYemenTitle: 'Yemen events - 3-day moving average',
+    dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
     dailyLaunchTitle: 'When were events? By day', dailyAlertTitle: 'When were alerts? By day',
     originTitle: 'Where were they launched from?', threatTitle: 'What was launched? Threat type',
     hourlyLaunchTitle: 'What hour? By hour', hourlyAlertTitle: 'What hour were alerts?',
     iranChartTitle: 'Events from Iran: 12h moving average + cumulative',
     lebChartTitle: 'Events from Lebanon: 12h moving average + cumulative',
-    yemenChartTitle: 'Events from Yemen: 12h moving average + cumulative',
     minuteTitle: 'What minute of the hour? (0-59)',
     topRegions: 'Cities with the most alerts', bottomRegions: 'Cities with the fewest alerts', topRegionsEvents: 'Cities with the most events', bottomRegionsEvents: 'Cities with the fewest events',
     recentTitle: 'Recent events',
@@ -1086,7 +1081,7 @@ var T = {
     popTrendFormula: 'Formula: (1×pop alerted once + 2×pop alerted twice + ...) / total tracked population',
     popTrendTotalPop: 'Total tracked population',
     summaryTableTitle: 'Summary data table',
-    stfAllSources: 'All sources', stfIran: 'Iran', stfLebanon: 'Lebanon', stfYemen: 'Yemen', stfAllDays: 'All days', stfDaysSelected: 'days selected', mapEnter: 'Enter map', mapExit: 'Exit map', wsTitle: 'Who suffers more?', navWhoSuffers: 'Who suffers more?', navProb: 'What\'s your alert risk?', probTitle: 'Alert probability', probLastDays: 'Last 7 days', probPillIran: 'Iran', probPillLeb: 'Lebanon', probCitiesOnly: 'cities only', probEventsLabel: 'Launch events', wsPickCity: 'Choose city...', wsCompare: 'Compare!', wsTotal: 'Total since war start', wsLast7: 'Last 7 days', wsNight: 'Nighttime (23:00-06:00)', wsAlerts: 'Alerts', wsFromIran: 'From Iran', wsFromLeb: 'From Lebanon', wsNightSince: 'since 02.03',
+    stfAllSources: 'All sources', stfIran: 'Iran', stfLebanon: 'Lebanon', stfAllDays: 'All days', stfDaysSelected: 'days selected', mapEnter: 'Enter map', mapExit: 'Exit map', wsTitle: 'Who suffers more?', navWhoSuffers: 'Who suffers more?', navProb: 'What\'s your alert risk?', probTitle: 'Alert probability', probLastDays: 'Last 7 days', probPillIran: 'Iran', probPillLeb: 'Lebanon', probCitiesOnly: 'cities only', probEventsLabel: 'Launch events', wsPickCity: 'Choose city...', wsCompare: 'Compare!', wsTotal: 'Total since war start', wsLast7: 'Last 7 days', wsNight: 'Nighttime (23:00-06:00)', wsAlerts: 'Alerts', wsFromIran: 'From Iran', wsFromLeb: 'From Lebanon', wsNightSince: 'since 02.03',
     colTimestamp: 'Time', colCity: 'City', colThreat: 'Threat type', colOrigin: 'Origin', colLaunchId: 'Event ID', colFirstTime: 'Time', colCityCount: 'Settlements', colPopulation: 'Population',
     threat0: 'Rockets & Missiles', threat5: 'Hostile aircraft', threat2: 'Terrorist infiltration',
     residents: 'residents', cities: 'cities',
@@ -1103,8 +1098,8 @@ var T = {
     dateBadge: 'From 28.02.2026',
     mapHeader: 'Where were the most alerts?', mapHeaderEvents: 'Where were the most events?',
     focusIsraelTitle: 'Focus on Israel',
-    fromIran: 'from Iran', fromLebanon: 'from Lebanon', fromYemen: 'from Yemen',
-    dailyIranTitle: 'Iran events - 3-day moving average', dailyLebTitle: 'Lebanon events - 3-day moving average', dailyYemenTitle: 'Yemen events - 3-day moving average',
+    fromIran: 'from Iran', fromLebanon: 'from Lebanon',
+    dailyIranTitle: 'Iran events - by day', dailyLebTitle: 'Lebanon events - by day',
     popClickHintText: 'Click a bar to see cities and alert counts',
     popCityPickerLabel: 'Select city:',
     seriesDrones: 'UAVs', seriesRockets: 'Rockets/Missiles', seriesExposures: 'Exposures',
@@ -1121,26 +1116,25 @@ var T = {
     credits: 'Разработано <a href="https://www.linkedin.com/in/tzahi-ben-shimol-411111197/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Цахи Бен Шимол</a> при содействии <a href="https://www.linkedin.com/in/baraklit/" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Барак Литвинов</a> | Данные тревог из открытого репозитория <a href="https://github.com/yuval-harpaz/alarms" target="_blank" style="color:var(--accent-blue);text-decoration:underline;">Юваль Харпаз</a>',
     introText: '<strong>Что показывает панель?</strong> Данные тревог и событий в реальном времени с 28 февраля 2026 года из открытого источника. <br><strong>Событие</strong> = активация системы оповещения. Одно событие может вызвать сирены в нескольких городах одновременно. Каждое событие имеет уникальный ID. <a href="javascript:void(0)" onclick="document.getElementById(\'methodologyBox\').style.display=document.getElementById(\'methodologyBox\').style.display===\'none\'?\'block\':\'none\'" style="color:var(--accent-blue);text-decoration:underline;font-weight:600;font-size:inherit;">Подробнее о методологии</a><br><strong>Тревога</strong> = каждый город, получивший сирену в рамках события. Одно событие может породить десятки тревог (один город = одна тревога). <br><strong>Экспозиции</strong> = тревоги &times; население. Показывает, сколько людей пережили сирену. Например: если в восточной Нетании (~117 тыс. жителей) было 3 тревоги за день, это 351 тыс. экспозиций. Данные о населении — ЦСБ 2024. <br><strong>Динамические фильтры:</strong> нажмите на любой элемент графика, карты или боковой панели, чтобы отфильтровать всю панель. Повторное нажатие снимает фильтр. Также можно использовать выпадающие меню выше.',
     iranBtn: '&#127470;&#127479; Нажмите для фильтрации только по Ирану',
-    allOrigins: 'Все источники', gaza: 'Газа', lebanon: 'Ливан', iran: 'Иран', yemen: 'Йемен', fa: 'FA', unknown: 'Неизвестно',
+    allOrigins: 'Все источники', gaza: 'Газа', lebanon: 'Ливан', iran: 'Иран', fa: 'FA', unknown: 'Неизвестно',
     allThreats: 'Все типы угроз', rockets: 'Ракеты и снаряды', aircraft: 'Враждебный БПЛА', infiltration: 'Проникновение террористов',
     allDays: 'Все дни', allHours: 'Все часы', searchCity: 'Поиск города...',
     clearAll: 'Очистить всё',
     eventsDetected: 'Обнаружено событий', alertsInCities: 'Тревоги в городах', eventsToday: 'Событий сегодня',
     citiesAttacked: 'Атакованные города', uniqueCities: 'Уникальные города', uniqueId: 'Уникальный ID события', eachCity: 'Каждый город = одна тревога',
-    sourceGaza: 'Источник: Газа', sourceLebanon: 'Источник: Ливан', sourceIran: 'Источник: Иран', sourceYemen: 'Источник: Йемен',
+    sourceGaza: 'Источник: Газа', sourceLebanon: 'Источник: Ливан', sourceIran: 'Источник: Иран',
     popTitle: 'Тревоги по численности населения',
     popExplanation: 'Сколько человек (примерно) укрылись в убежищах? График показывает оценочное число населения, получившего тревоги за весь период. Чем выше столбец, тем больше людей испытали данное количество тревог. Нажмите на столбец, чтобы увидеть города. <span class="pop-note">&#9888; Данные о населении — лишь оценка.</span>',
     popKpiSub: 'население получило тревоги за ',
     popPctSuffix: '% отслеживаемого населения)',
     popOnce: 'Укрывались 1 раз', popTwice: 'Укрывались 2 раза', popNTimes: 'Укрывались {n} раз',
     mapTitle: 'Где больше всего тревог?',
-    dailyIranTitle: 'Иран — события (3-дневное скользящее среднее)', dailyLebTitle: 'Ливан — события (3-дневное скользящее среднее)', dailyYemenTitle: 'Йемен — события (3-дневное скользящее среднее)',
+    dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
     dailyLaunchTitle: 'Когда были события? По дням', dailyAlertTitle: 'Когда были тревоги? По дням',
     originTitle: 'Откуда стреляли?', threatTitle: 'Чем стреляли? Тип угрозы',
     hourlyLaunchTitle: 'В какое время? По часам', hourlyAlertTitle: 'В какое время были тревоги?',
     iranChartTitle: 'События из Ирана: скользящее среднее 12ч + нарастающий итог',
     lebChartTitle: 'События из Ливана: скользящее среднее 12ч + нарастающий итог',
-    yemenChartTitle: 'События из Йемена: скользящее среднее 12ч + нарастающий итог',
     minuteTitle: 'Какая минута часа? (0-59)',
     topRegions: 'Города с наибольшим числом тревог', bottomRegions: 'Города с наименьшим числом тревог', topRegionsEvents: 'Города с наибольшим числом событий', bottomRegionsEvents: 'Города с наименьшим числом событий',
     recentTitle: 'Последние события',
@@ -1160,7 +1154,7 @@ var T = {
     popTrendFormula: 'Формула: (1×население с 1 тревогой + 2×население с 2 тревогами + ...) / всё отслеживаемое население',
     popTrendTotalPop: 'Всё отслеживаемое население',
     summaryTableTitle: 'Сводная таблица данных',
-    stfAllSources: 'Все источники', stfIran: 'Иран', stfLebanon: 'Ливан', stfYemen: 'Йемен', stfAllDays: 'Все дни', stfDaysSelected: 'дней выбрано', mapEnter: 'Войти в карту', mapExit: 'Выйти из карты', wsTitle: 'Кто страдает больше?', navWhoSuffers: 'Кто страдает больше?', navProb: 'Какой риск тревоги?', probTitle: 'Вероятность тревоги', probLastDays: 'Последние 7 дней', probPillIran: 'Иран', probPillLeb: 'Ливан', probCitiesOnly: 'только города', probEventsLabel: 'События запуска', wsPickCity: 'Выберите город...', wsCompare: 'Сравнить!', wsTotal: 'Всего с начала войны', wsLast7: 'Последние 7 дней', wsNight: 'Ночью (23:00-06:00)', wsAlerts: 'Тревоги', wsFromIran: 'Из Ирана', wsFromLeb: 'Из Ливана', wsNightSince: 'с 02.03',
+    stfAllSources: 'Все источники', stfIran: 'Иран', stfLebanon: 'Ливан', stfAllDays: 'Все дни', stfDaysSelected: 'дней выбрано', mapEnter: 'Войти в карту', mapExit: 'Выйти из карты', wsTitle: 'Кто страдает больше?', navWhoSuffers: 'Кто страдает больше?', navProb: 'Какой риск тревоги?', probTitle: 'Вероятность тревоги', probLastDays: 'Последние 7 дней', probPillIran: 'Иран', probPillLeb: 'Ливан', probCitiesOnly: 'только города', probEventsLabel: 'События запуска', wsPickCity: 'Выберите город...', wsCompare: 'Сравнить!', wsTotal: 'Всего с начала войны', wsLast7: 'Последние 7 дней', wsNight: 'Ночью (23:00-06:00)', wsAlerts: 'Тревоги', wsFromIran: 'Из Ирана', wsFromLeb: 'Из Ливана', wsNightSince: 'с 02.03',
     colTimestamp: 'Время', colCity: 'Город', colThreat: 'Тип угрозы', colOrigin: 'Источник', colLaunchId: 'ID события', colFirstTime: 'Время', colCityCount: 'Населённые пункты', colPopulation: 'Население',
     threat0: 'Ракеты и снаряды', threat5: 'Враждебный БПЛА', threat2: 'Проникновение террористов',
     residents: 'жителей', cities: 'городов',
@@ -1177,8 +1171,8 @@ var T = {
     dateBadge: 'С 28.02.2026',
     mapHeader: 'Где больше всего тревог?', mapHeaderEvents: 'Где больше всего событий?',
     focusIsraelTitle: 'Фокус на Израиль',
-    fromIran: 'из Ирана', fromLebanon: 'из Ливана', fromYemen: 'из Йемена',
-    dailyIranTitle: 'Иран — события (3-дневное скользящее среднее)', dailyLebTitle: 'Ливан — события (3-дневное скользящее среднее)', dailyYemenTitle: 'Йемен — события (3-дневное скользящее среднее)',
+    fromIran: 'из Ирана', fromLebanon: 'из Ливана',
+    dailyIranTitle: 'Иран — события по дням', dailyLebTitle: 'Ливан — события по дням',
     popClickHintText: 'Нажмите на столбец, чтобы увидеть города и количество тревог',
     popCityPickerLabel: 'Выберите город:',
     seriesDrones: 'БПЛА', seriesRockets: 'Ракеты/снаряды', seriesExposures: 'Экспозиции',
@@ -1208,7 +1202,7 @@ function cityName(heb){
 }
 function t(key){ return T[LANG][key] || T['he'][key] || key; }
 
-function normOrigin(o){if(!o||o===''||o==='FA') return 'Unknown';if(o==='Gaza'||o==='Lebanon'||o==='Iran'||o==='Yemen') return o;return 'Unknown';}
+function normOrigin(o){if(!o||o===''||o==='FA') return 'Unknown';if(o==='Gaza'||o==='Lebanon'||o==='Iran') return o;return 'Unknown';}
 
 function getFilteredAlerts(){
   var pcSet=null;
@@ -1414,7 +1408,6 @@ function applyLang(){
 
   if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=t('dailyIranTitle');
   if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=t('dailyLebTitle');
-  if(document.getElementById('dailyYemenTitle'))document.getElementById('dailyYemenTitle').textContent=t('dailyYemenTitle');
   document.getElementById('hourlyChartTitle').textContent=isL?t('hourlyLaunchTitle'):t('hourlyAlertTitle');
   document.getElementById('originChartTitle').textContent=t('originTitle');
 
@@ -1477,7 +1470,6 @@ function applyLang(){
   var _oba=document.getElementById('originBtnAlerts');if(_oba)_oba.textContent=t('alerts');
   var _hbi=document.getElementById('hourlyBtnIran');if(_hbi)_hbi.textContent=t('iran');
   var _hbl=document.getElementById('hourlyBtnLebanon');if(_hbl)_hbl.textContent=t('lebanon');
-  var _hby=document.getElementById('hourlyBtnYemen');if(_hby)_hby.textContent=t('yemen');
 
   // MA chart buttons
   var _mbi=document.getElementById('maBtnIran');if(_mbi)_mbi.textContent=t('iran');
@@ -1639,7 +1631,6 @@ function renderPopTrend(){
   });
 
   var pc=initChart('popTrendChart');
-  if(!pc)return;
   pc.setOption({
     tooltip:{trigger:'axis',formatter:function(p){
       var day=days[p[0].dataIndex];
@@ -1760,10 +1751,8 @@ function setMode(mode){
   var dailyMode=isL?'events':'alerts';
   setDailyIranView(dailyMode);
   setDailyLebView(dailyMode);
-  setDailyYemenView(dailyMode);
   if(document.getElementById('dailyIranTitle'))document.getElementById('dailyIranTitle').textContent=t('dailyIranTitle');
   if(document.getElementById('dailyLebTitle'))document.getElementById('dailyLebTitle').textContent=t('dailyLebTitle');
-  if(document.getElementById('dailyYemenTitle'))document.getElementById('dailyYemenTitle').textContent=t('dailyYemenTitle');
   document.getElementById('hourlyChartTitle').textContent=isL?t('hourlyLaunchTitle'):t('hourlyAlertTitle');
   var _trh=document.getElementById('topRegionsHeader');if(_trh)_trh.textContent=isL?t('topRegionsEvents'):t('topRegions');
   var _brh=document.getElementById('bottomRegionsHeader');if(_brh)_brh.textContent=isL?t('bottomRegionsEvents'):t('bottomRegions');
@@ -1795,7 +1784,6 @@ function renderStats(d){
   var gaza=d.originCounts['Gaza']||0;
   var leb=d.originCounts['Lebanon']||0;
   var iran=d.originCounts['Iran']||0;
-  var yemen=d.originCounts['Yemen']||0;
   var unknown=d.originCounts['Unknown']||0;
   var total=isL?d.totalLaunches:d.totalAlerts;
 
@@ -1804,44 +1792,43 @@ function renderStats(d){
   var _ly=document.getElementById('labelYesterday');if(_ly)_ly.textContent=isL?t('labelYesterday'):t('labelYesterdayAlerts');
 
   // Drone vs Rocket breakdown per origin
-  var iranDrones=0,iranRockets=0,lebDrones=0,lebRockets=0,yemenDrones=0,yemenRockets=0;
+  var iranDrones=0,iranRockets=0,lebDrones=0,lebRockets=0;
   d.alerts.forEach(function(a){
     var origin=normOrigin(a[5]);var threatCode=a[2];
     if(origin==='Iran'){if(threatCode==='5')iranDrones++;else iranRockets++;}
     if(origin==='Lebanon'){if(threatCode==='5')lebDrones++;else lebRockets++;}
-    if(origin==='Yemen'){if(threatCode==='5')yemenDrones++;else yemenRockets++;}
   });
   // Yesterday counts
   var YESTERDAY=new Date(new Date().getTime()-86400000).toISOString().substring(0,10);
-  var yesterdayIranL=0,yesterdayLebL=0,yesterdayYemenL=0,yesterdayTotal=0;
+  var yesterdayIranL=0,yesterdayLebL=0,yesterdayTotal=0;
   if(isL){
     d.launches.forEach(function(l){
-      if(l.time.startsWith(YESTERDAY)){yesterdayTotal++;if(normOrigin(l.origin)==='Iran')yesterdayIranL++;if(normOrigin(l.origin)==='Lebanon')yesterdayLebL++;if(normOrigin(l.origin)==='Yemen')yesterdayYemenL++;}
+      if(l.time.startsWith(YESTERDAY)){yesterdayTotal++;if(normOrigin(l.origin)==='Iran')yesterdayIranL++;if(normOrigin(l.origin)==='Lebanon')yesterdayLebL++;}
     });
   } else {
     d.alerts.forEach(function(a){
-      if(a[0].substring(0,10)===YESTERDAY){yesterdayTotal++;if(normOrigin(a[5])==='Iran')yesterdayIranL++;if(normOrigin(a[5])==='Lebanon')yesterdayLebL++;if(normOrigin(a[5])==='Yemen')yesterdayYemenL++;}
+      if(a[0].substring(0,10)===YESTERDAY){yesterdayTotal++;if(normOrigin(a[5])==='Iran')yesterdayIranL++;if(normOrigin(a[5])==='Lebanon')yesterdayLebL++;}
     });
   }
   // Populate main card breakdown (all origins with flags)
   var mainBreak=document.getElementById('mainBreakdown');
   if(mainBreak){
-    var parts='<span style="font-size:20px;">🇮🇷</span> '+fmt(iran)+' | <span style="font-size:20px;">🇱🇧</span> '+fmt(leb)+' | <span style="font-size:20px;">🇾🇪</span> '+fmt(yemen);
-    if(gaza>0) parts+=' | <span style="font-size:20px;">🇵🇸</span> '+fmt(gaza);
-    if(unknown>0) parts+=' | <span style="color:#6b7280;font-size:16px;">❓ '+fmt(unknown)+'</span>';
+    var parts='&#127470;&#127479; '+fmt(iran)+' | &#127473;&#127463; '+fmt(leb);
+    if(gaza>0) parts+=' | &#127477;&#127480; '+fmt(gaza);
+    if(unknown>0) parts+=' | <span style="color:#6b7280;">&#10067; '+fmt(unknown)+'</span>';
     mainBreak.innerHTML=parts;
   }
   // Yesterday card
   var yc=document.getElementById('yesterdayCount');if(yc)yc.textContent=fmt(yesterdayTotal);
   var yd=document.getElementById('yesterdayDate');if(yd)yd.textContent=YESTERDAY;
   var yb=document.getElementById('yesterdayBreakdown');
-  if(yb)yb.textContent=yesterdayIranL+' '+t('fromIran')+' | '+yesterdayLebL+' '+t('fromLebanon')+' | '+yesterdayYemenL+' '+t('fromYemen');
+  if(yb)yb.textContent=yesterdayIranL+' '+t('fromIran')+' | '+yesterdayLebL+' '+t('fromLebanon');
   // Exposures card (yesterday only)
-  var yExp=0,yExpIran=0,yExpLeb=0,yExpYemen=0;
-  d.alerts.forEach(function(a){if(a[0].substring(0,10)!==YESTERDAY)return;var pop=POP[a[1]]||0;var origin=normOrigin(a[5]);yExp+=pop;if(origin==='Iran')yExpIran+=pop;if(origin==='Lebanon')yExpLeb+=pop;if(origin==='Yemen')yExpYemen+=pop;});
+  var yExp=0,yExpIran=0,yExpLeb=0;
+  d.alerts.forEach(function(a){if(a[0].substring(0,10)!==YESTERDAY)return;var pop=POP[a[1]]||0;var origin=normOrigin(a[5]);yExp+=pop;if(origin==='Iran')yExpIran+=pop;if(origin==='Lebanon')yExpLeb+=pop;});
   var te=document.getElementById('totalExposures');if(te)te.textContent=fmtKM(yExp);
   var ed=document.getElementById('exposuresDate');if(ed)ed.textContent=YESTERDAY;
-  var eb=document.getElementById('exposuresBreakdown');if(eb)eb.innerHTML='<span style="font-size:18px;">🇮🇷</span> '+fmtKM(yExpIran)+' | <span style="font-size:18px;">🇱🇧</span> '+fmtKM(yExpLeb)+' | <span style="font-size:18px;">🇾🇪</span> '+fmtKM(yExpYemen);
+  var eb=document.getElementById('exposuresBreakdown');if(eb)eb.innerHTML='&#127470;&#127479; '+fmtKM(yExpIran)+' | &#127473;&#127463; '+fmtKM(yExpLeb);
 }
 
 function focusIsrael(){if(map) map.setView([31.5,35.0],7);}
@@ -1928,10 +1915,8 @@ function renderMapMarkers(){
 }
 
 function initChart(id){
-  var el=document.getElementById(id);
-  if(!el)return null;
   if(!charts[id]){
-    charts[id]=echarts.init(el);
+    charts[id]=echarts.init(document.getElementById(id));
     window.addEventListener('resize',function(){if(charts[id])charts[id].resize();});
   }
   return charts[id];
@@ -1955,7 +1940,6 @@ function setOriginView(mode){
 
 function renderOriginChart(d){
   var oc=initChart('originChart');
-  if(!oc)return;
   var od;
   if(originViewMode==='alerts'){
     var alertOriginCounts={};
@@ -1964,7 +1948,6 @@ function renderOriginChart(d){
       {value:alertOriginCounts['Gaza']||0,name:t('gaza'),itemStyle:{color:'#ff3b5c'}},
       {value:alertOriginCounts['Lebanon']||0,name:t('lebanon'),itemStyle:{color:'#ff8c42'}},
       {value:alertOriginCounts['Iran']||0,name:t('iran'),itemStyle:{color:'#a855f7'}},
-      {value:alertOriginCounts['Yemen']||0,name:t('yemen'),itemStyle:{color:'#14b8a6'}},
       {value:alertOriginCounts['Unknown']||0,name:t('unknown'),itemStyle:{color:'#6b7280'}}
     ];
   } else {
@@ -1972,7 +1955,6 @@ function renderOriginChart(d){
       {value:d.originCounts['Gaza']||0,name:t('gaza'),itemStyle:{color:'#ff3b5c'}},
       {value:d.originCounts['Lebanon']||0,name:t('lebanon'),itemStyle:{color:'#ff8c42'}},
       {value:d.originCounts['Iran']||0,name:t('iran'),itemStyle:{color:'#a855f7'}},
-      {value:d.originCounts['Yemen']||0,name:t('yemen'),itemStyle:{color:'#14b8a6'}},
       {value:d.originCounts['Unknown']||0,name:t('unknown'),itemStyle:{color:'#6b7280'}}
     ];
   }
@@ -1991,7 +1973,6 @@ function renderOriginChart(d){
 
 var dailyIranViewMode='events';
 var dailyLebViewMode='events';
-var dailyYemenViewMode='events';
 function setDailyIranView(mode){
   dailyIranViewMode=mode;
   var btnE=document.getElementById('iranBtnEvents');var btnA=document.getElementById('iranBtnAlerts');var btnX=document.getElementById('iranBtnExposures');
@@ -2008,14 +1989,6 @@ function setDailyLebView(mode){
   active.style.background='var(--accent-yellow)';active.style.color='#000';active.style.fontWeight='700';
   if(_lastChartData) renderDailyLeb(_lastChartData);
 }
-function setDailyYemenView(mode){
-  dailyYemenViewMode=mode;
-  var btnE=document.getElementById('yemenBtnEvents');var btnA=document.getElementById('yemenBtnAlerts');var btnX=document.getElementById('yemenBtnExposures');
-  [btnE,btnA,btnX].forEach(function(b){b.style.background='var(--bg-secondary)';b.style.color='var(--text-secondary)';b.style.fontWeight='normal';});
-  var active=mode==='events'?btnE:mode==='alerts'?btnA:btnX;
-  active.style.background='var(--accent-yellow)';active.style.color='#000';active.style.fontWeight='700';
-  if(_lastChartData) renderDailyYemen(_lastChartData);
-}
 function renderDailyIran(d){
   var grid={left:isMobile?30:45,right:isMobile?8:15,top:25,bottom:isMobile?60:70};
   var daysNoToday=d.days;
@@ -2031,7 +2004,6 @@ function renderDailyIran(d){
       expData.push(exp);
     });
     var dcIran=initChart('dailyIranChart');
-    if(!dcIran)return;
     dcIran.setOption({
       tooltip:{trigger:'axis',formatter:function(p){var v=p[0];return v.name+'<br/>'+t('seriesExposures')+': '+v.value.toLocaleString();}},grid:grid,
       xAxis:{type:'category',data:daysNoToday.map(function(x){return x.substring(5);}),axisLabel:{color:'#e0e0e0',fontSize:isMobile?8:10,fontWeight:'bold',rotate:90,interval:0},axisLine:{lineStyle:{color:'#2a2a3a'}}},
@@ -2064,7 +2036,6 @@ function renderDailyIran(d){
   });
   var iranTotals=dronesData.map(function(v,i){return v+rocketsData[i];});
   var dcIran=initChart('dailyIranChart');
-  if(!dcIran)return;
   dcIran.setOption({
     tooltip:{trigger:'axis'},grid:grid,
     legend:{bottom:5,textStyle:{color:'#a0a0b0',fontSize:isMobile?7:9},itemWidth:10,itemHeight:8},
@@ -2093,7 +2064,6 @@ function renderDailyLeb(d){
       expData.push(exp);
     });
     var dcLeb=initChart('dailyLebChart');
-    if(!dcLeb)return;
     dcLeb.setOption({
       tooltip:{trigger:'axis',formatter:function(p){var v=p[0];return v.name+'<br/>'+t('seriesExposures')+': '+v.value.toLocaleString();}},grid:grid,
       xAxis:{type:'category',data:daysNoToday.map(function(x){return x.substring(5);}),axisLabel:{color:'#e0e0e0',fontSize:isMobile?8:10,fontWeight:'bold',rotate:90,interval:0},axisLine:{lineStyle:{color:'#2a2a3a'}}},
@@ -2126,7 +2096,6 @@ function renderDailyLeb(d){
   });
   var lebTotals=dronesData.map(function(v,i){return v+rocketsData[i];});
   var dcLeb=initChart('dailyLebChart');
-  if(!dcLeb)return;
   dcLeb.setOption({
     tooltip:{trigger:'axis'},grid:grid,
     legend:{bottom:5,textStyle:{color:'#a0a0b0',fontSize:isMobile?7:9},itemWidth:10,itemHeight:8},
@@ -2139,68 +2108,6 @@ function renderDailyLeb(d){
   },true);
   dcLeb.off('click');
   dcLeb.on('click',function(p){if(isMobile)return;if(p.dataIndex!==undefined){var day=daysNoToday[p.dataIndex];setFilter('day',day);document.getElementById('filterDay').value=filters.day||'';}});
-}
-function renderDailyYemen(d){
-  var grid={left:isMobile?30:45,right:isMobile?8:15,top:25,bottom:isMobile?60:70};
-  var daysNoToday=d.days;
-  var mode=dailyYemenViewMode;
-  if(mode==='exposures'){
-    var expData=[];
-    daysNoToday.forEach(function(day){
-      var exp=0;
-      d.alerts.forEach(function(a){
-        if(a[0].substring(0,10)!==day||normOrigin(a[5])!=='Yemen') return;
-        exp+=(POP[a[1]]||0);
-      });
-      expData.push(exp);
-    });
-    var dcYemen=initChart('dailyYemenChart');
-    if(!dcYemen)return;
-    dcYemen.setOption({
-      tooltip:{trigger:'axis',formatter:function(p){var v=p[0];return v.name+'<br/>'+t('seriesExposures')+': '+v.value.toLocaleString();}},grid:grid,
-      xAxis:{type:'category',data:daysNoToday.map(function(x){return x.substring(5);}),axisLabel:{color:'#e0e0e0',fontSize:isMobile?8:10,fontWeight:'bold',rotate:90,interval:0},axisLine:{lineStyle:{color:'#2a2a3a'}}},
-      yAxis:{type:'value',axisLabel:{color:'#606070',fontSize:10,formatter:function(v){return v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?(v/1000).toFixed(0)+'K':v;}},splitLine:{lineStyle:{color:'#1e1e2e'}}},
-      series:[{name:t('seriesExposures'),type:'bar',data:expData,itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#2dd4bf'},{offset:1,color:'#14b8a6'}]),borderRadius:[3,3,0,0]},label:{show:true,position:'top',color:'#e0e0e0',fontSize:isMobile?7:9,fontWeight:'bold',formatter:function(p){var v=p.value;return v>0?(v>=1000000?(v/1000000).toFixed(1)+'M':v>=1000?Math.round(v/1000)+'K':v):'';}}}]
-    },true);
-    dcYemen.off('click');
-    dcYemen.on('click',function(p){if(isMobile)return;if(p.dataIndex!==undefined){var day=daysNoToday[p.dataIndex];setFilter('day',day);document.getElementById('filterDay').value=filters.day||'';}});
-    return;
-  }
-  var useAlerts=mode==='alerts';
-  var dronesData=[];var rocketsData=[];
-  daysNoToday.forEach(function(day){
-    var drones=0,rockets=0;
-    d.alerts.forEach(function(a){
-      if(a[0].substring(0,10)!==day) return;
-      if(normOrigin(a[5])!=='Yemen') return;
-      if(useAlerts){if(a[2]==='5')drones++;else rockets++;}
-      else{if(a[2]==='5')drones++;else rockets++;}
-    });
-    if(!useAlerts){
-      var launchDrones={},launchRockets={};
-      d.alerts.forEach(function(a){
-        if(a[0].substring(0,10)!==day||normOrigin(a[5])!=='Yemen') return;
-        if(a[2]==='5')launchDrones[a[3]]=1;else launchRockets[a[3]]=1;
-      });
-      drones=Object.keys(launchDrones).length;rockets=Object.keys(launchRockets).length;
-    }
-    dronesData.push(drones);rocketsData.push(rockets);
-  });
-  var yemenTotals=dronesData.map(function(v,i){return v+rocketsData[i];});
-  var dcYemen=initChart('dailyYemenChart');
-  if(!dcYemen)return;
-  dcYemen.setOption({
-    tooltip:{trigger:'axis'},grid:grid,
-    legend:{bottom:5,textStyle:{color:'#a0a0b0',fontSize:isMobile?7:9},itemWidth:10,itemHeight:8},
-    xAxis:{type:'category',data:daysNoToday.map(function(x){return x.substring(5);}),axisLabel:{color:'#e0e0e0',fontSize:isMobile?8:10,fontWeight:'bold',rotate:90,interval:0},axisLine:{lineStyle:{color:'#2a2a3a'}}},
-    yAxis:{type:'value',axisLabel:{color:'#606070',fontSize:10},splitLine:{lineStyle:{color:'#1e1e2e'}}},
-    series:[
-      {name:t('seriesDrones'),type:'bar',stack:'total',data:dronesData,itemStyle:{color:'#2dd4bf',borderRadius:[0,0,0,0]}},
-      {name:t('seriesRockets'),type:'bar',stack:'total',data:rocketsData,itemStyle:{color:'#14b8a6',borderRadius:[3,3,0,0]},label:{show:true,position:'top',color:'#e0e0e0',fontSize:isMobile?8:10,fontWeight:'bold',formatter:function(p){var tot=yemenTotals[p.dataIndex];return tot;}}}
-    ]
-  },true);
-  dcYemen.off('click');
-  dcYemen.on('click',function(p){if(isMobile)return;if(p.dataIndex!==undefined){var day=daysNoToday[p.dataIndex];setFilter('day',day);document.getElementById('filterDay').value=filters.day||'';}});
 }
 
 var maOriginFilter='Iran';
@@ -2239,48 +2146,35 @@ function setMAOrigin(origin){
 }
 var hourlyOriginFilter='Iran';
 function setHourlyOrigin(origin){
-  var idx=hourlyOriginFilter.indexOf(origin);
-  if(idx>=0){
-    hourlyOriginFilter.splice(idx,1);
-  } else {
-    hourlyOriginFilter.push(origin);
-  }
-  updateHourlyButtons();
-  if(_lastChartData) renderHourlyChart(_lastChartData);
-}
-
-function updateHourlyButtons(){
+  hourlyOriginFilter=origin;
   var btnI=document.getElementById('hourlyBtnIran');
   var btnL=document.getElementById('hourlyBtnLebanon');
-  var btnY=document.getElementById('hourlyBtnYemen');
-  [btnI,btnL,btnY].forEach(function(b){if(b){b.style.background='var(--bg-secondary)';b.style.color='var(--text-secondary)';b.style.fontWeight='normal';}});
-  hourlyOriginFilter.forEach(function(o){
-    var btn=o==='Iran'?btnI:o==='Lebanon'?btnL:btnY;
-    if(btn){btn.style.background='var(--accent-yellow)';btn.style.color='#000';btn.style.fontWeight='700';}
-  });
+  if(origin==='Iran'){
+    btnI.style.background='var(--accent-yellow)';btnI.style.color='#000';btnI.style.fontWeight='700';
+    btnL.style.background='var(--bg-secondary)';btnL.style.color='var(--text-secondary)';btnL.style.fontWeight='normal';
+  } else {
+    btnL.style.background='var(--accent-yellow)';btnL.style.color='#000';btnL.style.fontWeight='700';
+    btnI.style.background='var(--bg-secondary)';btnI.style.color='var(--text-secondary)';btnI.style.fontWeight='normal';
+  }
+  if(_lastChartData) renderHourlyChart(_lastChartData);
 }
 function renderHourlyChart(d){
   var isL=viewMode==='launches';
   var labelText=isL?t('launches'):t('alerts');
   var grid={left:isMobile?30:45,right:isMobile?8:15,top:15,bottom:isMobile?70:80};
-  var origins=hourlyOriginFilter.length>0?hourlyOriginFilter:['Iran'];
-  var series=[];
-  var colorMap={'Iran':'#ff6b6b','Lebanon':'#ff8c42','Yemen':'#2dd4bf'};
-  origins.forEach(function(origin){
-    var filtered=getFilteredAlerts().filter(function(a){return normOrigin(a[5])===origin;});
-    var items=isL?buildLaunches(filtered):filtered;
-    var counts=new Array(24).fill(0);
-    items.forEach(function(x){var h=parseInt((isL?x.time:x[0]).substring(11,13));counts[h]++;});
-    series.push({name:labelText+' ('+origin+')',type:'bar',stack:'total',data:counts.map(function(v){return v;}),itemStyle:{color:colorMap[origin],borderRadius:[2,2,0,0]}});
-  });
+  var filtered=getFilteredAlerts().filter(function(a){return normOrigin(a[5])===hourlyOriginFilter;});
+  var items=isL?buildLaunches(filtered):filtered;
+  var counts=new Array(24).fill(0);
+  items.forEach(function(x){var h=parseInt((isL?x.time:x[0]).substring(11,13));counts[h]++;});
+  var baseColor=hourlyOriginFilter==='Iran'?200:120;
+  var hColors=counts.map(function(_,i){return 'hsl('+(baseColor+i*6)+',70%,55%)';});
   var hc=initChart('hourlyChart');
-  if(!hc)return;
   hc.setOption({
     tooltip:{trigger:'axis'},grid:grid,
-    legend:{bottom:0,textStyle:{color:'#a0a0b0',fontSize:isMobile?7:9}},
     xAxis:{type:'category',data:Array.from({length:24},function(_,i){return i+':00';}),axisLabel:{color:'#e0e0e0',fontSize:9,fontWeight:'bold',rotate:90,interval:0},axisLine:{lineStyle:{color:'#2a2a3a'}}},
     yAxis:{type:'value',axisLabel:{color:'#606070',fontSize:10},splitLine:{lineStyle:{color:'#1e1e2e'}}},
-    series:series
+    series:[{name:labelText+' ('+hourlyOriginFilter+')',type:'bar',data:counts.map(function(v,i){return{value:v,itemStyle:{color:hColors[i]}};}),
+      itemStyle:{borderRadius:[2,2,0,0]}}]
   },true);
   hc.off('click');
   hc.on('click',function(p){if(isMobile)return;if(p.dataIndex!==undefined){setFilter('hour',String(p.dataIndex));document.getElementById('filterHour').value=filters.hour||'';}});
@@ -2295,7 +2189,6 @@ function renderCharts(d){
   _lastChartData=d;
   renderDailyIran(d);
   renderDailyLeb(d);
-  renderDailyYemen(d);
 
   // Origin chart (uses separate function for toggle)
   _lastChartData=d;
@@ -2363,7 +2256,6 @@ function renderIranMA(d){
     var maName = isExposures ? t('maMillions') : t('ma12');
 
     var ic=initChart('iranChart');
-    if(!ic)return;
     ic.setOption({
       tooltip:{trigger:'axis',formatter:function(p){var s=p[0].axisValue+'<br/>';p.forEach(function(x){s+=x.marker+x.seriesName+': '+(isExposures?x.value.toFixed(2)+'M':x.value)+'<br/>';});return s;}},
       legend:{data:[barName,maName],bottom:0,textStyle:{color:'#a0a0b0',fontSize:isMobile?6:9},itemWidth:isMobile?8:12,itemHeight:isMobile?6:8,itemGap:isMobile?4:10},
@@ -2381,9 +2273,8 @@ function renderIranMA(d){
   }
 }
 
-var dailyMAOrigin = ['Iran'];
+var dailyMAOrigin = 'Iran';
 var dailyMAMode = 'events'; // events, alerts, exposures
-var hourlyOriginFilter = ['Iran'];
 
 function setDailyMAMode(mode) {
   dailyMAMode = mode;
@@ -2399,70 +2290,54 @@ function setDailyMAMode(mode) {
 }
 
 function setDailyMAOrigin(origin) {
-  var idx = dailyMAOrigin.indexOf(origin);
-  if (idx >= 0) {
-    dailyMAOrigin.splice(idx, 1);
+  dailyMAOrigin = origin;
+  var iranBtn = document.getElementById('dailyMABtnIran');
+  var lebBtn = document.getElementById('dailyMABtnLebanon');
+  if (origin === 'Iran') {
+    iranBtn.style.background = 'var(--accent-yellow)';
+    iranBtn.style.color = '#000';
+    iranBtn.style.fontWeight = '700';
+    lebBtn.style.background = 'var(--bg-secondary)';
+    lebBtn.style.color = 'var(--text-secondary)';
+    lebBtn.style.fontWeight = 'normal';
   } else {
-    dailyMAOrigin.push(origin);
+    lebBtn.style.background = 'var(--accent-yellow)';
+    lebBtn.style.color = '#000';
+    lebBtn.style.fontWeight = '700';
+    iranBtn.style.background = 'var(--bg-secondary)';
+    iranBtn.style.color = 'var(--text-secondary)';
+    iranBtn.style.fontWeight = 'normal';
   }
-  updateDailyMAButtons();
   renderDailyMA();
 }
 
-function updateDailyMAButtons() {
-  var iranBtn = document.getElementById('dailyMABtnIran');
-  var lebBtn = document.getElementById('dailyMABtnLebanon');
-  var yemenBtn = document.getElementById('dailyMABtnYemen');
-  [iranBtn, lebBtn, yemenBtn].forEach(function(b) {
-    if (b) { b.style.background = 'var(--bg-secondary)'; b.style.color = 'var(--text-secondary)'; b.style.fontWeight = 'normal'; }
-  });
-  dailyMAOrigin.forEach(function(o) {
-    var btn = o === 'Iran' ? iranBtn : o === 'Lebanon' ? lebBtn : yemenBtn;
-    if (btn) { btn.style.background = 'var(--accent-yellow)'; btn.style.color = '#000'; btn.style.fontWeight = '700'; }
-  });
-}
-
 function renderDailyMA() {
-  var origins=dailyMAOrigin.length>0?dailyMAOrigin:['Iran'];
-  var isExposures = dailyMAMode === 'exposures';
-  var divisor = isExposures ? 1000000 : 1;
+  var originFilter = dailyMAOrigin;
+  var maColor = originFilter === 'Iran' ? '#ff6b6b' : '#ff8c42';
+  var filteredAlerts = RAW.filter(function(a) { return normOrigin(a[5]) === originFilter; });
   
-  // Color map
-  var originColorMap = { 'Iran': '#ff6b6b', 'Lebanon': '#ff8c42', 'Yemen': '#14b8a6' };
+  // Build daily buckets based on dailyMAMode
+  var dayBuckets = {};
+  if(dailyMAMode === 'events'){
+    var items = buildLaunches(filteredAlerts);
+    items.forEach(function(x) {
+      var dKey = x.time.substring(0, 10);
+      dayBuckets[dKey] = (dayBuckets[dKey] || 0) + 1;
+    });
+  } else if(dailyMAMode === 'alerts'){
+    filteredAlerts.forEach(function(a) {
+      var dKey = a[0].substring(0, 10);
+      dayBuckets[dKey] = (dayBuckets[dKey] || 0) + 1;
+    });
+  } else { // exposures
+    filteredAlerts.forEach(function(a) {
+      var dKey = a[0].substring(0, 10);
+      var pop = POP[a[1]] || 0;
+      dayBuckets[dKey] = (dayBuckets[dKey] || 0) + pop;
+    });
+  }
   
-  // Build day buckets for each origin
-  var allDayBucketsPerOrigin = {};
-  var allDaysSet = new Set();
-  
-  origins.forEach(function(origin) {
-    var filteredAlerts = RAW.filter(function(a) { return normOrigin(a[5]) === origin; });
-    var dayBuckets = {};
-    
-    if(dailyMAMode === 'events'){
-      var items = buildLaunches(filteredAlerts);
-      items.forEach(function(x) {
-        var dKey = x.time.substring(0, 10);
-        dayBuckets[dKey] = (dayBuckets[dKey] || 0) + 1;
-        allDaysSet.add(dKey);
-      });
-    } else if(dailyMAMode === 'alerts'){
-      filteredAlerts.forEach(function(a) {
-        var dKey = a[0].substring(0, 10);
-        dayBuckets[dKey] = (dayBuckets[dKey] || 0) + 1;
-        allDaysSet.add(dKey);
-      });
-    } else { // exposures
-      filteredAlerts.forEach(function(a) {
-        var dKey = a[0].substring(0, 10);
-        var pop = POP[a[1]] || 0;
-        dayBuckets[dKey] = (dayBuckets[dKey] || 0) + pop;
-        allDaysSet.add(dKey);
-      });
-    }
-    allDayBucketsPerOrigin[origin] = dayBuckets;
-  });
-  
-  var allDays = Array.from(allDaysSet).sort();
+  var allDays = Object.keys(dayBuckets).sort();
   if (allDays.length > 0) {
     var firstD = allDays[0], lastD = allDays[allDays.length - 1];
     var cur = new Date(firstD + 'T00:00:00');
@@ -2476,52 +2351,45 @@ function renderDailyMA() {
       cur = new Date(cur.getTime() + 86400000);
     }
     
-    // Exclude today only if it's actually in the data (incomplete day)
-    if (fullDays.length > 1 && fullDays[fullDays.length - 1] === TODAY) { fullDays = fullDays.slice(0, -1); }
+    // Exclude today (last day) since it's incomplete
+    if (fullDays.length > 1) { fullDays = fullDays.slice(0, -1); }
     
+    var isExposures = dailyMAMode === 'exposures';
+    var divisor = isExposures ? 1000000 : 1;
+    var dayVals = fullDays.map(function(d) { var v = (dayBuckets[d] || 0) / divisor; return isExposures ? Math.round(v * 100) / 100 : Math.round(v * 10) / 10; });
+    var ma3 = dayVals.map(function(_, i) {
+      var start = Math.max(0, i - 2);
+      var slice = dayVals.slice(start, i + 1);
+      var avg = slice.reduce(function(a, b) { return a + b; }, 0) / slice.length; return isExposures ? Math.round(avg * 100) / 100 : Math.round(avg * 10) / 10;
+    });
+    var cumul = []; var cs = 0;
+    dayVals.forEach(function(v) { cs += v; cumul.push(Math.round(cs * 100) / 100); });
     var labels = fullDays.map(function(d) { return d.substring(8, 10) + '/' + d.substring(5, 7); });
     
-    var series = [];
-    origins.forEach(function(origin) {
-      var dayBuckets = allDayBucketsPerOrigin[origin];
-      var dayVals = fullDays.map(function(d) { var v = (dayBuckets[d] || 0) / divisor; return isExposures ? Math.round(v * 100) / 100 : Math.round(v * 10) / 10; });
-      var ma3 = dayVals.map(function(_, i) {
-        var start = Math.max(0, i - 2);
-        var slice = dayVals.slice(start, i + 1);
-        var avg = slice.reduce(function(a, b) { return a + b; }, 0) / slice.length; return isExposures ? Math.round(avg * 100) / 100 : Math.round(avg * 10) / 10;
-      });
-      var maName = origin + ' - ' + (isExposures ? t('ma3Millions') : t('ma3'));
-      var maColor = originColorMap[origin];
-      series.push({
-        name: maName, 
-        type: 'line', 
-        data: ma3, 
-        smooth: true, 
-        lineStyle: { color: maColor, width: 3.5 }, 
-        symbol: 'circle', 
-        symbolSize: function(val, p) { return p.dataIndex % 5 === 0 && p.dataIndex < ma3.length - 1 ? 8 : 0; }, 
-        itemStyle: { color: maColor }, 
-        label: { show: true, position: 'top', fontSize: 11, fontWeight: 'bold', color: maColor, formatter: function(p) { return p.dataIndex % 5 === 0 && p.dataIndex < ma3.length - 1 ? (isExposures ? p.value.toFixed(1) + 'M' : p.value) : ''; } }, 
-        yAxisIndex: 0
-      });
-    });
-    
-    var titleText = origins.length === 1 ? (origins[0] === 'Iran' ? t('dailyIranTitle') : origins[0] === 'Lebanon' ? t('dailyLebTitle') : 'אירועים מתימן') : 'ממוצע נע 3 ימים (כל המקורות)';
+    var titleText = originFilter === 'Iran' ? t('dailyIranTitle') : t('dailyLebTitle');
     var titleEl = document.getElementById('dailyMATitle');
     if (titleEl) titleEl.textContent = titleText;
     
     var yAxisName = isExposures ? t('yAxisExposures') : t('perDay');
+    var barName = isExposures ? t('exposuresMillions') : t('launchesPerDay');
+    var maName = isExposures ? t('ma3Millions') : t('ma3');
     var cumulName = isExposures ? 'מצטבר (מיליון)' : t('cumulative');
     
     var ic = initChart('dailyMAChart');
-    if(!ic)return;
     ic.setOption({
       tooltip: { trigger: 'axis', formatter: function(p) { var s = p[0].axisValue + '<br/>'; p.forEach(function(x) { s += x.marker + x.seriesName + ': ' + (isExposures ? x.value.toFixed(2) + 'M' : x.value) + '<br/>'; }); return s; } },
-      legend: { data: series.map(function(x) { return x.name; }), bottom: 0, textStyle: { color: '#a0a0b0', fontSize: isMobile ? 6 : 9 }, itemWidth: isMobile ? 8 : 12, itemHeight: isMobile ? 6 : 8, itemGap: isMobile ? 4 : 10 },
+      legend: { data: [barName, maName, cumulName], bottom: 0, textStyle: { color: '#a0a0b0', fontSize: isMobile ? 6 : 9 }, itemWidth: isMobile ? 8 : 12, itemHeight: isMobile ? 6 : 8, itemGap: isMobile ? 4 : 10 },
       grid: { left: isMobile ? 30 : 50, right: isMobile ? 30 : 55, top: 15, bottom: isMobile ? 50 : 45 },
       xAxis: { type: 'category', data: labels, axisLabel: { color: '#e0e0e0', fontSize: 9, fontWeight: 'bold', rotate: 90, interval: 0 }, axisLine: { lineStyle: { color: '#2a2a3a' } } },
-      yAxis: { type: 'value', name: yAxisName, nameTextStyle: { color: '#606070', fontSize: isMobile ? 7 : 9 }, axisLabel: { color: '#606070', fontSize: isMobile ? 7 : 9, formatter: function(v) { return isExposures ? v.toFixed(1) + 'M' : v; } }, splitLine: { lineStyle: { color: '#1e1e2e' } } },
-      series: series
+      yAxis: [
+        { type: 'value', name: yAxisName, nameTextStyle: { color: '#606070', fontSize: isMobile ? 7 : 9 }, axisLabel: { color: '#606070', fontSize: isMobile ? 7 : 9, formatter: function(v) { return isExposures ? v.toFixed(1) + 'M' : v; } }, splitLine: { lineStyle: { color: '#1e1e2e' } } },
+        { type: 'value', name: cumulName, nameTextStyle: { color: '#606070', fontSize: isMobile ? 7 : 9 }, axisLabel: { color: '#606070', fontSize: isMobile ? 7 : 9, formatter: function(v) { return isExposures ? v.toFixed(0) + 'M' : v; } }, splitLine: { show: false } }
+      ],
+      series: [
+        { name: barName, type: 'bar', data: dayVals, itemStyle: { color: 'rgba(100,149,237,0.45)', borderRadius: [2, 2, 0, 0] }, yAxisIndex: 0 },
+        { name: maName, type: 'line', data: ma3, smooth: true, lineStyle: { color: maColor, width: 3.5 }, symbol: 'circle', symbolSize: function(val, p) { return p.dataIndex % 5 === 0 && p.dataIndex < ma3.length - 1 ? 8 : 0; }, itemStyle: { color: maColor }, label: { show: true, position: 'top', fontSize: 11, fontWeight: 'bold', color: maColor, formatter: function(p) { return p.dataIndex % 5 === 0 && p.dataIndex < ma3.length - 1 ? (isExposures ? p.value.toFixed(1) + 'M' : p.value) : ''; } }, yAxisIndex: 0 },
+        { name: cumulName, type: 'line', data: cumul, smooth: false, lineStyle: { color: '#ffd93d', width: 3.5, type: 'dashed' }, symbol: 'none', yAxisIndex: 1 }
+      ]
     }, true);
   }
 }
@@ -2635,7 +2503,6 @@ function renderPopChart(){
     var trendDays=Object.keys(cityDayCounts).sort();
     var trendVals=trendDays.map(function(d){return cityDayCounts[d];});
     if(!popChartInstance) popChartInstance=initChart('popChart');
-    if(!popChartInstance)return;
     popChartInstance.setOption({
       tooltip:{trigger:'axis',formatter:function(p){return p[0].name+'<br/>'+p[0].value+' '+(isL?(LANG==='he'?'אירועים':LANG==='ru'?'событий':'events'):(LANG==='he'?'התרעות':LANG==='ru'?'тревог':'alerts'));}},
       grid:{left:isMobile?40:55,right:isMobile?10:20,top:isMobile?25:35,bottom:isMobile?65:75},
@@ -2711,7 +2578,6 @@ function renderPopChart(){
   popGroupKeys=keys;
 
   if(!popChartInstance) popChartInstance=initChart('popChart');
-  if(!popChartInstance)return;
   popChartInstance.setOption({
     tooltip:{trigger:'axis',formatter:function(p){
       var i=p[0].dataIndex;
@@ -3448,8 +3314,6 @@ function refreshAll(){
   renderStats(d);
   renderMap(d);
   renderCharts(d);
-  updateHourlyButtons();
-  updateDailyMAButtons();
   renderRegions(d);
   renderProbSection();
   renderPopChart();
@@ -3774,7 +3638,7 @@ window.addEventListener('load',function(){
   var tipEl=document.createElement('div');tipEl.id='floatingTip';document.body.appendChild(tipEl);
   var tipTimer=null;
   function showTip(e){
-    var src=e.currentTarget;if(!src)return;var html=src.getAttribute('data-tip');if(!html)return;
+    var src=e.currentTarget;var html=src.getAttribute('data-tip');if(!html)return;
     tipEl.innerHTML=html;tipEl.classList.add('visible');
     var rect=src.getBoundingClientRect();
     var tipW=tipEl.offsetWidth;var tipH=tipEl.offsetHeight;
@@ -3798,4 +3662,3 @@ window.addEventListener('load',function(){
 </script>
 </body>
 </html>
-
