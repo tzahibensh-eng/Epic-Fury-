@@ -2716,7 +2716,7 @@ function initPopSlider(){
   renderPopChart();
 }
 
-function renderPopChart(){
+function renderPopChart(fromGlobal){
   var sel=document.getElementById('popDaySelect');
   var day=sel.value;
 
@@ -2726,7 +2726,11 @@ function renderPopChart(){
       sel.value=day;
     } else {
       day='filtered';
+      sel.value='all';
     }
+  } else if(fromGlobal){
+    sel.value='all';
+    day='all';
   }
 
   var popCity=popSelectedCity||'all';
@@ -3582,7 +3586,7 @@ function _doRefreshAll(){
   updateDailyMAButtons();
   renderRegions(d);
   renderProbSection();
-  renderPopChart();
+  renderPopChart(true);
   renderSummaryTable();
   updateTimeSince();
   var cts=document.getElementById('cityTimelineSelect');
