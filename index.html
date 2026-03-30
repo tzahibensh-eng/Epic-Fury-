@@ -3803,8 +3803,8 @@ function refreshFromGitHub(){
   btn.textContent=t('refreshing');
   function doRefresh(url){
     var ctrl=new AbortController();
-    var timer=setTimeout(function(){ctrl.abort();},10000);
-    return fetch(url,{signal:ctrl.signal}).finally(function(){clearTimeout(timer);}).then(function(r){
+    var timer=setTimeout(function(){ctrl.abort();},30000);
+    return fetch(url,{signal:ctrl.signal,cache:'no-store'}).finally(function(){clearTimeout(timer);}).then(function(r){
       if(!r.ok) throw new Error('HTTP '+r.status);
       return r.text();
     }).then(function(csv){
@@ -3830,8 +3830,8 @@ function refreshFromGitHub(){
       setTimeout(function(){btn.textContent=t('refreshBtn');},3000);
     });
   }
-  doRefresh('https://cdn.jsdelivr.net/gh/yuval-harpaz/alarms@master/data/alarms.csv?_='+Date.now())
-    .catch(function(e){console.warn('jsDelivr refresh failed, trying GitHub raw...',e);return doRefresh('https://raw.githubusercontent.com/yuval-harpaz/alarms/master/data/alarms.csv?_='+Date.now());})
+  doRefresh('https://raw.githubusercontent.com/yuval-harpaz/alarms/master/data/alarms.csv?_='+Date.now())
+    .catch(function(e){console.warn('GitHub raw refresh failed, trying jsDelivr...',e);return doRefresh('https://cdn.jsdelivr.net/gh/yuval-harpaz/alarms@master/data/alarms.csv?_='+Date.now());})
     .catch(function(e){btn.textContent=t('refreshError');console.error(e);});
 }
 
@@ -3878,12 +3878,12 @@ window.addEventListener('load',function(){
   function fetchWithTimeout(url,ms){
     var ctrl=new AbortController();
     var timer=setTimeout(function(){ctrl.abort();},ms);
-    return fetch(url,{signal:ctrl.signal}).finally(function(){clearTimeout(timer);});
+    return fetch(url,{signal:ctrl.signal,cache:'no-store'}).finally(function(){clearTimeout(timer);});
   }
 
   function fetchData(url,label,onProgress){
     console.log('Fetching from '+label+'...');
-    return fetchWithTimeout(url,10000).then(function(r){
+    return fetchWithTimeout(url,30000).then(function(r){
       if(!r.ok) throw new Error(label+' HTTP '+r.status);
       var total=parseInt(r.headers.get('content-length')||'0',10);
       if(!total||!r.body||!r.body.getReader) return r.text();
@@ -3952,8 +3952,8 @@ window.addEventListener('load',function(){
     }
   }
 
-  fetchData(CDN_URL,'jsDelivr',onDlProgress)
-    .catch(function(e){console.warn('jsDelivr failed:',e);progBar.style.width='0%';progPct.textContent='0%';return fetchData(RAW_URL,'GitHub raw',onDlProgress);})
+  fetchData(RAW_URL,'GitHub raw',onDlProgress)
+    .catch(function(e){console.warn('GitHub raw failed:',e);progBar.style.width='0%';progPct.textContent='0%';return fetchData(CDN_URL,'jsDelivr',onDlProgress);})
     .then(function(){
       bootWithData();
       progBar.style.width='100%';
